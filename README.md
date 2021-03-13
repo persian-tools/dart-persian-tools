@@ -1,2 +1,27 @@
-# dart-persian-tools
-Dart language version of Persian-Tools
+<div align="center">
+	<p align="center">
+		<img src="https://raw.githubusercontent.com/persian-tools/persian-tools/master/images/logo.png" width="200" />
+	</p>
+	<h1 align="center">Persian tools</h1>
+    <hr/>
+    <p align="center">Persian Tools dart package which you can use in all platforms</p>
+
+[![MIT license](https://img.shields.io/badge/License-MIT-lightblue.svg)](https://github.com/persian-tools/dart-persian-tools/blob/master/LICENSE)
+[![Dart Version](https://img.shields.io/badge/Dart-v2.12.0-lightblue)](https://dart.dev)
+![status](https://img.shields.io/badge/under_development-lightblue.svg)
+</div>
+<hr/>
+
+## Features
+- [ ] Converting Persian words to number
+- [ ] Converting Persian numbers to word
+- [ ] Adding and removing separator to/from numbers
+- [ ] Converting Persian numbers to Arabic / English numbers and reverse
+- [ ] Validating Iranians national id
+- [ ] Finding city and province names by national id
+- [ ] Calculating bills
+- [ ] Checking validation of IBAN (_SHEBA_)
+- [ ] Recognizing bank information by IBAN (_SHEBA_)
+- [ ] Validating ATM card number
+- [ ] Finding name of banks by ATM card number
+- [ ] Getting information from vehicle plate
