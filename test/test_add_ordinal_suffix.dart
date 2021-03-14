@@ -12,9 +12,13 @@ void main() {
         var number = 'سی دو';
         expect(addOrdinalSuffix(number), equals('سی دوم'));
       });
-      test('method on شضت', () {
-        var number = 'شضت';
-        expect(addOrdinalSuffix(number), equals('شضت اُم'));
+      test('method on شصت', () {
+        var number = 'شصت';
+        expect(addOrdinalSuffix(number), equals('شصتم'));
+      });
+      test('method on سی', () {
+        var number = 'سی';
+        expect(addOrdinalSuffix(number), equals('سی اُم'));
       });
     });
     group('test AddOrdinalSuffix extension', () {
@@ -26,9 +30,13 @@ void main() {
         var number = 'سی دو';
         expect(number.withOrdinalSuffix, equals('سی دوم'));
       });
-      test('extension on شضت', () {
-        var number = 'شضت';
-        expect(number.withOrdinalSuffix, equals('شضت اُم'));
+      test('extension on شصت', () {
+        var number = 'شصت';
+        expect(number.withOrdinalSuffix, equals('شصتم'));
+      });
+      test('extension on سی', () {
+        var number = 'سی';
+        expect(number.withOrdinalSuffix, equals('سی اُم'));
       });
     });
   });
