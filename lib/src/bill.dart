@@ -61,4 +61,10 @@ class Bill {
         billIdStr.substring(billIdStr.length - 2, billIdStr.length - 1));
     return billTypesMap[billTypeKey]!;
   }
+
+  /// Creates barcode of the Bill from bill ID and payment ID
+  String get barcode {
+    // ignore: unnecessary_brace_in_string_interps
+    return '${_billId}000${_paymentId}';
+  }
 }
