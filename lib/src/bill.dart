@@ -90,4 +90,26 @@ class Bill {
       int.parse(nonNullBarcode.substring(16)),
     ];
   }
+
+  // TODO:documentation
+  int _calTheBit(String number) {
+    var sum = 0;
+    var base = 2;
+    for (var i = 0; i < number.length; ++i) {
+      if (base == 8) base = 2;
+      var substring = number.substring(
+        number.length - 1 - i,
+        number.length - i,
+      );
+      sum += int.parse(substring) * base;
+      base++;
+    }
+    sum %= 11;
+    if (sum < 2) {
+      sum = 0;
+    } else {
+      sum = 11 - sum;
+    }
+    return sum;
+  }
 }
