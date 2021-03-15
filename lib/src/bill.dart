@@ -68,6 +68,19 @@ class Bill {
     return '${_billId}000${_paymentId}';
   }
 
+  /// Validates payment ID of the bill
+  bool get isPaymentIdValid {
+    var billIdSrt = '$_billId';
+    var paymentIdStr = '$_paymentId';
+    if (paymentIdStr.length < 6) return false;
+    final firstControlBit = paymentIdStr[paymentIdStr.length - 2];
+    final secondControlBit = paymentIdStr[paymentIdStr.length - 1];
+    paymentIdStr = paymentIdStr.substring(0, paymentIdStr.length - 2);
+    return _calTheBit(paymentIdStr) == int.parse(firstControlBit) &&
+        _calTheBit(billIdSrt + paymentIdStr + firstControlBit) ==
+            int.parse(secondControlBit);
+  }
+
   /// Finds bill ID and payment ID from the given barcode or barcode class member
   /// which it returns ```List<int>``` - first one is bill ID , second one is payment ID
   List<int> findByBarcode([String? barcode]) {
