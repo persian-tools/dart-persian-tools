@@ -40,7 +40,7 @@ class Bill {
     int? billId,
     int? paymentId,
   })  : _barcode = barcode,
-        _currency = currency,
+        _currency = currencies.singleWhere((c) => currency == c),
         _billId = billId,
         _paymentId = paymentId;
 
