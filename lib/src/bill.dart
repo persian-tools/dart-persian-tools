@@ -91,6 +91,9 @@ class Bill {
         billType != 'unknown';
   }
 
+  /// Validates the Bill by bill ID and payment ID
+  bool get isBillValid => isBillIdValid && isPaymentIdValid;
+
   /// Finds bill ID and payment ID from the given barcode or barcode class member
   /// which it returns ```List<int>``` - first one is bill ID , second one is payment ID
   List<int> findByBarcode([String? barcode]) {
