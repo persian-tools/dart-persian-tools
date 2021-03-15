@@ -59,7 +59,7 @@ class Bill {
     var billIdStr = '$_billId';
     var billTypeKey = int.parse(
         billIdStr.substring(billIdStr.length - 2, billIdStr.length - 1));
-    return billTypesMap[billTypeKey]!;
+    return billTypesMap[billTypeKey] ?? 'unknown';
   }
 
   /// Creates barcode of the Bill from bill ID and payment ID
