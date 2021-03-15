@@ -43,4 +43,13 @@ class Bill {
         _currency = currency,
         _billId = billId,
         _paymentId = paymentId;
+
+  /// Takes amount of the Bill from payment ID
+  int get amount {
+    if (_paymentId == null) {
+      throw Exception('You can not use [amount] when [paymentId] is null');
+    }
+    final currency = _currency == 'rial' ? 1000 : 100;
+    return _paymentId! ~/ 100000 * currency;
+  }
 }
