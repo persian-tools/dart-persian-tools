@@ -53,4 +53,12 @@ class Bill {
     final currency = _currency == 'rial' ? 1000 : 100;
     return _paymentId! ~/ 100000 * currency;
   }
+
+  /// Takes bill type of the Bill form bill ID
+  String get billType {
+    var billIdStr = '$_billId';
+    var billTypeKey = int.parse(
+        billIdStr.substring(billIdStr.length - 2, billIdStr.length - 1));
+    return billTypesMap[billTypeKey]!;
+  }
 }
