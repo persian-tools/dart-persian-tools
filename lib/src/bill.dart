@@ -12,7 +12,7 @@ final List<String> billTypesList = [
 
 /// Saves bill types as a ```Map<int, String>```
 final Map<int, String> billTypesMap = Map.fromIterables(
-  List<int>.generate(9, (index) => index + 1),
+  List<int>.generate(8, (index) => index + 1),
   billTypesList,
 );
 
