@@ -17,7 +17,7 @@ final Map<int, String> billTypesMap = Map.fromIterables(
 );
 
 /// Saves Iranian currencies to use it in our codes as ```List<String>```
-final List<String> currency = ['toman', 'rial'];
+final List<String> currencies = ['toman', 'rial'];
 
 /// The means to gathering information from barcode or id and payment id of a bill
 class Bill {
