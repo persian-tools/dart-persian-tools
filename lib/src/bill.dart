@@ -67,4 +67,14 @@ class Bill {
     // ignore: unnecessary_brace_in_string_interps
     return '${_billId}000${_paymentId}';
   }
+
+  /// Finds bill ID and payment ID from the given barcode or barcode class member
+  /// which it returns ```List<int>``` - first one is bill ID , second one is payment ID
+  List<int> findByBarcode([String? barcode]) {
+    final nonNullBarcode = barcode ?? _barcode!;
+    return [
+      int.parse(nonNullBarcode.substring(0, 13)),
+      int.parse(nonNullBarcode.substring(16)),
+    ];
+  }
 }
