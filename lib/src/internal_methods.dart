@@ -11,7 +11,10 @@ final arabicContextualForms = RegExp(r'/[ي|ﻱ|ﻲ|ﻚ|ك|ﻚ|ﺔ|ﺓ|ة]/g');
 /// and create a [RegExp] pattern form keys of Map and if keys matched , replace
 /// matched string with corresponding value of key
 String replaceMap(String string, Map<String, String> mapPattern) {
-  // TODO: create test case and null checker for line:16
+  // TODO: create test case
   var regexp = RegExp(mapPattern.keys.join('|'), caseSensitive: false);
-  return string.replaceAllMapped(regexp, (match) => mapPattern[match.group(0)]);
+  return string.replaceAllMapped(
+    regexp,
+    (match) => mapPattern[match.group(0)]!,
+  );
 }
