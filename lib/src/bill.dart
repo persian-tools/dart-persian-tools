@@ -125,14 +125,4 @@ class Bill {
     }
     return sum;
   }
-
-  /// You can invoke the object of the Bill to get all information about the Bill
-  Map<String, dynamic> call() => {
-        'amount': amount,
-        'type': billType,
-        'barcode': barcode,
-        'isBillValid': isBillValid,
-        'isBillIdValid': isBillIdValid,
-        'isPaymentIdValid': isPaymentIdValid,
-      };
 }
