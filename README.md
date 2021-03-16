@@ -12,6 +12,7 @@
 <hr/>
 
 ## Features
+
 - [x] Adding ordinal suffixes
 - [ ] Converting Persian words to number
 - [ ] Converting Persian numbers to word
@@ -27,14 +28,35 @@
 - [ ] Getting information from vehicle plate
 
 ## Usage
+
 now let's look at examples and how work with apis in package
-- #### Adding Ordinal Suffixes
+
+- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/add_ordinal_suffix.dart)
+
 ```dart
 import 'package:dart_persian_tools/dart_persian_tools.dart';
 
 void main() {
-  var number = 'سی سه' // or سی | شصت | پنجاه دو
+  var number = 'سی سه'; // or سی | شصت | پنجاه دو
   print(addOrdinalSuffix(number)); // سی سوم | سی اُم | شصتم | پنجاه دوم
   print(number.withOrdinalSuffix); // ... like so
+}
+```
+
+- #### Calculating Bill - [source]()
+
+```dart
+import 'package:dart_persian_tools/dart_persian_tools.dart';
+
+void main() {
+  var bill = Bill(billId: 9174639504124, paymentId: 12908197, currency: 'rial');
+  print(bill.barcode); // 917463950412400012908197
+  print(bill.billType); // برق 
+  print(bill.amount); // 129000
+  print(bill.isBillValid); // false
+  print(bill.isPaymentIdValid); // false
+  print(bill.isBillIdValid); // true
+  // returns all the above getter as a Map with same as getters
+  print(bill()); 
 }
 ```
