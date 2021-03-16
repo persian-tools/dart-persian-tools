@@ -18,6 +18,7 @@
 - [ ] Converting Persian numbers to word
 - [ ] Adding and removing separator to/from numbers
 - [ ] Converting Persian numbers to Arabic / English numbers and reverse
+- [x] Checking a string has/is Persian
 - [ ] Validating Iranians national id
 - [ ] Finding city and province names by national id
 - [x] Calculating bills
@@ -42,6 +43,19 @@ void main() {
   print(number.withOrdinalSuffix); // ... like so
 }
 ```
+
+- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/example/example_ispersian_methods.dart)
+```dart
+import 'package:dart_persian_tools/dart_persian_tools.dart';
+
+void main() {
+  print(isPersian('این یک متن فارسی است؟')); // true
+  print(isPersian('هل هذا نص فارسي؟')); // false
+  print(hasPersian('This text includes فارسی')); // true
+  print(hasPersian('Это персидский س текст?')); // true
+  print(hasPersian('أكد رئيس اللجنة العسكرية الممثلة لحكومة الوفاق أراضي البلاد.')); //true
+}
+``` 
 
 - #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/bill.dart)
 
