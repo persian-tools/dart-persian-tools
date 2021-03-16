@@ -42,11 +42,7 @@ class Bill {
   })  : _barcode = barcode,
         _currency = currencies.singleWhere((c) => currency == c),
         _billId = billId,
-        _paymentId = paymentId {
-    if (billId == null && paymentId == null && barcode == null) {
-      throw Exception('billId and paymentId should passed together');
-    }
-  }
+        _paymentId = paymentId;
 
   /// Takes amount of the Bill from payment ID
   int get amount {
