@@ -44,7 +44,7 @@ void main() {
 }
 ```
 
-- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/example/example_ispersian_methods.dart)
+- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/isPersian/methods.dart)
 ```dart
 import 'package:dart_persian_tools/dart_persian_tools.dart';
 
