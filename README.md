@@ -43,7 +43,7 @@ void main() {
 }
 ```
 
-- #### Calculating Bill - [source]()
+- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/bill.dart)
 
 ```dart
 import 'package:dart_persian_tools/dart_persian_tools.dart';
