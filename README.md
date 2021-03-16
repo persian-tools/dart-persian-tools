@@ -19,7 +19,7 @@
 - [ ] Converting Persian numbers to Arabic / English numbers and reverse
 - [ ] Validating Iranians national id
 - [ ] Finding city and province names by national id
-- [ ] Calculating bills
+- [x] Calculating bills
 - [ ] Checking validation of IBAN (_SHEBA_)
 - [ ] Recognizing bank information by IBAN (_SHEBA_)
 - [ ] Validating ATM card number
