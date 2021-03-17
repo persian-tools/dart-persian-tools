@@ -1,0 +1,43 @@
+# Testing codes on every push/pull_request to master branch
+name: "Test master"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        sdk: [2.12.0]
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      
+      - name: Setup Dart SKD , v2.12.0
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+
+      - name: Install dependencies
+        run: pub get
+      
+      - name: Run tests and take coverage
+        run: pub run test --coverage=coverage
+        
+      - name: Install coverage
+        run: pub global activate coverage
+        
+      - name: Format json files to lcov
+        run: pub global run coverage:format_coverage -l -i coverage/test/ -o coverage/coverage.lcov
+      
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: coverage/coverage.lcov

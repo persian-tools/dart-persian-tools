@@ -6,6 +6,7 @@
     <p align="center">Persian Tools dart package which you can use in all platforms</p>
 
 [![MIT license](https://img.shields.io/badge/License-MIT-lightblue.svg)](https://github.com/persian-tools/dart-persian-tools/blob/master/LICENSE)
+[![codecov](https://codecov.io/gh/persian-tools/dart-persian-tools/branch/master/graph/badge.svg?token=2O5UD1VRHN)](https://codecov.io/gh/persian-tools/dart-persian-tools)
 [![Dart Version](https://img.shields.io/badge/Dart-v2.12.0-lightblue)](https://dart.dev)
 ![status](https://img.shields.io/badge/under_development-lightblue.svg)
 </div>
