@@ -34,7 +34,7 @@ jobs:
         run: pub global activate coverage
         
       - name: Format json files to lcov
-        run: pub global run coverage:format_coverage -l -i coverage/test/ -o coverage/coverage.lcov
+        run: pub global run coverage:format_coverage -l --packages=.test -i coverage/test/ -o coverage/coverage.lcov
       
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
