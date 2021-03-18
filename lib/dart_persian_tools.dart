@@ -15,3 +15,6 @@ export 'src/url_fix.dart';
 
 // exports [validateCardNumber]
 export 'src/validate_card_number.dart';
+
+// exports Digits methods
+export 'src/Digits/methods.dart';
