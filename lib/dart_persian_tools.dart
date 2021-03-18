@@ -12,3 +12,6 @@ export 'src/isPersian/methods.dart';
 
 /// exports [urlFix] method
 export 'src/url_fix.dart';
+
+/// exports [validateCardNumber]
+export 'src/validate_card_number.dart';
