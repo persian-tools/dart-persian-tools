@@ -28,7 +28,7 @@
 - [ ] Validating ATM card number
 - [ ] Finding name of banks by ATM card number
 - [ ] Getting information from vehicle plate
-
+- [x] Fixing and decoding URLs with whitespace
 ## Usage
 
 now let's look at examples and how work with apis in package
@@ -73,5 +73,16 @@ void main() {
   print(bill.isBillIdValid); // true
   // returns all the above getter as a Map with same as getters
   print(bill()); 
+}
+```
+
+- ####Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/url_fix.dart)
+
+```dart
+import 'package:dart_persian_tools/dart_persian_tools.dart';
+
+void main() {
+  var url = 'wss://hostname.domain/?q=i am a wrong query';
+  print(urlFix(url)); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
 }
 ```
