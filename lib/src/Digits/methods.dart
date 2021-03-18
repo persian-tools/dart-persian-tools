@@ -7,3 +7,11 @@ String convertEnToFa(String digits) {
   }
   return digits;
 }
+
+/// Takes a String that includes Persian digits and converts them to English digits
+String convertFaToEn(String digits) {
+  for (var i = 0; i < 10; i++) {
+    digits = digits.replaceAll('${faNumber[i]}', '$i');
+  }
+  return digits;
+}
