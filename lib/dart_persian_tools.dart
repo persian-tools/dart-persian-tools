@@ -9,3 +9,6 @@ export 'src/bill.dart';
 
 /// exports [isPersian] and [hasPersian] methods
 export 'src/isPersian/methods.dart';
+
+/// exports [urlFix] method
+export 'src/url_fix.dart';
