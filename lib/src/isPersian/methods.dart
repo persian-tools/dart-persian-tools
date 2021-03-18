@@ -1,4 +1,4 @@
-import './fa_chars.dart';
+import './constants.dart';
 
 /// Check is the input string Persian or not
 /// returns true if the input is matched with Farsi char dataset [RegExp], if not
