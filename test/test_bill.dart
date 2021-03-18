@@ -185,5 +185,19 @@ void main() {
         equals(1070189),
       );
     }); // test 'test findByBarcode method from the given barcode'
+
+    test('test call method', () {
+      var bill = Bill(billId: 9174639504124, paymentId: 12908197);
+      expect(
+          bill(),
+          equals({
+            'amount': 12900,
+            'type': 'برق',
+            'barcode': '917463950412400012908197',
+            'isBillValid': false,
+            'isBillIdValid': true,
+            'isPaymentIdValid': false,
+          }));
+    }); // test 'test call method'
   });
 }
