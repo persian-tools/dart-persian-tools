@@ -47,7 +47,7 @@ void main() {
         equals('این ها digit های عربی است : ٤٥٦'),
       );
     });
-    test('test convertArToFa', () {
+    test('test convertArToFa method', () {
       // digits in arabic , persian , english with arabic text
       expect(
         convertArToFa('السلام علیکم 14۱۲۳6٤٥'),
@@ -64,6 +64,25 @@ void main() {
       expect(
         convertArToFa('سلام به دوستای پرشین تولز : ٤٥٦٧123'),
         equals('سلام به دوستای پرشین تولز : ۴۵۶۷123'),
+      );
+    });
+    test('test convertArToEn method', () {
+      // digits in arabic and english with english text
+      expect(
+        convertArToEn('hello Persian Tools : 123٥٦٧'),
+        equals('hello Persian Tools : 123567'),
+      );
+
+      // digits in arabic with english text
+      expect(
+        convertArToEn('hey! i have arabic : ٠١٢٣٤٥٦٧٨٩'),
+        equals('hey! i have arabic : 0123456789'),
+      );
+
+      // digits in arabic , english with persian text
+      expect(
+        convertArToEn('سلام به دوستای پرشین تولز : ٤٥٦٧123'),
+        equals('سلام به دوستای پرشین تولز : 4567123'),
       );
     });
   });
