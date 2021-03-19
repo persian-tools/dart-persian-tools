@@ -47,7 +47,21 @@ void main() {
 }
 ```
 
+- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Digits/methods.dart)
+
+```dart
+import 'package:dart_persian_tools/dart_persian_tools.dart';
+
+void main() {
+  print(convertArToFa('السلام علیکم 14۱۲۳6٤٥')); // السلام علیکم 14۱۲۳6۴۵
+  print(convertArToEn('Persian Tools : 123٥٦٧')); // Persian Tools : 123567
+  print(convertEnToFa('سلام این هارو فارسی کن : 22۲۳۴')); // سلام این هارو فارسی کن : ۲۲۲۳۴
+  print(convertFaToEn('سلام این هارو اینگلیسی کن : 22۲۳۴')); // سلام این هارو اینگلیسی کن : 22234
+}
+```
+
 - #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/isPersian/methods.dart)
+
 ```dart
 import 'package:dart_persian_tools/dart_persian_tools.dart';
 
