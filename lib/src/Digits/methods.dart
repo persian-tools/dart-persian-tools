@@ -15,3 +15,11 @@ String convertFaToEn(String digits) {
   }
   return digits;
 }
+
+/// Takes a String that includes Arabic digits and converts them to Persian digits
+String convertArToFa(String digits) {
+  for (var i = 0; i < 10; i++) {
+    digits = digits.replaceAll(arNumber[i], faNumber[i]);
+  }
+  return digits;
+}
