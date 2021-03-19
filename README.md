@@ -16,21 +16,21 @@
 
 ## Features
 
-- [x] Adding ordinal suffixes
+- [x] [Adding ordinal suffixes](https://github.com/persian-tools/dart-persian-tools#adding-ordinal-suffixes---source)
 - [ ] Converting Persian words to number
 - [ ] Converting Persian numbers to word
 - [ ] Adding and removing separator to/from numbers
-- [ ] Converting Persian numbers to Arabic / English numbers and reverse
-- [x] Checking a string has/is Persian
+- [x] [Converting Persian numbers to Arabic / English numbers and reverse]()
+- [x] [Checking a string has/is Persian](https://github.com/persian-tools/dart-persian-tools#checking-a-string-hasis-persian---source)
 - [ ] Validating Iranians national id
 - [ ] Finding city and province names by national id
-- [x] Calculating bills
+- [x] [Calculating bills](https://github.com/persian-tools/dart-persian-tools#calculating-bill---source)
 - [ ] Checking validation of IBAN (_SHEBA_)
 - [ ] Recognizing bank information by IBAN (_SHEBA_)
-- [x] Validating ATM card number
+- [x] [Validating ATM card number](https://github.com/persian-tools/dart-persian-tools#validating-atm-card-number---source)
 - [ ] Finding name of banks by ATM card number
 - [ ] Getting information from vehicle plate
-- [x] Fixing and decoding URLs with whitespace
+- [x] [Fixing and decoding URLs with whitespace](https://github.com/persian-tools/dart-persian-tools#fixing-and-decoding-urls---source)
 ## Usage
 
 now let's look at examples and how work with apis in package
@@ -78,17 +78,6 @@ void main() {
 }
 ```
 
-- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/url_fix.dart)
-
-```dart
-import 'package:dart_persian_tools/dart_persian_tools.dart';
-
-void main() {
-  var url = 'wss://hostname.domain/?q=i am a wrong query';
-  print(urlFix(url)); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
-}
-```
-
 - #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/validate_card_number.dart)
 
 ```dart
@@ -99,5 +88,16 @@ void main(){
   print(validateCardNumber('6219861034529007')); // true
   print(validateCardNumber('0000000000000000')); // false
   print(validateCardNumber('621986103452900')); // false
+}
+```
+
+- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/url_fix.dart)
+
+```dart
+import 'package:dart_persian_tools/dart_persian_tools.dart';
+
+void main() {
+  var url = 'wss://hostname.domain/?q=i am a wrong query';
+  print(urlFix(url)); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
 }
 ```
