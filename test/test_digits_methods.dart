@@ -25,5 +25,27 @@ void main() {
         equals('این ها digit های عربی است : ٤٥٦'),
       );
     });
+    test('test convertFaToEn method', () {
+      // just digits
+      expect(convertFaToEn('۱۲۳456۷۸۹'), equals('123456789'));
+
+      // digits in english with english text
+      expect(
+        convertFaToEn('i have some numbers : ۱۰۰۲۵'),
+        equals('i have some numbers : 10025'),
+      );
+
+      // digits in english and persian with persian text
+      expect(
+        convertFaToEn('سلام این هارو اینگلیسی کن : 22۲۳۴'),
+        equals('سلام این هارو اینگلیسی کن : 22234'),
+      );
+
+      // digits in arabic with mixed english and persian text
+      expect(
+        convertFaToEn('این ها digit های عربی است : ٤٥٦'),
+        equals('این ها digit های عربی است : ٤٥٦'),
+      );
+    });
   });
 }
