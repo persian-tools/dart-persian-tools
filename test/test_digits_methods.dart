@@ -47,5 +47,24 @@ void main() {
         equals('این ها digit های عربی است : ٤٥٦'),
       );
     });
+    test('test convertArToFa', () {
+      // digits in arabic , persian , english with arabic text
+      expect(
+        convertArToFa('السلام علیکم 14۱۲۳6٤٥'),
+        equals('السلام علیکم 14۱۲۳6۴۵'),
+      );
+
+      // digits in arabic with english text
+      expect(
+        convertArToFa('hey! i have arabic : ٠١٢٣٤٥٦٧٨٩'),
+        equals('hey! i have arabic : ۰۱۲۳۴۵۶۷۸۹'),
+      );
+
+      // digits in arabic , english with persian text
+      expect(
+        convertArToFa('سلام به دوستای پرشین تولز : ٤٥٦٧123'),
+        equals('سلام به دوستای پرشین تولز : ۴۵۶۷123'),
+      );
+    });
   });
 }
