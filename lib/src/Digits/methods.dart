@@ -23,3 +23,11 @@ String convertArToFa(String digits) {
   }
   return digits;
 }
+
+/// Takes a String that includes Arabic digits and converts them to English digits
+String convertArToEn(String digits) {
+  for (var i = 0; i < 10; i++) {
+    digits = digits.replaceAll(arNumber[i], '$i');
+  }
+  return digits;
+}
