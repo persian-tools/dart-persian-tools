@@ -8,7 +8,6 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-lightblue.svg)](https://github.com/persian-tools/dart-persian-tools/blob/master/LICENSE)
 [![codecov](https://codecov.io/gh/persian-tools/dart-persian-tools/branch/master/graph/badge.svg?token=2O5UD1VRHN)](https://codecov.io/gh/persian-tools/dart-persian-tools)
 [![CI/CD](https://github.com/persian-tools/dart-persian-tools/workflows/Test%20master/badge.svg)]()
-[![CodeFactor](https://www.codefactor.io/repository/github/persian-tools/dart-persian-tools/badge)](https://www.codefactor.io/repository/github/persian-tools/dart-persian-tools)
 [![Dart Version](https://img.shields.io/badge/Dart-v2.12.0-lightblue)](https://dart.dev)
 ![status](https://img.shields.io/badge/under_development-lightblue.svg)
 </div>
