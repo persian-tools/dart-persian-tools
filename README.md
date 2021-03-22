@@ -21,7 +21,7 @@
 - [ ] Adding and removing separator to/from numbers
 - [x] [Converting Persian numbers to Arabic / English numbers and reverse]()
 - [x] [Checking a string has/is Persian](https://github.com/persian-tools/dart-persian-tools#checking-a-string-hasis-persian---source)
-- [ ] Validating Iranians national id
+- [x] Validating Iranians national id
 - [ ] Finding city and province names by national id
 - [x] [Calculating bills](https://github.com/persian-tools/dart-persian-tools#calculating-bill---source)
 - [ ] Checking validation of IBAN (_SHEBA_)
@@ -73,6 +73,25 @@ void main() {
 }
 ``` 
 
+- #### Validate Iranian national number(code-e Melli) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/sac/national_id.dart)
+
+```dart
+import 'package:dart_persian_tools/dart_persian_tools.dart';
+
+void main() {
+  var nationalID = '0684159414';
+  print(nationalID.verifyIranianNationalId); // true
+  
+  ///the nationalID should contain 10 digit, so the following verifications 
+  ///should return false
+  nationalID = '00000';
+  print(nationalID.verifyIranianNationalId); // false
+  
+  nationalID = '';
+  print(nationalID.verifyIranianNationalId); // false
+}
+```
+
 - #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/bill.dart)
 
 ```dart
@@ -112,24 +131,5 @@ import 'package:dart_persian_tools/dart_persian_tools.dart';
 void main() {
   var url = 'wss://hostname.domain/?q=i am a wrong query';
   print(urlFix(url)); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
-}
-```
-
-- #### Verifying Iranians national ID from String - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/sac/national_id.dart)
-
-```dart
-import 'package:dart_persian_tools/dart_persian_tools.dart';
-
-void main() {
-  var nationalID = '0684159414';
-  print(nationalID.verifyIranianNationalId); // true
-  
-  ///the nationalID should contain 10 digit, so the following verifications 
-  ///should return false
-  nationalID = '00000';
-  print(nationalID.verifyIranianNationalId); // false
-  
-  nationalID = '';
-  print(nationalID.verifyIranianNationalId); // false
 }
 ```
