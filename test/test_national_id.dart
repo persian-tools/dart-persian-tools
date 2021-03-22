@@ -17,8 +17,8 @@ void main() {
       );
     });
     test('test national ID validation', () {
-      expect('0499370899'.verifyIranianNationalId, true);
       expect('1111111111'.verifyIranianNationalId, true);
+      expect('0499370899'.verifyIranianNationalId, true);
       expect('0790419904'.verifyIranianNationalId, true);
       expect('0084575948'.verifyIranianNationalId, true);
       expect('0963695398'.verifyIranianNationalId, true);
