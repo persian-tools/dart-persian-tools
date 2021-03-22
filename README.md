@@ -15,21 +15,21 @@
 
 ## Features
 
-- [x] [Adding ordinal suffixes](https://github.com/persian-tools/dart-persian-tools#adding-ordinal-suffixes---source)
+- [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
 - [ ] Converting Persian words to number
 - [ ] Converting Persian numbers to word
 - [ ] Adding and removing separator to/from numbers
-- [x] [Converting Persian numbers to Arabic / English numbers and reverse]()
-- [x] [Checking a string has/is Persian](https://github.com/persian-tools/dart-persian-tools#checking-a-string-hasis-persian---source)
-- [x] Validating Iranians national id
+- [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
+- [x] [Checking a string has/is Persian](#checking-a-string-hasis-persian---source)
+- [x] [Validating Iranians national id](#validate-iranian-national-numbercode-e-melli---source)
 - [ ] Finding city and province names by national id
-- [x] [Calculating bills](https://github.com/persian-tools/dart-persian-tools#calculating-bill---source)
+- [x] [Calculating bills](#calculating-bill---source)
 - [ ] Checking validation of IBAN (_SHEBA_)
 - [ ] Recognizing bank information by IBAN (_SHEBA_)
-- [x] [Validating ATM card number](https://github.com/persian-tools/dart-persian-tools#validating-atm-card-number---source)
+- [x] [Validating ATM card number](#validating-atm-card-number---source)
 - [ ] Finding name of banks by ATM card number
 - [ ] Getting information from vehicle plate
-- [x] [Fixing and decoding URLs with whitespace](https://github.com/persian-tools/dart-persian-tools#fixing-and-decoding-urls---source)
+- [x] [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
 ## Usage
 
 now let's look at examples and how work with apis in package
