@@ -5,17 +5,12 @@ void main() {
   group('test national_id.dart', () {
     test('test input validation', () {
       /// empty string
-      expect(
-        ''.verifyIranianNationalId,
-        false,
-      );
+      expect(''.verifyIranianNationalId, false);
 
       /// non 10 chars string - national id should contain 10 chars
-      expect(
-        '00000'.verifyIranianNationalId,
-        false,
-      );
+      expect('00000'.verifyIranianNationalId, false);
     });
+
     test('test national ID validation', () {
       expect('1111111111'.verifyIranianNationalId, true);
       expect('0499370899'.verifyIranianNationalId, true);

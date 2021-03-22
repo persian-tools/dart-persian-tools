@@ -114,3 +114,22 @@ void main() {
   print(urlFix(url)); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
 }
 ```
+
+- #### Verifying Iranians national ID from String - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/sac/national_id.dart)
+
+```dart
+import 'package:dart_persian_tools/dart_persian_tools.dart';
+
+void main() {
+  var nationalID = '0684159414';
+  print(nationalID.verifyIranianNationalId); // true
+  
+  ///the nationalID should contain 10 digit, so the following verifications 
+  ///should return false
+  nationalID = '00000';
+  print(nationalID.verifyIranianNationalId); // false
+  
+  nationalID = '';
+  print(nationalID.verifyIranianNationalId); // false
+}
+```
