@@ -3,11 +3,16 @@ import './constants.dart';
 /// Takes Sheba code and gives information from it
 class Sheba {
   final String _shebaCode;
+
+  /// [RegExp] to checking validation of the sheba
   final pattern = RegExp(r'IR[0-9]{24}');
+
+  /// [RegExp] to finding bank code
   final patternCode = RegExp(r'IR[0-9]{2}([0-9]{3})[0-9]{19}');
 
   Sheba(this._shebaCode);
 
+  // TODO:adding documentation
   int _iso7064Mod97_10(String iban) {
     String remainder = iban, block;
     while (remainder.length > 2) {
@@ -23,6 +28,7 @@ class Sheba {
     return int.parse(remainder) % 97;
   }
 
+  /// Checks validation of the sheba
   bool get isValid {
     final shebaCode = _shebaCode;
     if (shebaCode.length != 26) return false;
@@ -35,6 +41,7 @@ class Sheba {
     return remainder != 1 ? false : true;
   }
 
+  /// Returns all information from sheba code
   Map<String, dynamic>? call() {
     final shebaCode = _shebaCode;
     if (!isValid) return null;
