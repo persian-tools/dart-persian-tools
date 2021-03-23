@@ -18,3 +18,6 @@ export 'src/validate_card_number.dart';
 
 // exports Digits methods
 export 'src/Digits/methods.dart';
+
+// exports Sheba methods
+export 'src/Sheba/methods.dart';
