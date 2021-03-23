@@ -11,7 +11,12 @@ class Sheba {
   int _iso7064Mod97_10(String iban) {
     String remainder = iban, block;
     while (remainder.length > 2) {
-      block = remainder.substring(0, 9);
+      // like slice in TS
+      try {
+        block = remainder.substring(0, 9);
+      } on RangeError catch (e) {
+        block = remainder;
+      }
       remainder =
           '${int.parse(block) % 97}' + remainder.substring(block.length);
     }
