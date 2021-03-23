@@ -1,4 +1,3 @@
-/// Banks information
 const _banksInfo = <Map<String, dynamic>>[
   {
     'nickname': 'central-bank',
@@ -316,4 +315,5 @@ Map<String, String> _shahrBankProc(String string) {
   };
 }
 
+/// Banks information
 final banksInfo = {for (var bank in _banksInfo) bank['code'] as String: bank};
