@@ -34,4 +34,19 @@ class Sheba {
     final remainder = _iso7064Mod97_10(iban);
     return remainder != 1 ? false : true;
   }
+
+  Map<String, dynamic>? call() {
+    final shebaCode = _shebaCode;
+    if (!isValid) return null;
+    final bankCode = patternCode.firstMatch(shebaCode)?[1] ?? '';
+    var bank = banksInfo[bankCode];
+    if (bank == null) return null;
+    if (bank['accountNumberAvailable']) {
+      final data = bank['process'](shebaCode);
+      bank['accountNumber'] = data['normal'];
+      bank['formattedAccountNumber'] = data['formatted'];
+    }
+    bank.remove('process');
+    return bank;
+  }
 }
