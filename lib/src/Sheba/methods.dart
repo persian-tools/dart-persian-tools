@@ -8,4 +8,13 @@ class Sheba {
 
   Sheba(this._shebaCode);
 
+  int _iso7064Mod97_10(String iban) {
+    String remainder = iban, block;
+    while (remainder.length > 2) {
+      block = remainder.substring(0, 9);
+      remainder =
+          '${int.parse(block) % 97}' + remainder.substring(block.length);
+    }
+    return int.parse(remainder) % 97;
+  }
 }
