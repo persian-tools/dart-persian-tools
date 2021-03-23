@@ -17,4 +17,16 @@ class Sheba {
     }
     return int.parse(remainder) % 97;
   }
+
+  bool get isValid {
+    final shebaCode = _shebaCode;
+    if (shebaCode.length != 26) return false;
+    if (!pattern.hasMatch(shebaCode)) return false;
+    final d1 = shebaCode.codeUnitAt(0) - 65 + 10;
+    final d2 = shebaCode.codeUnitAt(1) - 65 + 10;
+    var iban = shebaCode.substring(4);
+    iban += '$d1$d2${shebaCode.substring(2, 4)}';
+    final remainder = _iso7064Mod97_10(iban);
+    return remainder != 1 ? false : true;
+  }
 }
