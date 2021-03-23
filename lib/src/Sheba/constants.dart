@@ -1,4 +1,4 @@
-const _banksInfo = <Map<String, dynamic>>[
+var _banksInfo = <Map<String, dynamic>>[
   {
     'nickname': 'central-bank',
     'name': 'Central Bank of Iran',
