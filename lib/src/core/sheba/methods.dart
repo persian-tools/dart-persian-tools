@@ -1,4 +1,4 @@
-import './constants.dart';
+import '../../constants/sheba/constants.dart';
 
 /// Takes Sheba code and gives information from it
 class Sheba {

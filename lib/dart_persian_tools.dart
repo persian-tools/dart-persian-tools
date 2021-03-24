@@ -2,22 +2,22 @@
 library dart_persian_tools;
 
 // exports [addOrdinalSuffix] method and [AddOrdinalSuffix] extension
-export 'src/add_ordinal_suffix.dart';
+export 'src/core/add_ordinal_suffix/add_ordinal_suffix.dart';
 
 // exports [Bill] class
-export 'src/bill.dart';
+export 'src/core/bill/bill.dart';
 
-// exports [isPersian] and [hasPersian] methods
-export 'src/isPersian/methods.dart';
+// exports isPersian/methods
+export 'src/core/is_persian/methods.dart';
 
 // exports [urlFix] method
-export 'src/url_fix.dart';
+export 'src/core/url_fix/url_fix.dart';
 
 // exports [validateCardNumber]
-export 'src/validate_card_number.dart';
+export 'src/core/validate_card_number/validate_card_number.dart';
 
-// exports Digits methods
-export 'src/Digits/methods.dart';
+// exports Digits/methods
+export 'src/core/digits/methods.dart';
 
-// exports Sheba methods
-export 'src/Sheba/methods.dart';
+// exports Sheba/methods
+export 'src/core/sheba/methods.dart';
