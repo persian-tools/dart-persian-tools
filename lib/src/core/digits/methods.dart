@@ -1,4 +1,4 @@
-import './constants.dart';
+import '../../constants/digits/constants.dart';
 
 /// Takes a String that includes English digits and coverts them to Persian digits
 String convertEnToFa(String digits) {
