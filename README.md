@@ -33,7 +33,7 @@
 
 now let's look at examples and how work with apis in package
 
-- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/add_ordinal_suffix.dart)
+- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/feature/sheba/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
 
 ```dart
 var number = 'سی سه'; // or سی | شصت | پنجاه دو
@@ -41,7 +41,7 @@ addOrdinalSuffix(number); // سی سوم | سی اُم | شصتم | پنجاه �
 number.withOrdinalSuffix // ... like so
 ```
 
-- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Digits/methods.dart)
+- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/feature/sheba/lib/src/core/digits/methods.dart)
 
 ```dart
 convertArToFa('السلام علیکم 14۱۲۳6٤٥'); // السلام علیکم 14۱۲۳6۴۵
@@ -50,7 +50,7 @@ convertEnToFa('سلام این هارو فارسی کن : 22۲۳۴'); // سلا�
 convertFaToEn('سلام این هارو اینگلیسی کن : 22۲۳۴'); // سلام این هارو اینگلیسی کن : 22234
 ```
 
-- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/isPersian/methods.dart)
+- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/feature/sheba/lib/src/core/is_persian/methods.dart)
 
 ```dart
 isPersian('این یک متن فارسی است؟'); // true
@@ -60,7 +60,7 @@ hasPersian('Это персидский س текст?'); // true
 hasPersian('أكد رئيس اللجنة العسكرية الممثلة لحكومة الوفاق أراضي البلاد.'); //true
 ``` 
 
-- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/bill.dart)
+- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/feature/sheba/lib/src/core/bill/bill.dart)
 
 ```dart
 var bill = Bill(billId: 9174639504124, paymentId: 12908197, currency: 'rial');
@@ -74,7 +74,7 @@ bill.isBillIdValid // true
 bill();
 ```
 
-- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
+- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/feature/sheba/lib/src/core/sheba/methods.dart)
   
 ```dart
 var sheba = Sheba('IR820540102680020817909002');
@@ -82,7 +82,7 @@ sheba(); // Returns all the information about bank from sheba
 sheba.isValid; // true
 ```
 
-- #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/validate_card_number.dart)
+- #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/feature/sheba/lib/src/core/validate_card_number/validate_card_number.dart)
 
 ```dart
 validateCardNumber('6219861034529007'); // true
@@ -91,7 +91,7 @@ validateCardNumber('0000000000000000'); // false
 validateCardNumber('621986103452900'); // false
 ```
 
-- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/url_fix.dart)
+- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/feature/sheba/lib/src/core/url_fix/url_fix.dart)
 
 ```dart
 var url = 'wss://hostname.domain/?q=i am a wrong query';
