@@ -24,7 +24,7 @@
 - [ ] Validating Iranians national id
 - [ ] Finding city and province names by national id
 - [x] [Calculating bills](#calculating-bill---source)
-- [ ] Checking IBAN of the bank account (_SHEBA_)
+- [x] [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
 - [x] [Validating ATM card number](#validating-atm-card-number---source)
 - [ ] Finding name of banks by ATM card number
 - [ ] Getting information from vehicle plate
@@ -72,6 +72,14 @@ bill.isPaymentIdValid // false
 bill.isBillIdValid // true
 // returns all the above getter as a Map with same as getters
 bill();
+```
+
+- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
+  
+```dart
+var sheba = Sheba('IR820540102680020817909002');
+sheba(); // Returns all the information about bank from sheba
+sheba.isValid; // true
 ```
 
 - #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/validate_card_number.dart)
