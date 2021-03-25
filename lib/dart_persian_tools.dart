@@ -21,3 +21,6 @@ export 'src/core/digits/methods.dart';
 
 // exports Sheba/methods
 export 'src/core/sheba/methods.dart';
+
+// exports [NationalId] extension and
+export 'src/core/national_id/national_id.dart';
