@@ -18,3 +18,6 @@ export 'src/core/validate_card_number/validate_card_number.dart';
 
 // exports Digits methods
 export 'src/core/digits/methods.dart';
+
+// exports [NationalId] extension and
+export 'src/core/national_id/national_id.dart';

@@ -5,5 +5,6 @@ void main() {
   print(isPersian('هل هذا نص فارسي؟')); // false
   print(hasPersian('This text includes فارسی')); // true
   print(hasPersian('Это персидский س текст?')); // true
-  print(hasPersian('أكد رئيس اللجنة العسكرية الممثلة لحكومة الوفاق أراضي البلاد.')); //true
+  print(hasPersian(
+      'أكد رئيس اللجنة العسكرية الممثلة لحكومة الوفاق أراضي البلاد.')); //true
 }
