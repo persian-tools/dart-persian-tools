@@ -8,6 +8,23 @@ class AccountNumberModel {
   });
 }
 
+/// Stores Bank information that [banksInfo] uses
+class BankInformation {
+  final String nickname, name, persianName, code;
+  final bool accountNumberAvailable;
+  final AccountNumberModel Function(String)? process;
+  String? accountNumber, formattedAccountNumber;
+
+  BankInformation({
+    required this.nickname,
+    required this.name,
+    required this.persianName,
+    required this.code,
+    required this.accountNumberAvailable,
+    this.process,
+  });
+}
+
 var _banksInfo = <Map<String, dynamic>>[
   {
     'nickname': 'central-bank',
