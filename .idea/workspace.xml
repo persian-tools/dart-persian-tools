@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d239e344-b65f-4ed2-8326-fa96cd01458c" name="Default Changelist" comment="" />
+    <list default="true" id="d239e344-b65f-4ed2-8326-fa96cd01458c" name="Default Changelist" comment="merge with master">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,13 +101,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615659980894</updated>
-    </task>
-    <task id="LOCAL-00054" summary="improvement(main lib):export url_fix.dart">
-      <created>1616073308749</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1616073308749</updated>
     </task>
     <task id="LOCAL-00055" summary="test(url fix):added urlFix test">
       <created>1616078918171</created>
@@ -443,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616660416543</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="merge with master">
+      <created>1616664200133</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1616664200133</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -474,7 +476,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(digits):added convertArToEn method" />
     <MESSAGE value="test(digits):added convertArToEn testcases" />
     <MESSAGE value="feat(digits):added example for Digits/methods" />
     <MESSAGE value="improvement(readme):update README.md" />
@@ -499,6 +500,7 @@
     <MESSAGE value="Merge from master" />
     <MESSAGE value="docs(readme):added sheba documents" />
     <MESSAGE value="feat(commas):added addCommas method" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(commas):added addCommas method" />
+    <MESSAGE value="merge with master" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge with master" />
   </component>
 </project>
