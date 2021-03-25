@@ -4,6 +4,8 @@
     <list default="true" id="d239e344-b65f-4ed2-8326-fa96cd01458c" name="Default Changelist" comment="feat(sheba):added AccountNumberModel class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_sheba_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_sheba_methods.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,13 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615659980894</updated>
-    </task>
-    <task id="LOCAL-00057" summary="docs(readme):added urlFix to README.md">
-      <created>1616079687451</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1616079687451</updated>
     </task>
     <task id="LOCAL-00058" summary="improvement(readme):update README.md">
       <created>1616080236067</created>
@@ -446,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616666082048</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="feat(sheba):added BankInformation class">
+      <created>1616684196481</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1616684196482</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -477,7 +479,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(digits):added example for Digits/methods" />
     <MESSAGE value="improvement(readme):update README.md" />
     <MESSAGE value="docs(readme):added Digits/methods" />
     <MESSAGE value="feat(sheba):added dataset" />
@@ -502,6 +503,7 @@
     <MESSAGE value="feat(commas):added addCommas method" />
     <MESSAGE value="merge with master" />
     <MESSAGE value="feat(sheba):added AccountNumberModel class" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(sheba):added AccountNumberModel class" />
+    <MESSAGE value="feat(sheba):added BankInformation class" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(sheba):added BankInformation class" />
   </component>
 </project>

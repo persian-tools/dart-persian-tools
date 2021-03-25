@@ -1,5 +1,32 @@
 import '../../constants/sheba/constants.dart';
 
+/// Stores account number that _*Proc methods returns
+class AccountNumberModel {
+  final String accountNumber, formattedAccountNumber;
+
+  AccountNumberModel({
+    required this.accountNumber,
+    required this.formattedAccountNumber,
+  });
+}
+
+/// Stores Bank information that [banksInfo] uses
+class BankInformation {
+  final String nickname, name, persianName, code;
+  final bool accountNumberAvailable;
+  final AccountNumberModel Function(String)? process;
+  String? accountNumber, formattedAccountNumber;
+
+  BankInformation({
+    required this.nickname,
+    required this.name,
+    required this.persianName,
+    required this.code,
+    required this.accountNumberAvailable,
+    this.process,
+  });
+}
+
 /// Takes Sheba code and gives information from it
 class Sheba {
   final String _shebaCode;
@@ -42,18 +69,17 @@ class Sheba {
   }
 
   /// Returns all information from sheba code
-  Map<String, dynamic>? call() {
+  BankInformation? call() {
     final shebaCode = _shebaCode;
     if (!isValid) return null;
     final bankCode = patternCode.firstMatch(shebaCode)?[1] ?? '';
     var bank = banksInfo[bankCode];
     if (bank == null) return null;
-    if (bank['accountNumberAvailable']) {
-      final data = bank['process'](shebaCode);
-      bank['accountNumber'] = data['normal'];
-      bank['formattedAccountNumber'] = data['formatted'];
+    if (bank.accountNumberAvailable) {
+      final data = bank.process!(shebaCode);
+      bank.accountNumber = data.accountNumber;
+      bank.formattedAccountNumber = data.formattedAccountNumber;
     }
-    bank.remove('process');
     return bank;
   }
 }
