@@ -75,7 +75,7 @@ nationalID = '';
 nationalID.isIranianNationalId; // false
 ```
 
-- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/bill.dart)
+- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/bill/bill.dart)
 
 ```dart
 var bill = Bill(billId: 9174639504124, paymentId: 12908197, currency: 'rial');
@@ -89,7 +89,7 @@ bill.isBillIdValid // true
 bill();
 ```
 
-- #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/validate_card_number.dart)
+- #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/validate_card_number/validate_card_number.dart)
 
 ```dart
 validateCardNumber('6219861034529007'); // true
@@ -98,7 +98,7 @@ validateCardNumber('0000000000000000'); // false
 validateCardNumber('621986103452900'); // false
 ```
 
-- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/url_fix.dart)
+- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
 
 ```dart
 var url = 'wss://hostname.domain/?q=i am a wrong query';
