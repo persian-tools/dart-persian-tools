@@ -24,6 +24,8 @@ class BankInformation {
     required this.code,
     required this.accountNumberAvailable,
     this.process,
+    this.accountNumber,
+    this.formattedAccountNumber,
   });
 }
 
