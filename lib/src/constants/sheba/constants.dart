@@ -1,3 +1,13 @@
+/// Stores account number that _*Proc methods returns
+class AccountNumberModel {
+  final String accountNumber, formattedAccountNumber;
+
+  AccountNumberModel({
+    required this.accountNumber,
+    required this.formattedAccountNumber,
+  });
+}
+
 var _banksInfo = <Map<String, dynamic>>[
   {
     'nickname': 'central-bank',
