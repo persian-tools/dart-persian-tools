@@ -19,7 +19,7 @@ void main() {
                 name: 'Parsian Bank',
                 persianName: 'بانک پارسیان',
                 code: '054',
-                accountNumberAvailable: true,
+                isAccountNumberAvailable: true,
                 accountNumber: '020817909002',
                 formattedAccountNumber: '0020-0081790-002'),
           ));

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d239e344-b65f-4ed2-8326-fa96cd01458c" name="Default Changelist" comment="feat(sheba):added AccountNumberModel class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_sheba_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/example_sheba_methods.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_sheba_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_sheba_methods.dart" afterDir="false" />
     </list>
@@ -103,41 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615659980894</updated>
-    </task>
-    <task id="LOCAL-00059" summary="test(bill):added call method testcase">
-      <created>1616080240823</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1616080240823</updated>
-    </task>
-    <task id="LOCAL-00060" summary="feat(validate card number):added validateCardNumber method">
-      <created>1616082398110</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1616082398111</updated>
-    </task>
-    <task id="LOCAL-00061" summary="improvement(main lib):export validate_card_number.dart">
-      <created>1616082598620</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1616082598620</updated>
-    </task>
-    <task id="LOCAL-00062" summary="improvement(main lib):change doc comments to regular comments">
-      <created>1616082643102</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1616082643102</updated>
-    </task>
-    <task id="LOCAL-00063" summary="fix(validate card number):change number of iteration">
-      <created>1616083558047</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1616083558048</updated>
     </task>
     <task id="LOCAL-00064" summary="test(validate card number):create testcase">
       <created>1616083687623</created>
@@ -447,7 +414,42 @@
       <option name="project" value="LOCAL" />
       <updated>1616692947549</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="improvement(sheba):added two fields in BankInformation class constructor">
+      <created>1616698258357</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1616698258357</updated>
+    </task>
+    <task id="LOCAL-00109" summary="feat(sheba):override == operator in BankInformation">
+      <created>1616739938083</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1616739938083</updated>
+    </task>
+    <task id="LOCAL-00110" summary="feat(sheba):set process field to null&#10;in Map we remove it instead we set it null">
+      <created>1616740036649</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1616740036649</updated>
+    </task>
+    <task id="LOCAL-00111" summary="improvement(sheba):update testcase">
+      <created>1616740099393</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1616740099393</updated>
+    </task>
+    <task id="LOCAL-00112" summary="improvement(sheba):update example">
+      <created>1616740696404</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1616740696404</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -478,11 +480,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs(readme):added Digits/methods" />
-    <MESSAGE value="feat(sheba):added dataset" />
-    <MESSAGE value="docs(sheba):added dataset documents" />
-    <MESSAGE value="feat(sheba):added and init Sheba class" />
-    <MESSAGE value="feat(sheba):added private _iso7064Mod97_10 method" />
     <MESSAGE value="feat(sheba):added isValid getter" />
     <MESSAGE value="improvement(main lib):export Sheba/methods.dart" />
     <MESSAGE value="test(sheba):test isValid getter" />
@@ -503,6 +500,11 @@
     <MESSAGE value="feat(sheba):added AccountNumberModel class" />
     <MESSAGE value="feat(sheba):added BankInformation class" />
     <MESSAGE value="feat(sheba):changed banks info type&#10;from Map&lt;String , dynamic&gt; to BankInformation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(sheba):changed banks info type&#10;from Map&lt;String , dynamic&gt; to BankInformation" />
+    <MESSAGE value="improvement(sheba):added two fields in BankInformation class constructor" />
+    <MESSAGE value="feat(sheba):override == operator in BankInformation" />
+    <MESSAGE value="feat(sheba):set process field to null&#10;in Map we remove it instead we set it null" />
+    <MESSAGE value="improvement(sheba):update testcase" />
+    <MESSAGE value="improvement(sheba):update example" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvement(sheba):update example" />
   </component>
 </project>

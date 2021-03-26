@@ -13,7 +13,7 @@ class AccountNumberModel {
 /// Stores Bank information that [banksInfo] uses
 class BankInformation {
   final String nickname, name, persianName, code;
-  final bool accountNumberAvailable;
+  final bool isAccountNumberAvailable;
   AccountNumberModel Function(String)? process;
   String? accountNumber, formattedAccountNumber;
 
@@ -22,7 +22,7 @@ class BankInformation {
     required this.name,
     required this.persianName,
     required this.code,
-    required this.accountNumberAvailable,
+    required this.isAccountNumberAvailable,
     this.process,
     this.accountNumber,
     this.formattedAccountNumber,
@@ -35,7 +35,7 @@ class BankInformation {
         name == other.name &&
         persianName == other.persianName &&
         code == other.code &&
-        accountNumberAvailable == other.accountNumberAvailable &&
+        isAccountNumberAvailable == other.isAccountNumberAvailable &&
         accountNumber == other.accountNumber &&
         formattedAccountNumber == other.formattedAccountNumber &&
         process == other.process;
@@ -90,7 +90,7 @@ class Sheba {
     final bankCode = patternCode.firstMatch(shebaCode)?[1] ?? '';
     var bank = banksInfo[bankCode];
     if (bank == null) return null;
-    if (bank.accountNumberAvailable) {
+    if (bank.isAccountNumberAvailable) {
       final data = bank.process!(shebaCode);
       bank.accountNumber = data.accountNumber;
       bank.formattedAccountNumber = data.formattedAccountNumber;
