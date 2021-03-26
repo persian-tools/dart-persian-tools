@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d239e344-b65f-4ed2-8326-fa96cd01458c" name="Default Changelist" comment="feat(sheba):added AccountNumberModel class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_sheba_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_sheba_methods.dart" afterDir="false" />
     </list>
@@ -104,13 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615659980894</updated>
-    </task>
-    <task id="LOCAL-00058" summary="improvement(readme):update README.md">
-      <created>1616080236067</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1616080236067</updated>
     </task>
     <task id="LOCAL-00059" summary="test(bill):added call method testcase">
       <created>1616080240823</created>
@@ -448,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616684196482</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="feat(sheba):changed banks info type&#10;from Map&lt;String , dynamic&gt; to BankInformation">
+      <created>1616692947548</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1616692947549</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -479,7 +478,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improvement(readme):update README.md" />
     <MESSAGE value="docs(readme):added Digits/methods" />
     <MESSAGE value="feat(sheba):added dataset" />
     <MESSAGE value="docs(sheba):added dataset documents" />
@@ -504,6 +502,7 @@
     <MESSAGE value="merge with master" />
     <MESSAGE value="feat(sheba):added AccountNumberModel class" />
     <MESSAGE value="feat(sheba):added BankInformation class" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(sheba):added BankInformation class" />
+    <MESSAGE value="feat(sheba):changed banks info type&#10;from Map&lt;String , dynamic&gt; to BankInformation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(sheba):changed banks info type&#10;from Map&lt;String , dynamic&gt; to BankInformation" />
   </component>
 </project>
