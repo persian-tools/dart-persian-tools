@@ -14,7 +14,7 @@ class AccountNumberModel {
 class BankInformation {
   final String nickname, name, persianName, code;
   final bool accountNumberAvailable;
-  final AccountNumberModel Function(String)? process;
+  AccountNumberModel Function(String)? process;
   String? accountNumber, formattedAccountNumber;
 
   BankInformation({
@@ -95,6 +95,7 @@ class Sheba {
       bank.accountNumber = data.accountNumber;
       bank.formattedAccountNumber = data.formattedAccountNumber;
     }
+    bank.process = null;
     return bank;
   }
 }
