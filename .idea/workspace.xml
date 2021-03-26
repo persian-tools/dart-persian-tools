@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d239e344-b65f-4ed2-8326-fa96cd01458c" name="Default Changelist" comment="feat(sheba):added AccountNumberModel class">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_sheba_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/example_sheba_methods.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/constants/sheba/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/sheba/methods.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_sheba_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_sheba_methods.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/persian-tools/dart-persian-tools" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1piJT02QVkyIkfsDyEDZUkfldVY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="yaml" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Dart" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/constants/sheba" />
+      <recent name="$PROJECT_DIR$/lib/src/core" />
+      <recent name="$PROJECT_DIR$/lib/src/constants/is_persian" />
+      <recent name="$PROJECT_DIR$/lib/src/constants/digits" />
+      <recent name="$PROJECT_DIR$/lib/src/add_ordinal_suffix" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Dart Test.run tests">
+    <configuration name="example_sheba_methods.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/example/example_sheba_methods.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <option name="filePath" value="$PROJECT_DIR$/test" />
+      <option name="scope" value="FOLDER" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run tests" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <option name="filePath" value="$PROJECT_DIR$/test/" />
+      <option name="scope" value="FOLDER" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Dart Command Line App.example_sheba_methods.dart" />
+      <item itemvalue="Dart Test.run tests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Dart Command Line App.example_sheba_methods.dart" />
+        <item itemvalue="Dart Command Line App.example_sheba_methods.dart" />
+        <item itemvalue="Dart Command Line App.example_sheba_methods.dart" />
+        <item itemvalue="Dart Command Line App.example_sheba_methods.dart" />
+        <item itemvalue="Dart Command Line App.example_sheba_methods.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d239e344-b65f-4ed2-8326-fa96cd01458c" name="Default Changelist" comment="" />
+      <created>1615659980894</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615659980894</updated>
+    </task>
+    <task id="LOCAL-00064" summary="test(validate card number):create testcase">
+      <created>1616083687623</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1616083687623</updated>
+    </task>
+    <task id="LOCAL-00065" summary="feat(validate card number):added example for validateCardNumber">
+      <created>1616083829477</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1616083829477</updated>
+    </task>
+    <task id="LOCAL-00066" summary="docs(validate card number):added validateCardNumber to README.md">
+      <created>1616084007562</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1616084007562</updated>
+    </task>
+    <task id="LOCAL-00067" summary="improvement(is persian):refactor fa_chars.dart to constants.dart">
+      <created>1616084704889</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1616084704889</updated>
+    </task>
+    <task id="LOCAL-00068" summary="feat(digits):added datasets">
+      <created>1616087099770</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1616087099770</updated>
+    </task>
+    <task id="LOCAL-00069" summary="improvement(readme):added CI/CD badge">
+      <created>1616087132434</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1616087132434</updated>
+    </task>
+    <task id="LOCAL-00070" summary="feat(digits):added convertEnToFa method">
+      <created>1616087211820</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1616087211820</updated>
+    </task>
+    <task id="LOCAL-00071" summary="improvement(digits):export Digits/methods.dart">
+      <created>1616087429548</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1616087429548</updated>
+    </task>
+    <task id="LOCAL-00072" summary="test(digits):added convertEnToFa testcases">
+      <created>1616088190125</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1616088190125</updated>
+    </task>
+    <task id="LOCAL-00073" summary="improvement(readme):added CodeFactor badge">
+      <created>1616089667879</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1616089667879</updated>
+    </task>
+    <task id="LOCAL-00074" summary="feat(digits):added convertFaToEn methods">
+      <created>1616091324793</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1616091324793</updated>
+    </task>
+    <task id="LOCAL-00075" summary="test(digits):added convertFaToEn testcases">
+      <created>1616148500181</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1616148500182</updated>
+    </task>
+    <task id="LOCAL-00076" summary="feat(digits):added convertArToFa method">
+      <created>1616148777342</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1616148777342</updated>
+    </task>
+    <task id="LOCAL-00077" summary="test(digits):added convertArToFa testcases">
+      <created>1616149221238</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1616149221238</updated>
+    </task>
+    <task id="LOCAL-00078" summary="feat(digits):added convertArToEn method">
+      <created>1616149521392</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1616149521392</updated>
+    </task>
+    <task id="LOCAL-00079" summary="test(digits):added convertArToEn testcases">
+      <created>1616149834785</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1616149834785</updated>
+    </task>
+    <task id="LOCAL-00080" summary="feat(digits):added example for Digits/methods">
+      <created>1616151988101</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1616151988101</updated>
+    </task>
+    <task id="LOCAL-00081" summary="improvement(readme):update README.md">
+      <created>1616152597245</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1616152597245</updated>
+    </task>
+    <task id="LOCAL-00082" summary="docs(readme):added Digits/methods">
+      <created>1616152626490</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1616152626490</updated>
+    </task>
+    <task id="LOCAL-00083" summary="feat(sheba):added dataset">
+      <created>1616491416584</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1616491416585</updated>
+    </task>
+    <task id="LOCAL-00084" summary="docs(sheba):added dataset documents">
+      <created>1616491468444</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1616491468444</updated>
+    </task>
+    <task id="LOCAL-00085" summary="feat(sheba):added and init Sheba class">
+      <created>1616506506457</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1616506506459</updated>
+    </task>
+    <task id="LOCAL-00086" summary="feat(sheba):added private _iso7064Mod97_10 method">
+      <created>1616506547162</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1616506547162</updated>
+    </task>
+    <task id="LOCAL-00087" summary="feat(sheba):added isValid getter">
+      <created>1616506597772</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1616506597772</updated>
+    </task>
+    <task id="LOCAL-00088" summary="improvement(main lib):export Sheba/methods.dart">
+      <created>1616506634718</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1616506634718</updated>
+    </task>
+    <task id="LOCAL-00089" summary="test(sheba):test isValid getter">
+      <created>1616508733236</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1616508733236</updated>
+    </task>
+    <task id="LOCAL-00090" summary="fix(sheba):fix RangeError in _iso7064Mod97_10 method">
+      <created>1616510476521</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1616510476521</updated>
+    </task>
+    <task id="LOCAL-00091" summary="improvement(sheba):lowercase to CamelCase">
+      <created>1616515649432</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1616515649432</updated>
+    </task>
+    <task id="LOCAL-00092" summary="improvement(sheba):change const to var&#10;to adding keys and values">
+      <created>1616517963092</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1616517963092</updated>
+    </task>
+    <task id="LOCAL-00093" summary="feat(sheba):added call method">
+      <created>1616520047298</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1616520047298</updated>
+    </task>
+    <task id="LOCAL-00094" summary="docs(sheba):added documentation">
+      <created>1616520558661</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1616520558661</updated>
+    </task>
+    <task id="LOCAL-00095" summary="docs(sheba):added methods documentation">
+      <created>1616520725198</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1616520725198</updated>
+    </task>
+    <task id="LOCAL-00096" summary="test(sheba):added call method testcase">
+      <created>1616521123734</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1616521123734</updated>
+    </task>
+    <task id="LOCAL-00097" summary="feat(sheba):added example of sheba/methods.dart">
+      <created>1616521275270</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1616521275270</updated>
+    </task>
+    <task id="LOCAL-00098" summary="improvement:cleaner directory in lib/src">
+      <created>1616588053266</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1616588053267</updated>
+    </task>
+    <task id="LOCAL-00099" summary="improvement:update README.md">
+      <created>1616588137562</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1616588137562</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Merge from master">
+      <created>1616589104877</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1616589104877</updated>
+    </task>
+    <task id="LOCAL-00101" summary="docs(readme):added sheba documents">
+      <created>1616590323399</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1616590323399</updated>
+    </task>
+    <task id="LOCAL-00102" summary="feat(commas):added addCommas method">
+      <created>1616660416542</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1616660416543</updated>
+    </task>
+    <task id="LOCAL-00103" summary="merge with master">
+      <created>1616664200133</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1616664200133</updated>
+    </task>
+    <task id="LOCAL-00104" summary="merge with master">
+      <created>1616664559544</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1616664559544</updated>
+    </task>
+    <task id="LOCAL-00105" summary="feat(sheba):added AccountNumberModel class">
+      <created>1616666082047</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1616666082048</updated>
+    </task>
+    <task id="LOCAL-00106" summary="feat(sheba):added BankInformation class">
+      <created>1616684196481</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1616684196482</updated>
+    </task>
+    <task id="LOCAL-00107" summary="feat(sheba):changed banks info type&#10;from Map&lt;String , dynamic&gt; to BankInformation">
+      <created>1616692947548</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1616692947549</updated>
+    </task>
+    <task id="LOCAL-00108" summary="improvement(sheba):added two fields in BankInformation class constructor">
+      <created>1616698258357</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1616698258357</updated>
+    </task>
+    <task id="LOCAL-00109" summary="feat(sheba):override == operator in BankInformation">
+      <created>1616739938083</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1616739938083</updated>
+    </task>
+    <task id="LOCAL-00110" summary="feat(sheba):set process field to null&#10;in Map we remove it instead we set it null">
+      <created>1616740036649</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1616740036649</updated>
+    </task>
+    <task id="LOCAL-00111" summary="improvement(sheba):update testcase">
+      <created>1616740099393</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1616740099393</updated>
+    </task>
+    <task id="LOCAL-00112" summary="improvement(sheba):update example">
+      <created>1616740696404</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1616740696404</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.test" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/sheba" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(sheba):added isValid getter" />
+    <MESSAGE value="improvement(main lib):export Sheba/methods.dart" />
+    <MESSAGE value="test(sheba):test isValid getter" />
+    <MESSAGE value="fix(sheba):fix RangeError in _iso7064Mod97_10 method" />
+    <MESSAGE value="improvement(sheba):lowercase to CamelCase" />
+    <MESSAGE value="improvement(sheba):change const to var&#10;to adding keys and values" />
+    <MESSAGE value="feat(sheba):added call method" />
+    <MESSAGE value="docs(sheba):added documentation" />
+    <MESSAGE value="docs(sheba):added methods documentation" />
+    <MESSAGE value="test(sheba):added call method testcase" />
+    <MESSAGE value="feat(sheba):added example of sheba/methods.dart" />
+    <MESSAGE value="improvement:cleaner directory in lib/src" />
+    <MESSAGE value="improvement:update README.md" />
+    <MESSAGE value="Merge from master" />
+    <MESSAGE value="docs(readme):added sheba documents" />
+    <MESSAGE value="feat(commas):added addCommas method" />
+    <MESSAGE value="merge with master" />
+    <MESSAGE value="feat(sheba):added AccountNumberModel class" />
+    <MESSAGE value="feat(sheba):added BankInformation class" />
+    <MESSAGE value="feat(sheba):changed banks info type&#10;from Map&lt;String , dynamic&gt; to BankInformation" />
+    <MESSAGE value="improvement(sheba):added two fields in BankInformation class constructor" />
+    <MESSAGE value="feat(sheba):override == operator in BankInformation" />
+    <MESSAGE value="feat(sheba):set process field to null&#10;in Map we remove it instead we set it null" />
+    <MESSAGE value="improvement(sheba):update testcase" />
+    <MESSAGE value="improvement(sheba):update example" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvement(sheba):update example" />
+  </component>
+</project>

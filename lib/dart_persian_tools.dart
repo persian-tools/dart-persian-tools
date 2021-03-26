@@ -7,7 +7,7 @@ export 'src/core/add_ordinal_suffix/add_ordinal_suffix.dart';
 // exports [Bill] class
 export 'src/core/bill/bill.dart';
 
-// exports [isPersian] and [hasPersian] methods
+// exports isPersian/methods
 export 'src/core/is_persian/methods.dart';
 
 // exports [urlFix] method
@@ -16,8 +16,11 @@ export 'src/core/url_fix/url_fix.dart';
 // exports [validateCardNumber]
 export 'src/core/validate_card_number/validate_card_number.dart';
 
-// exports Digits methods
+// exports Digits/methods
 export 'src/core/digits/methods.dart';
+
+// exports Sheba/methods
+export 'src/core/sheba/methods.dart';
 
 // exports [NationalId] extension and
 export 'src/core/national_id/national_id.dart';

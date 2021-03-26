@@ -24,7 +24,7 @@
 - [x] [Validating Iranians national id](#validate-iranian-national-id---source)
 - [ ] Finding city and province names by national id
 - [x] [Calculating bills](#calculating-bill---source)
-- [ ] Checking IBAN of the bank account (_SHEBA_)
+- [x] [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
 - [x] [Validating ATM card number](#validating-atm-card-number---source)
 - [ ] Finding name of banks by ATM card number
 - [ ] Getting information from vehicle plate
@@ -87,6 +87,23 @@ bill.isPaymentIdValid // false
 bill.isBillIdValid // true
 // returns all the above getter as a Map with same as getters
 bill();
+```
+
+- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
+  
+```dart
+var sheba = Sheba('IR820540102680020817909002');
+var bank = sheba(); // Returns nullable object of BankInformation
+bank?.nickname // nickname of bank
+bank?.name // complete name of bank
+bank?.persianName // complete persian name of bank
+bank?.code // code of bank
+// true means with sheba package can take account number, false means package can't
+bank?.isAccountNumberAvailable
+bank?.accountNumber // account number in simple numbers
+bank?.formattedAccountNumber // account number with hyphen
+bank?.process
+sheba.isValid // true
 ```
 
 - #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/validate_card_number/validate_card_number.dart)
