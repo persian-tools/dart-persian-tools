@@ -27,6 +27,19 @@ class BankInformation {
     this.accountNumber,
     this.formattedAccountNumber,
   });
+
+  @override
+  bool operator ==(Object other) {
+    other = other as BankInformation;
+    return nickname == other.nickname &&
+        name == other.name &&
+        persianName == other.persianName &&
+        code == other.code &&
+        accountNumberAvailable == other.accountNumberAvailable &&
+        accountNumber == other.accountNumber &&
+        formattedAccountNumber == other.formattedAccountNumber &&
+        process == other.process;
+  }
 }
 
 /// Takes Sheba code and gives information from it
