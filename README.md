@@ -93,8 +93,17 @@ bill();
   
 ```dart
 var sheba = Sheba('IR820540102680020817909002');
-sheba(); // Returns all the information about bank from sheba
-sheba.isValid; // true
+var bank = sheba(); // Returns nullable object of BankInformation
+bank?.nickname // nickname of bank
+bank?.name // complete name of bank
+bank?.persianName // complete persian name of bank
+bank?.code // code of bank
+// true means with sheba package can take account number, false means package can't
+bank?.isAccountNumberAvailable
+bank?.accountNumber // account number in simple numbers
+bank?.formattedAccountNumber // account number with hyphen
+bank?.process
+sheba.isValid // true
 ```
 
 - #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/validate_card_number/validate_card_number.dart)
