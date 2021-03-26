@@ -13,16 +13,16 @@ void main() {
       var sheba = Sheba('IR820540102680020817909002');
       expect(
           sheba(),
-          equals({
-            'nickname': 'parsian',
-            'name': 'Parsian Bank',
-            'persianName': 'بانک پارسیان',
-            'code': '054',
-            'accountNumberAvailable': true,
-            'accountNumber': '020817909002',
-            'formattedAccountNumber': '0020-0081790-002',
-          }));
-
+          equals(
+            BankInformation(
+                nickname: 'parsian',
+                name: 'Parsian Bank',
+                persianName: 'بانک پارسیان',
+                code: '054',
+                accountNumberAvailable: true,
+                accountNumber: '020817909002',
+                formattedAccountNumber: '0020-0081790-002'),
+          ));
     });
   });
 }
