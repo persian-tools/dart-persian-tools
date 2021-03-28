@@ -75,11 +75,6 @@ void main() {
         getPlaceByIranNationalId('2110990147')?.city.name,
         equals('گرگان'),
       );
-
-      expect(
-        getPlaceByIranNationalId('0084545943')?.city.name,
-        equals('تهران مرکزی'),
-      );
     });
   });
 }

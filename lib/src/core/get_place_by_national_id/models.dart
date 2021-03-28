@@ -89,6 +89,17 @@ class NationalIdPlace {
 
   String get codesAsString => codes.join('-');
 
+  NationalIdPlace copyWith({
+    List<String>? codes,
+    City? city,
+    Province? province,
+  }) =>
+      NationalIdPlace(
+        codes: codes ?? this.codes,
+        city: city ?? this.city,
+        province: province ?? this.province,
+      );
+
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||

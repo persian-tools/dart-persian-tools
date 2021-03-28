@@ -1,6 +1,6 @@
 import 'package:dart_persian_tools/src/core/get_place_by_national_id/models.dart';
 
-final nationalIdPlaces = [
+final nationalIdPlaces = <NationalIdPlace?>[
   NationalIdPlace.fromStringCodes(
     codes: '169',
     city: City(name: 'آذرشهر'),
