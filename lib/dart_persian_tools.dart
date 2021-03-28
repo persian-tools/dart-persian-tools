@@ -24,3 +24,6 @@ export 'src/core/sheba/methods.dart';
 
 // exports [NationalId] extension and
 export 'src/core/national_id/national_id.dart';
+
+// exports [getPlaceByNationalId] method and extension
+export 'src/core/get_place_by_national_id/get_place_by_national_id.dart';
