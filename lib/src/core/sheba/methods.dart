@@ -61,7 +61,7 @@ class Sheba {
       // like slice in TS
       try {
         block = remainder.substring(0, 9);
-      } on RangeError catch (e) {
+      } on RangeError catch (_) {
         block = remainder;
       }
       remainder =
