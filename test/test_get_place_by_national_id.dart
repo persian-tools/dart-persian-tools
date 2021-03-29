@@ -76,5 +76,67 @@ void main() {
         equals('گرگان'),
       );
     });
+
+    test('test getPlaceNationalId extension method', () {
+      expect(
+        '0499370899'.getPlaceNationalId?.city.name,
+        equals('شهرری'),
+      );
+
+      expect(
+        '0790419904'.getPlaceNationalId?.city.name,
+        equals('سبزوار'),
+      );
+
+      expect(
+        '0084575948'.getPlaceNationalId?.city.name,
+        equals('تهران مرکزی'),
+      );
+
+      expect(
+        '0060495219'.getPlaceNationalId?.city.name,
+        equals('تهران مرکزی'),
+      );
+
+      expect(
+        '0671658506'.getPlaceNationalId?.city.name,
+        equals('بجنورد'),
+      );
+
+      expect(
+        '0671658506'.getPlaceNationalId?.city.name,
+        equals('بجنورد'),
+      );
+
+      expect(
+        '0643005846'.getPlaceNationalId?.city.name,
+        equals('بیرجند'),
+      );
+
+      expect(
+        '0906582709'.getPlaceNationalId?.city.name,
+        equals('کاشمر'),
+      );
+
+      expect(
+        '0451727304'.getPlaceNationalId?.city.name,
+        equals('شمیران'),
+      );
+
+      expect(
+        '0371359058'.getPlaceNationalId?.city.name,
+        equals('قم'),
+      );
+
+      expect(
+        '5049478618'.getPlaceNationalId?.city.name,
+        equals('پارس آباد'),
+      );
+
+      expect(
+        '2110990147'.getPlaceNationalId?.city.name,
+        equals('گرگان'),
+      );
+    });
   });
 }
