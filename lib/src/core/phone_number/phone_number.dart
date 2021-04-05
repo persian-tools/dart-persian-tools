@@ -26,7 +26,7 @@ bool phoneNumberValidator(String phoneNumber) {
 }
 
 extension PhoneNumberExtension on String {
-  String get phonePrefix => getPhonePrefix(this);
+  String get phoneNumberPrefix => getPhonePrefix(this);
 
   OperatorDetail? get phoneNumberDetail => getPhoneNumberDetail(this);
 
