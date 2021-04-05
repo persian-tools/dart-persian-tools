@@ -24,3 +24,7 @@ export 'src/core/sheba/methods.dart';
 
 // exports [NationalId] extension and
 export 'src/core/national_id/national_id.dart';
+
+// exports [phoneNumber]
+export 'src/core/phone_number/phone_number.dart';
+
