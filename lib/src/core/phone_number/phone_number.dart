@@ -2,8 +2,8 @@ import 'package:dart_persian_tools/src/constants/phone_number/constants.dart';
 
 import 'models.dart';
 
-String getPhonePrefix(String mobile) {
-  final matches = mobileRegex.allMatches(mobile);
+String getPhonePrefix(String phoneNumber) {
+  final matches = mobileRegex.allMatches(phoneNumber);
 
   if (matches.isNotEmpty) {
     return matches.first.group(1) ?? '';
@@ -12,12 +12,23 @@ String getPhonePrefix(String mobile) {
   return '';
 }
 
+OperatorDetail? getPhoneNumberDetail(String phoneNumber) {
+  if (phoneNumberValidator(phoneNumber)) {
+    final prefix = getPhonePrefix(phoneNumber);
 
-OperatorDetail? phoneNumberDetail(String phoneNumber) {
-  //ToDo(payam) : implement this function
+    return operators[prefix];
+  }
 }
 
 bool phoneNumberValidator(String phoneNumber) {
-  //ToDo(payam) : implement this function
-  return false;
+  return mobileRegex.hasMatch(phoneNumber) &&
+      prefixes.contains(getPhonePrefix(phoneNumber));
+}
+
+extension PhoneNumberExtension on String {
+  String get phonePrefix => getPhonePrefix(this);
+
+  OperatorDetail? get phoneNumberDetail => getPhoneNumberDetail(this);
+
+  bool get isPhoneNumber => phoneNumberValidator(this);
 }

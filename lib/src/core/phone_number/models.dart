@@ -49,7 +49,11 @@ class OperatorDetail {
 
   @override
   int get hashCode =>
-      base.hashCode ^ provinces.hashCode ^ model.hashCode ^ type.hashCode ^ operator.hashCode;
+      base.hashCode ^
+      provinces.hashCode ^
+      model.hashCode ^
+      type.hashCode ^
+      operator.hashCode;
 
   @override
   String toString() {
@@ -64,14 +68,16 @@ class Operator {
 
   static const shatelMobile = Operator._('شاتل موبایل');
   static const MCI = Operator._('همراه اول');
-  static const Irancell = Operator._('ایرانسل');
-  static const Taliya = Operator._('تالیا');
-  static const RightTel = Operator._('رایتل');
+  static const irancell = Operator._('ایرانسل');
+  static const taliya = Operator._('تالیا');
+  static const rightTel = Operator._('رایتل');
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Operator && runtimeType == other.runtimeType && name == other.name;
+      other is Operator &&
+          runtimeType == other.runtimeType &&
+          name == other.name;
 
   @override
   int get hashCode => name.hashCode;

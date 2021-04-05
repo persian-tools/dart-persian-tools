@@ -5,28 +5,28 @@ import 'package:test/test.dart';
 void main() {
   group('test phone_number.dart', () {
     test('test phoneNumberValidator method', () {
-      final number1 = phoneNumberDetail('09022002580');
+      final number1 = getPhoneNumberDetail('09022002580');
 
       expect(number1?.base, 'کشوری');
-      expect(number1?.operator, 'ایرانسل');
+      expect(number1?.operator?.name, 'ایرانسل');
       expect(number1?.type, SimCardType.both);
 
-      final number2 = phoneNumberDetail('09981000000');
+      final number2 = getPhoneNumberDetail('09981000000');
 
       expect(number2?.base, 'کشوری');
-      expect(number2?.operator, 'شاتل موبایل');
+      expect(number2?.operator?.name, 'شاتل موبایل');
       expect(number2?.type, SimCardType.credit);
 
-      final number3 = phoneNumberDetail('09300880440');
+      final number3 = getPhoneNumberDetail('09300880440');
 
       expect(number3?.base, 'کشوری');
-      expect(number3?.operator, 'ایرانسل');
+      expect(number3?.operator?.name, 'ایرانسل');
       expect(number3?.type, SimCardType.both);
 
-      expect(phoneNumberDetail('09022002580')?.provinces?.length ?? 0, 0);
+      expect(getPhoneNumberDetail('09022002580')?.provinces?.length ?? 0, 0);
 
       /// Should return null, because it's not an iranian phone number
-      expect(phoneNumberDetail('09802002580'), null);
+      expect(getPhoneNumberDetail('09802002580'), null);
     });
     test('test phoneNumberValidator method', () {
       expect(phoneNumberValidator('09022002580'), true);
