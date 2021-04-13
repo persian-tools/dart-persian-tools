@@ -27,3 +27,6 @@ export 'src/core/national_id/national_id.dart';
 
 // exports [phoneNumber]
 export 'src/core/phone_number/phone_number.dart';
+
+// exports [getPlaceByNationalId] method and extension
+export 'src/core/get_place_by_national_id/get_place_by_national_id.dart';

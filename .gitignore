@@ -12,6 +12,5 @@ build/
 # Directory created by dartdoc
 doc/api/
 
-# .idea directory
-**.idea/**
-
+/.idea/libraries
+/.idea/
