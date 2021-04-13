@@ -26,6 +26,7 @@
 - [x] [Calculating bills](#calculating-bill---source)
 - [x] [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
 - [x] [Validating ATM card number](#validating-atm-card-number---source)
+- [x] [Validating Iranians phone number](#validating-iranians-phone-number---source)
 - [ ] Finding name of banks by ATM card number
 - [ ] Getting information from vehicle plate
 - [x] [Fixing and decoding URLs with whitespace](https://github.com/persian-tools/dart-persian-tools#fixing-and-decoding-urls---source)
@@ -127,6 +128,36 @@ validateCardNumber('6219861034529007'); // true
 validateCardNumber('6219861034529007'); // true
 validateCardNumber('0000000000000000'); // false
 validateCardNumber('621986103452900'); // false
+```
+
+- #### Validating Iranians phone number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/phone_number/phone_number.dart)
+
+```dart
+final phoneNumber = '09022002580';
+
+// phone number validator
+phoneNumberValidator(phoneNumber); // true
+
+// phone number prefix
+getPhonePrefix(phoneNumber); // 902
+
+// phone number detail
+final operatorDetail = getPhoneNumberDetail(phoneNumber);
+operatorDetail?.name; // ایرانسل
+operatorDetail?.provinces; // []
+operatorDetail?.base; // کشوری
+operatorDetail?.type; // SimCartType.both
+
+/// you can also use this methods as String extension method
+
+// phone number validator
+phoneNumber.isPhoneNumber; // true
+
+// phone number prefix
+phoneNumber.phoneNumberPrefix; // 902
+
+// phone number detail
+phoneNumber.phoneNumberDetail?.name; // ایرانسل
 ```
 
 - #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
