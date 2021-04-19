@@ -4,7 +4,8 @@ import 'package:test/test.dart';
 void main() {
   group('test get_bank_name_from_card_number.dart', () {
     test('test getBankNameFromCardNumber method', () {
-      expect(getBankNameFromCardNumber('6037701689095443')?.name, 'بانک کشاورزی');
+      expect(
+          getBankNameFromCardNumber('6037701689095443')?.name, 'بانک کشاورزی');
       expect(getBankNameFromCardNumber('6219861034529007')?.name, 'بانک سامان');
       expect(getBankNameFromCardNumber('6219861034529007')?.name, 'بانک سامان');
 

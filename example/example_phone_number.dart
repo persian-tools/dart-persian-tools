@@ -15,7 +15,6 @@ void main() {
   print(operatorDetail?.base); // کشوری
   print(operatorDetail?.type); // SimCartType.both
 
-
   /// you can also use this methods as String extension method
 
   // phone number validator

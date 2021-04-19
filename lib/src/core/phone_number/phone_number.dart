@@ -17,7 +17,6 @@ String getPhonePrefix(String phoneNumber) {
   return '';
 }
 
-
 /// find information such as province, type and model of [phoneNumber]
 /// this function used the [getPhonePrefix] to find out the [phoneNumber] prefix number and
 /// used the [phoneNumberValidator] function to validate the [phoneNumber].
