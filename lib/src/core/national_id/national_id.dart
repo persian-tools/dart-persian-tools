@@ -1,6 +1,5 @@
-
 /// check the [value] is an iranian national ID
-bool  verifyIranianNationalId(String value){
+bool verifyIranianNationalId(String value) {
   if (!RegExp(r'^\d{10}$').hasMatch(value)) return false;
 
   final nationalId = '0000$value'.substring(value.length + 4 - 10);
@@ -16,8 +15,7 @@ bool  verifyIranianNationalId(String value){
 
   sum = sum % 11;
 
-  return (sum < 2 && lastNumber == sum) ||
-      (sum >= 2 && lastNumber == 11 - sum);
+  return (sum < 2 && lastNumber == sum) || (sum >= 2 && lastNumber == 11 - sum);
 }
 
 extension NationalId on String {
