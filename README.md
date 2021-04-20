@@ -27,9 +27,9 @@
 - [x] [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
 - [x] [Validating ATM card number](#validating-atm-card-number---source)
 - [x] [Validating Iranians phone number](#validating-iranians-phone-number---source)
-- [ ] Finding name of banks by ATM card number
+- [x] [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
 - [ ] Getting information from vehicle plate
-- [x] [Fixing and decoding URLs with whitespace](https://github.com/persian-tools/dart-persian-tools#fixing-and-decoding-urls---source)
+- [x] [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
 ## Usage
 
 now let's look at examples and how work with apis in package
@@ -158,6 +158,21 @@ phoneNumber.phoneNumberPrefix; // 902
 
 // phone number detail
 phoneNumber.phoneNumberDetail?.name; // ایرانسل
+```
+
+- #### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
+
+```dart
+final cardNumber = '6037701689095443';
+
+final bankInfo = getBankNameFromCardNumber(cardNumber);
+bankInfo?.name; // بانک کشاورزی
+bankInfo?.initCode; // 603770
+
+/// you can also use this methods as String extension method
+
+// get bank info from String 
+cardNumber.bankNameFromCard?.name; // بانک کشاورزی
 ```
 
 - #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)

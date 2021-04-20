@@ -30,3 +30,6 @@ export 'src/core/phone_number/phone_number.dart';
 
 // exports [getPlaceByNationalId] method and extension
 export 'src/core/get_place_by_national_id/get_place_by_national_id.dart';
+
+// exports [getBankNameFromCardNumber] method and extension
+export 'src/core/get_bank_name_from_card_number/get_bank_name_from_card_number.dart';
