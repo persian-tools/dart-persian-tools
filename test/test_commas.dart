@@ -21,5 +21,9 @@ void main() {
       expect(removeCommas('30,000,000'), equals(30000000));
       expect(removeCommas('300'), equals(300));
     });
+    test('extension methods', () {
+      expect('522642'.addComma, equals('522,642'));
+      expect('56,555.978'.removeComma, equals(56555.978));
+    });
   });
 }

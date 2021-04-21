@@ -50,6 +50,9 @@ addCommas('۸۲۳۳۴۵'); // 823,345
 
 removeCommas('654,562'); // 654562
 removeCommas('3,365.255'); // 3365.255
+
+'11222'.addComma // 11,222
+'4,544.562'.removeComma // 4544.562
 ```
 
 - #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/methods.dart)
