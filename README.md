@@ -18,7 +18,7 @@
 - [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
 - [ ] Converting Persian words to number
 - [ ] Converting Persian numbers to word
-- [ ] Adding and removing separator to/from numbers
+- [x] [Adding and removing separator to / from numbers](#adding-and-removing-separator-to--from-numbers---source)
 - [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
 - [x] [Checking a string has/is Persian](#checking-a-string-hasis-persian---source)
 - [x] [Validating Iranians national id](#validate-iranian-national-id---source)
@@ -40,6 +40,19 @@ now let's look at examples and how work with apis in package
 var number = 'سی سه'; // or سی | شصت | پنجاه دو
 addOrdinalSuffix(number); // سی سوم | سی اُم | شصتم | پنجاه دوم
 number.withOrdinalSuffix // ... like so
+```
+
+- #### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)
+
+```dart
+addCommas('3333'); // 3,333
+addCommas('۸۲۳۳۴۵'); // 823,345
+
+removeCommas('654,562'); // 654562
+removeCommas('3,365.255'); // 3365.255
+
+'11222'.addComma // 11,222
+'4,544.562'.removeComma // 4544.562
 ```
 
 - #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/methods.dart)
