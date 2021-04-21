@@ -36,3 +36,6 @@ export 'src/core/get_bank_name_from_card_number/get_bank_name_from_card_number.d
 
 // exports [addCommas] and [removeCommas] methods
 export 'src/core/commas/methods.dart';
+
+// exports [Plate] class
+export 'src/core/vehicle_plate/classes.dart';
