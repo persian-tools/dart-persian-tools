@@ -21,19 +21,20 @@
 - [ ] Adding and removing separator to/from numbers
 - [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
 - [x] [Checking a string has/is Persian](#checking-a-string-hasis-persian---source)
-- [ ] Validating Iranians national id
-- [ ] Finding city and province names by national id
+- [x] [Validating Iranians national id](#validate-iranian-national-id---source)
+- [x] [Finding city and province names by national id](#find-city-and-province-name-by-national-code---source)
 - [x] [Calculating bills](#calculating-bill---source)
-- [ ] Checking IBAN of the bank account (_SHEBA_)
+- [x] [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
 - [x] [Validating ATM card number](#validating-atm-card-number---source)
-- [ ] Finding name of banks by ATM card number
+- [x] [Validating Iranians phone number](#validating-iranians-phone-number---source)
+- [x] [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
 - [ ] Getting information from vehicle plate
 - [x] [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
 ## Usage
 
 now let's look at examples and how work with apis in package
 
-- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/add_ordinal_suffix.dart)
+- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
 
 ```dart
 var number = 'سی سه'; // or سی | شصت | پنجاه دو
@@ -41,7 +42,7 @@ addOrdinalSuffix(number); // سی سوم | سی اُم | شصتم | پنجاه �
 number.withOrdinalSuffix // ... like so
 ```
 
-- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Digits/methods.dart)
+- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/methods.dart)
 
 ```dart
 convertArToFa('السلام علیکم 14۱۲۳6٤٥'); // السلام علیکم 14۱۲۳6۴۵
@@ -50,7 +51,7 @@ convertEnToFa('سلام این هارو فارسی کن : 22۲۳۴'); // سلا�
 convertFaToEn('سلام این هارو اینگلیسی کن : 22۲۳۴'); // سلام این هارو اینگلیسی کن : 22234
 ```
 
-- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/isPersian/methods.dart)
+- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/is_persian/methods.dart)
 
 ```dart
 isPersian('این یک متن فارسی است؟'); // true
@@ -58,9 +59,38 @@ isPersian('هل هذا نص فارسي؟'); // false
 hasPersian('This text includes فارسی'); // true
 hasPersian('Это персидский س текст?'); // true
 hasPersian('أكد رئيس اللجنة العسكرية الممثلة لحكومة الوفاق أراضي البلاد.'); //true
-``` 
+```
 
-- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/bill.dart)
+- #### Validate Iranian national ID - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/national_id/national_id.dart)
+
+```dart
+var nationalID = '0684159414';
+verifyIranianNationalId(nationalID); // true
+  
+///the nationalID should contain 10 digit, so the following verifications
+///should return false
+nationalID = '00000';
+verifyIranianNationalId(nationalID); // false
+
+/// verify nationalId with extension methods over [String] class
+nationalID = '';
+nationalID.isIranianNationalId; // false
+```
+
+- #### Find city and province name by national code - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core\get_place_by_national_id\get_place_by_national_id.dart)
+
+```dart
+final place = getPlaceByIranNationalId('0084575948');
+place?.city.name; // تهران مرکزی
+place?.province.name; // تهران
+
+/// get place with extension methods over [String] class
+final nationalId = '2110990147';
+nationalId.getPlaceNationalId?.city.name; // گرگان
+nationalId.getPlaceNationalId?.province.name; // گلستان
+```
+
+- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/bill/bill.dart)
 
 ```dart
 var bill = Bill(billId: 9174639504124, paymentId: 12908197, currency: 'rial');
@@ -74,7 +104,24 @@ bill.isBillIdValid // true
 bill();
 ```
 
-- #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/validate_card_number.dart)
+- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
+  
+```dart
+var sheba = Sheba('IR820540102680020817909002');
+var bank = sheba(); // Returns nullable object of BankInformation
+bank?.nickname // nickname of bank
+bank?.name // complete name of bank
+bank?.persianName // complete persian name of bank
+bank?.code // code of bank
+// true means with sheba package can take account number, false means package can't
+bank?.isAccountNumberAvailable
+bank?.accountNumber // account number in simple numbers
+bank?.formattedAccountNumber // account number with hyphen
+bank?.process
+sheba.isValid // true
+```
+
+- #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/validate_card_number/validate_card_number.dart)
 
 ```dart
 validateCardNumber('6219861034529007'); // true
@@ -83,7 +130,52 @@ validateCardNumber('0000000000000000'); // false
 validateCardNumber('621986103452900'); // false
 ```
 
-- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/url_fix.dart)
+- #### Validating Iranians phone number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/phone_number/phone_number.dart)
+
+```dart
+final phoneNumber = '09022002580';
+
+// phone number validator
+phoneNumberValidator(phoneNumber); // true
+
+// phone number prefix
+getPhonePrefix(phoneNumber); // 902
+
+// phone number detail
+final operatorDetail = getPhoneNumberDetail(phoneNumber);
+operatorDetail?.name; // ایرانسل
+operatorDetail?.provinces; // []
+operatorDetail?.base; // کشوری
+operatorDetail?.type; // SimCartType.both
+
+/// you can also use this methods as String extension method
+
+// phone number validator
+phoneNumber.isPhoneNumber; // true
+
+// phone number prefix
+phoneNumber.phoneNumberPrefix; // 902
+
+// phone number detail
+phoneNumber.phoneNumberDetail?.name; // ایرانسل
+```
+
+- #### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
+
+```dart
+final cardNumber = '6037701689095443';
+
+final bankInfo = getBankNameFromCardNumber(cardNumber);
+bankInfo?.name; // بانک کشاورزی
+bankInfo?.initCode; // 603770
+
+/// you can also use this methods as String extension method
+
+// get bank info from String 
+cardNumber.bankNameFromCard?.name; // بانک کشاورزی
+```
+
+- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
 
 ```dart
 var url = 'wss://hostname.domain/?q=i am a wrong query';
