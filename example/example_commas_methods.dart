@@ -6,4 +6,7 @@ void main() {
 
   print(removeCommas('654,562')); // 654562
   print(removeCommas('3,365.255')); // 3365.255
+
+  print('11222'.addComma); // 11,222
+  print('4,544.562'.removeComma); // 4544.562
 }
