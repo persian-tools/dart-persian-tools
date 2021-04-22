@@ -28,7 +28,7 @@
 - [x] [Validating ATM card number](#validating-atm-card-number---source)
 - [x] [Validating Iranians phone number](#validating-iranians-phone-number---source)
 - [x] [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
-- [ ] Getting information from vehicle plate
+- [x] [Getting information from vehicle plate](#getting-information-from-vehicle-plate---source)
 - [x] [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
 ## Usage
 
@@ -183,6 +183,25 @@ bankInfo?.initCode; // 603770
 
 // get bank info from String 
 cardNumber.bankNameFromCard?.name; // بانک کشاورزی
+```
+
+- ### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/classes.dart)
+
+```dart
+var motorcyclePlate = Plate(plate: '12345678');
+motorcyclePlate.info.type // Motorcycle
+motorcyclePlate.info.template // 123-45678
+motorcyclePlate.info.province // مرکز تهران
+motorcyclePlate.info.category // null because its type is Motorcycle
+motorcyclePlate.isValid // true
+
+// because of persian language you may see plate in wrong form
+var carPlate = Plate(plate: '12ب14547');
+carPlate.info.type // Car
+carPlate.info.template // 12{B}145{Iran}47 , B=ب  Iran=ایران
+carPlate.info.province // مرکزی
+carPlate.info.category // شخصی
+carPlate.isValid // true
 ```
 
 - #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
