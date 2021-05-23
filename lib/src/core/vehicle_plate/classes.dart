@@ -13,3 +13,7 @@ class Plate {
 
   bool get isValid => isPlateValid(info, normalizedPlate);
 }
+
+extension VehiclePlate on String {
+  Plate get createVehiclePlate => Plate(plate: this);
+}

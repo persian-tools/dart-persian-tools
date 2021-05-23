@@ -205,6 +205,14 @@ carPlate.info.template // 12{B}145{Iran}47 , B=ب  Iran=ایران
 carPlate.info.province // مرکزی
 carPlate.info.category // شخصی
 carPlate.isValid // true
+
+// you can also create [Plate] with below String extension method
+var motorPlate =  '12345678'.createVehiclePlate;
+motorPlate.info.type // Motorcycle
+motorPlate.info.template // 123-45678
+motorPlate.info.province // مرکز تهران
+motorPlate.info.category // null because its type is Motorcycle
+motorPlate.isValid // true
 ```
 
 - #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
