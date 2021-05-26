@@ -1,50 +1,11 @@
-<div align="center">
-	<p align="center">
-		<img src="https://raw.githubusercontent.com/persian-tools/persian-tools/master/images/logo.png" width="200" />
-	</p>
-	<h1 align="center">Persian tools</h1>
-    <p align="center">Persian Tools dart package which you can use in all platforms</p>
-
-[![MIT license](https://img.shields.io/badge/License-MIT-lightblue.svg)](https://github.com/persian-tools/dart-persian-tools/blob/master/LICENSE)
-[![codecov](https://codecov.io/gh/persian-tools/dart-persian-tools/branch/master/graph/badge.svg?token=2O5UD1VRHN)](https://codecov.io/gh/persian-tools/dart-persian-tools)
-[![CI/CD](https://github.com/persian-tools/dart-persian-tools/workflows/Test%20master/badge.svg)]()
-[![Dart Version](https://img.shields.io/badge/Dart->=2.12.0%20<3.0.0-lightblue)](https://dart.dev)
-[![pub version](https://img.shields.io/pub/v/dart_persian_tools)](https://pub.dev/packages/dart_persian_tools)
-![status](https://img.shields.io/badge/under_development-lightblue.svg)
-</div>
-<hr/>
-
-## Features
-
-- [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
-- [ ] Converting Persian words to number
-- [ ] Converting Persian numbers to word
-- [x] [Adding and removing separator to / from numbers](#adding-and-removing-separator-to--from-numbers---source)
-- [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
-- [x] [Checking a string has/is Persian](#checking-a-string-hasis-persian---source)
-- [x] [Validating Iranians national id](#validate-iranian-national-id---source)
-- [x] [Finding city and province names by national id](#find-city-and-province-name-by-national-code---source)
-- [x] [Calculating bills](#calculating-bill---source)
-- [x] [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
-- [x] [Validating ATM card number](#validating-atm-card-number---source)
-- [x] [Validating Iranians phone number](#validating-iranians-phone-number---source)
-- [x] [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
-- [x] [Getting information from vehicle plate](#getting-information-from-vehicle-plate---source)
-- [x] [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
-## Usage
-
-now let's look at examples and how work with apis in package
-
-- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
-
+#### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
 ```dart
 var number = 'سی سه'; // or سی | شصت | پنجاه دو
 addOrdinalSuffix(number); // سی سوم | سی اُم | شصتم | پنجاه دوم
 number.withOrdinalSuffix // ... like so
 ```
 
-- #### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)
-
+#### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)
 ```dart
 addCommas('3333'); // 3,333
 addCommas('۸۲۳۳۴۵'); // 823,345
@@ -56,8 +17,7 @@ removeCommas('3,365.255'); // 3365.255
 '4,544.562'.removeComma // 4544.562
 ```
 
-- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/methods.dart)
-
+#### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/methods.dart)
 ```dart
 convertArToFa('السلام علیکم 14۱۲۳6٤٥'); // السلام علیکم 14۱۲۳6۴۵
 convertArToEn('Persian Tools : 123٥٦٧'); // Persian Tools : 123567
@@ -65,7 +25,7 @@ convertEnToFa('سلام این هارو فارسی کن : 22۲۳۴'); // سلا�
 convertFaToEn('سلام این هارو اینگلیسی کن : 22۲۳۴'); // سلام این هارو اینگلیسی کن : 22234
 ```
 
-- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/is_persian/methods.dart)
+#### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/is_persian/methods.dart)
 
 ```dart
 isPersian('این یک متن فارسی است؟'); // true
@@ -75,7 +35,7 @@ hasPersian('Это персидский س текст?'); // true
 hasPersian('أكد رئيس اللجنة العسكرية الممثلة لحكومة الوفاق أراضي البلاد.'); //true
 ```
 
-- #### Validate Iranian national ID - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/national_id/national_id.dart)
+#### Validate Iranian national ID - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/national_id/national_id.dart)
 
 ```dart
 var nationalID = '0684159414';
@@ -91,7 +51,7 @@ nationalID = '';
 nationalID.isIranianNationalId; // false
 ```
 
-- #### Find city and province name by national code - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core\get_place_by_national_id\get_place_by_national_id.dart)
+#### Find city and province name by national code - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core\get_place_by_national_id\get_place_by_national_id.dart)
 
 ```dart
 final place = getPlaceByIranNationalId('0084575948');
@@ -104,7 +64,7 @@ nationalId.getPlaceNationalId?.city.name; // گرگان
 nationalId.getPlaceNationalId?.province.name; // گلستان
 ```
 
-- #### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/bill/bill.dart)
+#### Calculating Bill - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/bill/bill.dart)
 
 ```dart
 var bill = Bill(billId: 9174639504124, paymentId: 12908197, currency: 'rial');
@@ -118,8 +78,8 @@ bill.isBillIdValid // true
 bill();
 ```
 
-- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
-  
+#### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
+
 ```dart
 var sheba = Sheba('IR820540102680020817909002');
 var bank = sheba(); // Returns nullable object of BankInformation
@@ -135,7 +95,7 @@ bank?.process
 sheba.isValid // true
 ```
 
-- #### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/validate_card_number/validate_card_number.dart)
+#### Validating ATM card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/validate_card_number/validate_card_number.dart)
 
 ```dart
 validateCardNumber('6219861034529007'); // true
@@ -144,7 +104,7 @@ validateCardNumber('0000000000000000'); // false
 validateCardNumber('621986103452900'); // false
 ```
 
-- #### Validating Iranians phone number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/phone_number/phone_number.dart)
+#### Validating Iranians phone number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/phone_number/phone_number.dart)
 
 ```dart
 final phoneNumber = '09022002580';
@@ -174,7 +134,7 @@ phoneNumber.phoneNumberPrefix; // 902
 phoneNumber.phoneNumberDetail?.name; // ایرانسل
 ```
 
-- #### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
+#### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
 
 ```dart
 final cardNumber = '6037701689095443';
@@ -189,7 +149,7 @@ bankInfo?.initCode; // 603770
 cardNumber.bankNameFromCard?.name; // بانک کشاورزی
 ```
 
-- ### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/classes.dart)
+#### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/classes.dart)
 
 ```dart
 var motorcyclePlate = Plate(plate: '12345678');
@@ -216,9 +176,10 @@ motorPlate.info.category // null because its type is Motorcycle
 motorPlate.isValid // true
 ```
 
-- #### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
+#### Fixing and decoding URLs - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
 
 ```dart
 var url = 'wss://hostname.domain/?q=i am a wrong query';
 urlFix(url); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
 ```
+

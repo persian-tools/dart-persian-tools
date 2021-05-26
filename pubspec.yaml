@@ -1,5 +1,10 @@
 name: dart_persian_tools
-description: A starting point for Dart libraries or applications.
+description: Dart language version of Persian-Tools
+
+version: 0.1.0
+homepage: https://github.com/persian-tools/dart-persian-tools
+repository: https://github.com/persian-tools/dart-persian-tools
+issue_tracker: https://github.com/persian-tools/dart-persian-tools/issues
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
