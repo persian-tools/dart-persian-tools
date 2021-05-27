@@ -9,7 +9,7 @@
 [![codecov](https://codecov.io/gh/persian-tools/dart-persian-tools/branch/master/graph/badge.svg?token=2O5UD1VRHN)](https://codecov.io/gh/persian-tools/dart-persian-tools)
 [![CI/CD](https://github.com/persian-tools/dart-persian-tools/workflows/Test%20master/badge.svg)]()
 [![Dart Version](https://img.shields.io/badge/Dart->=2.12.0%20<3.0.0-lightblue)](https://dart.dev)
-[![pub version](https://img.shields.io/pub/v/dart_persian_tools)](https://pub.dev/packages/dart_persian_tools)
+[![pub version](https://img.shields.io/pub/v/persian_tools)](https://pub.dev/packages/persian_tools)
 ![status](https://img.shields.io/badge/under_development-lightblue.svg)
 </div>
 <hr/>

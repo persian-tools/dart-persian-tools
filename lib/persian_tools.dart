@@ -1,5 +1,5 @@
-/// dart_persian_tools is main lib
-library dart_persian_tools;
+/// persian_tools is main lib
+library persian_tools;
 
 // exports [addOrdinalSuffix] method and [AddOrdinalSuffix] extension
 export 'src/core/add_ordinal_suffix/add_ordinal_suffix.dart';

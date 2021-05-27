@@ -1,4 +1,4 @@
-import 'package:dart_persian_tools/src/core/get_bank_name_from_card_number/models.dart';
+import 'package:persian_tools/src/core/get_bank_name_from_card_number/models.dart';
 
 const bankInformation = <Bank?>[
   Bank(

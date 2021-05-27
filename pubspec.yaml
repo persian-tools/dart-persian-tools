@@ -1,5 +1,7 @@
-name: dart_persian_tools
-description: Dart language version of Persian-Tools
+name: persian_tools
+description: >
+  An anthology of a variety of tools for the Persian language
+  which you can use in all platform that dart supports
 
 version: 0.1.0
 homepage: https://github.com/persian-tools/dart-persian-tools
@@ -7,7 +9,7 @@ repository: https://github.com/persian-tools/dart-persian-tools
 issue_tracker: https://github.com/persian-tools/dart-persian-tools/issues
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
 
 dev_dependencies:
   pedantic: ^1.9.0

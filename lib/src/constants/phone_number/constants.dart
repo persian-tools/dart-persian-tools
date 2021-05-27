@@ -1,4 +1,4 @@
-import 'package:dart_persian_tools/src/core/phone_number/models.dart';
+import 'package:persian_tools/src/core/phone_number/models.dart';
 
 final mobileRegex = RegExp(r'^(?:[+|0{2}]?98)?(?:0)?(\d{3})+(\d{3})+(\d{4})$');
 

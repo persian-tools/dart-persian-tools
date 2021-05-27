@@ -1,4 +1,4 @@
-import 'package:dart_persian_tools/dart_persian_tools.dart';
+import 'package:persian_tools/persian_tools.dart';
 
 void main() {
   print(convertArToFa('السلام علیکم 14۱۲۳6٤٥')); // السلام علیکم 14۱۲۳6۴۵

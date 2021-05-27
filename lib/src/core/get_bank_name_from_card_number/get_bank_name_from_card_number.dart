@@ -1,4 +1,4 @@
-import 'package:dart_persian_tools/src/constants/get_bank_name_from_card_number/constants.dart';
+import 'package:persian_tools/src/constants/get_bank_name_from_card_number/constants.dart';
 
 import 'models.dart';
 

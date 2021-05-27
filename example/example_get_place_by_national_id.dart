@@ -1,4 +1,4 @@
-import 'package:dart_persian_tools/dart_persian_tools.dart';
+import 'package:persian_tools/persian_tools.dart';
 
 void main() {
   final place = getPlaceByIranNationalId('0084575948');

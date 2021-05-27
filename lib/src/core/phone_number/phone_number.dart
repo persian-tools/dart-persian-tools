@@ -1,4 +1,4 @@
-import 'package:dart_persian_tools/src/constants/phone_number/constants.dart';
+import 'package:persian_tools/src/constants/phone_number/constants.dart';
 
 import 'models.dart';
 

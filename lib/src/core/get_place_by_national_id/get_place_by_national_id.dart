@@ -1,7 +1,7 @@
-import 'package:dart_persian_tools/src/constants/get_place_by_national_id/national_id_place_constants.dart';
-import 'package:dart_persian_tools/src/constants/get_place_by_national_id/province_constants.dart';
-import 'package:dart_persian_tools/src/core/get_place_by_national_id/models.dart';
-import 'package:dart_persian_tools/dart_persian_tools.dart';
+import 'package:persian_tools/src/constants/get_place_by_national_id/national_id_place_constants.dart';
+import 'package:persian_tools/src/constants/get_place_by_national_id/province_constants.dart';
+import 'package:persian_tools/src/core/get_place_by_national_id/models.dart';
+import 'package:persian_tools/persian_tools.dart';
 
 NationalIdPlace? getPlaceByIranNationalId(String nationalId) {
   if (!nationalId.isIranianNationalId) return null;

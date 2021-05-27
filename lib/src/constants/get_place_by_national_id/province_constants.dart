@@ -1,4 +1,4 @@
-import 'package:dart_persian_tools/src/core/get_place_by_national_id/models.dart';
+import 'package:persian_tools/src/core/get_place_by_national_id/models.dart';
 
 const provinces = [
   Province(

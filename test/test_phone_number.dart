@@ -1,5 +1,5 @@
-import 'package:dart_persian_tools/dart_persian_tools.dart';
-import 'package:dart_persian_tools/src/core/phone_number/models.dart';
+import 'package:persian_tools/persian_tools.dart';
+import 'package:persian_tools/src/core/phone_number/models.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,6 +1,6 @@
-import 'package:dart_persian_tools/dart_persian_tools.dart';
-import 'package:dart_persian_tools/src/core/vehicle_plate/helper_classes.dart';
-import 'package:dart_persian_tools/src/core/vehicle_plate/helper_methods.dart';
+import 'package:persian_tools/persian_tools.dart';
+import 'package:persian_tools/src/core/vehicle_plate/helper_classes.dart';
+import 'package:persian_tools/src/core/vehicle_plate/helper_methods.dart';
 import 'package:test/test.dart';
 
 void main() {
