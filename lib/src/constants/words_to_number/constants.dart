@@ -1,4 +1,4 @@
-const units = {
+const units = <String,int>{
   'صفر': 0,
   'یک': 1,
   'دو': 2,
@@ -30,7 +30,7 @@ const units = {
   'نود': 90,
 };
 
-const ten = {
+const ten = <String,int>{
   'صد': 100,
   'یکصد': 100,
   'دویست': 200,
@@ -43,7 +43,7 @@ const ten = {
   'نهصد': 900,
 };
 
-const magnitude = {
+const magnitude = <String,int>{
   'هزار': 1000,
   'میلیون': 1000000,
   'بیلیون': 1000000000,
