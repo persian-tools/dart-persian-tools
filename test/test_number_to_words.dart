@@ -3,21 +3,20 @@ import 'package:test/test.dart';
 
 void main() {
   group('test number_to_words.dart', () {
-    test('test numberToWordsByString returns null', () {
-      expect(
-        numberToWordsByString('mn234566'),
-        null,
-      );
+    test('test numberToWordsByString function: empty value', () {
 
       expect(
         numberToWordsByString(''),
         null,
       );
+
     });
 
     test('test toWord method', () {
+
       expect(numToWord(432), equals('چهارصد و سی و دو'),);
       expect(numToWord(85), equals('هشتاد و پنج'),);
+
     });
 
     test('test numberToWordsByString function', () {
@@ -50,6 +49,17 @@ void main() {
         numberToWordsByString('2,465,337,400', ordinal: true),
         equals('دو میلیارد و چهارصد و شصت و پنج میلیون و سیصد و سی و هفت هزار و چهارصدم'),
       );
+
+      expect(
+        numberToWordsByString('500')?.length,
+        equals(5),
+      );
+
+      expect(
+        numberToWordsByString('502375902532527'),
+        equals(''),
+      );
+
     });
 
     test('test numberToWordsByString function: with negative values', () {
@@ -93,6 +103,11 @@ void main() {
 
     test('test numberToWordsByInt function', () {
       expect(
+        numberToWordsByInt(0),
+        equals('صفر'),
+      );
+
+      expect(
         numberToWordsByInt(56),
         equals('پنجاه و شش'),
       );
@@ -121,9 +136,21 @@ void main() {
         numberToWordsByInt(2465337400, ordinal: true),
         equals('دو میلیارد و چهارصد و شصت و پنج میلیون و سیصد و سی و هفت هزار و چهارصدم'),
       );
+
+      expect(
+        numberToWordsByInt(500)?.length,
+        equals(5),
+      );
+
+      expect(
+        numberToWordsByInt(502375902532527),
+        equals(''),
+      );
+
     });
 
     test('test numberToWordsByInt function: with negative values', () {
+
       expect(
         numberToWordsByInt(-87),
         equals('منفی هشتاد و هفت'),
@@ -146,6 +173,16 @@ void main() {
     });
 
     test('test numberToWordsByInt function: return ordinal words', () {
+
+      expect(
+        numberToWordsByInt(-30, ordinal: true),
+        equals('منفی سی اُم'),
+      );
+
+      expect(
+        numberToWordsByInt(33, ordinal: true),
+        equals('سی و سوم'),
+      );
 
       expect(
         numberToWordsByInt(-700443000, ordinal: true),
