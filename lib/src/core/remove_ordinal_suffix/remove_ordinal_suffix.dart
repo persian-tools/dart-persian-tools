@@ -11,9 +11,9 @@ String removeOrdinalSuffix(String word) {
       .replaceAll(RegExp('مین\$', caseSensitive: false), '')
       .replaceAll(RegExp('(ام| اُم)\$', caseSensitive: false), '');
   if (word.endsWith('سوم')) {
-    word = word.substring(0, word.length-3) + 'سه';
+    word = word.substring(0, word.length - 3) + 'سه';
   } else if (word.endsWith('م')) {
-    word = word.substring(0, word.length-1);
+    word = word.substring(0, word.length - 1);
   }
 
   return word;

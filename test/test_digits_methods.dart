@@ -26,12 +26,11 @@ void main() {
       );
     });
     test('test convertEnToAr method', () {
-      expect(convertEnToAr('123456'),"۱۲۳٤٥٦");
-      expect(convertEnToAr('1234567891'),"۱۲۳٤٥٦۷۸۹۱");
-      expect(convertEnToAr('0'),"۰");
-      expect(convertEnToAr("123٤٥٦"),"۱۲۳٤٥٦");
-      expect(convertEnToAr(""),"");
-
+      expect(convertEnToAr('123456'), "۱۲۳٤٥٦");
+      expect(convertEnToAr('1234567891'), "۱۲۳٤٥٦۷۸۹۱");
+      expect(convertEnToAr('0'), "۰");
+      expect(convertEnToAr("123٤٥٦"), "۱۲۳٤٥٦");
+      expect(convertEnToAr(""), "");
     });
     test('test convertFaToEn method', () {
       // just digits

@@ -2,6 +2,7 @@ import 'package:persian_tools/persian_tools.dart';
 import 'package:persian_tools/src/constants/words_to_number/constants.dart';
 import 'package:persian_tools/src/internal_methods.dart';
 
+//ToDo : implementing fuzzy option
 enum DigitLocale {
   en,
   fa,
@@ -71,4 +72,14 @@ String? wordsToNumberString(
     default:
       return addedCommasIfNeeded;
   }
+}
+
+extension WordsToNumber on String {
+  int? convertWordsToNumber() => wordsToNumber(this);
+
+  String? convertWordsToNumberString({
+    DigitLocale digits = DigitLocale.en,
+    bool addComma = false,
+  }) =>
+      wordsToNumberString(this, digits: digits, addComma: addComma);
 }

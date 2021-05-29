@@ -1,4 +1,4 @@
-const units = <String,int>{
+const units = <String, int>{
   'صفر': 0,
   'یک': 1,
   'دو': 2,
@@ -30,7 +30,7 @@ const units = <String,int>{
   'نود': 90,
 };
 
-const ten = <String,int>{
+const ten = <String, int>{
   'صد': 100,
   'یکصد': 100,
   'دویست': 200,
@@ -43,14 +43,13 @@ const ten = <String,int>{
   'نهصد': 900,
 };
 
-const magnitude = <String,int>{
+const magnitude = <String, int>{
   'هزار': 1000,
   'میلیون': 1000000,
   'بیلیون': 1000000000,
   'میلیارد': 1000000000,
   'تریلیون': 1000000000000,
 };
-
 
 const typoList = {
   'شیش صد': 'ششصد',
