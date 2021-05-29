@@ -46,12 +46,29 @@ int? wordsToNumber(String words) {
 
   words = words.replaceAll(RegExp('مین\$', caseSensitive: false), '');
 
+  /// removing the ordinal suffix
+  words = words.withoutOrdinalSuffix;
+
+  return compute(tokenize(words));
 }
 
-String wordsToNumberString(
+String? wordsToNumberString(
   String words, {
   DigitLocale digits = DigitLocale.en,
   bool addComma = false,
 }) {
-  return '';
+  final computeNumbers = wordsToNumber(words);
+  if (computeNumbers == null) return null;
+  final addedCommasIfNeeded =
+      addComma ? computeNumbers.addComma : computeNumbers.toString();
+
+  switch (digits) {
+    case DigitLocale.fa:
+      return convertEnToFa(addedCommasIfNeeded);
+    case DigitLocale.ar:
+      return convertEnToAr(addedCommasIfNeeded);
+    case DigitLocale.en:
+    default:
+      return addedCommasIfNeeded;
+  }
 }

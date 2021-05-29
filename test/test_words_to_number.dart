@@ -66,6 +66,13 @@ void main() {
         ),
         '٤٥۰۰۰۰',
       );
+      expect(
+        wordsToNumberString(
+          'نه صد و هشتاد و هفت',
+          digits: DigitLocale.ar,
+        ),
+        '۹۸۷',
+      );
     });
     test('test wordsToNumber function: with ordinal words', () {
       expect(
@@ -98,15 +105,23 @@ void main() {
       );
       expect(wordsToNumber('منفی سه هزارمین'), -3000);
       expect(wordsToNumber('منفی سه هزارم'), -3000);
-      expect(wordsToNumberString('منفی سه هزارمین'), isNot(equals('-3000')));
-      expect(wordsToNumberString('منفی سه هزارمین').length, 5);
+      expect(wordsToNumberString('منفی سه هزارمین'), equals('-3000'));
+      expect(wordsToNumberString('منفی سه هزارمین')?.length, 5);
       expect(wordsToNumber('منفی سی اُم'), -30);
       expect(wordsToNumber('سی و سوم'), 33);
     });
-    test('test wordsToNumber function: empty value', () {
+    test('test wordsToNumber function: empty & invalid value', () {
       expect(
-        wordsToNumberString('', digits: DigitLocale.fa).addComma,
-        equals(''),
+        wordsToNumberString('', digits: DigitLocale.fa)?.addComma,
+        equals(null),
+      );
+      expect(
+        wordsToNumber(''),
+        equals(null),
+      );
+      expect(
+        wordsToNumberString('متن بدون عدد', digits: DigitLocale.fa)?.addComma,
+        equals('0'),
       );
     });
   });
