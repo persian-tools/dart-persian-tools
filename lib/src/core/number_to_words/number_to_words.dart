@@ -2,6 +2,7 @@ import 'package:persian_tools/persian_tools.dart';
 import 'package:persian_tools/src/constants/number_to_words/constants.dart';
 import 'package:persian_tools/src/internal_methods.dart';
 
+/// gets an [int] with 3 or less digits as input and converts it to persian
 String numToWord (int number) {
   var unit = 100;
   var result = '';
@@ -22,6 +23,7 @@ String numToWord (int number) {
   return result;
 }
 
+/// checks current [input] for negative [value] and deploying converting process
 String compute (int number, bool ordinal) {
   var result = <String>[];
 
@@ -50,14 +52,28 @@ String compute (int number, bool ordinal) {
   return words;
 }
 
-String? numberToWordsByString (String number, {bool ordinal = false}) {
+String? numberToWordsByString (String number, [bool ordinal = false]) {
   if (number.isEmpty) return null;
   if (number == '0') return 'صفر';
 
   return compute(removeCommas(number).toInt(), ordinal);
 }
 
-String? numberToWordsByInt (int number, {bool ordinal = false}) {
+String? numberToWordsByInt (int number, [bool ordinal = false]) {
   if (number == 0) return 'صفر';
   return compute(number, ordinal);
+}
+
+extension NumberToPersianWordsByStr on String {
+
+  /// converts current [String] value to persian words
+  String? convertNumToWordsByStr([bool ordinal = false]) => numberToWordsByString(this, ordinal);
+
+}
+
+extension NumberToPersianWordsByInt on int {
+
+  /// converts current [int] value to persian words
+  String? convertNumToWordsByInt([bool ordinal = false]) => numberToWordsByInt (this, ordinal);
+
 }
