@@ -25,6 +25,14 @@ void main() {
         equals('این ها digit های عربی است : ٤٥٦'),
       );
     });
+    test('test convertEnToAr method', () {
+      expect(convertEnToAr('123456'),"۱۲۳٤٥٦");
+      expect(convertEnToAr('1234567891'),"۱۲۳٤٥٦۷۸۹۱");
+      expect(convertEnToAr('0'),"۰");
+      expect(convertEnToAr("123٤٥٦"),"۱۲۳٤٥٦");
+      expect(convertEnToAr(""),"");
+
+    });
     test('test convertFaToEn method', () {
       // just digits
       expect(convertFaToEn('۱۲۳456۷۸۹'), equals('123456789'));
@@ -56,32 +64,32 @@ void main() {
 
       // digits in arabic with english text
       expect(
-        convertArToFa('hey! i have arabic : ٠١٢٣٤٥٦٧٨٩'),
+        convertArToFa('hey! i have arabic : ۰۱۲۳٤٥٦۷۸۹'),
         equals('hey! i have arabic : ۰۱۲۳۴۵۶۷۸۹'),
       );
 
       // digits in arabic , english with persian text
       expect(
-        convertArToFa('سلام به دوستای پرشین تولز : ٤٥٦٧123'),
+        convertArToFa('سلام به دوستای پرشین تولز : ٤٥٦۷123'),
         equals('سلام به دوستای پرشین تولز : ۴۵۶۷123'),
       );
     });
     test('test convertArToEn method', () {
       // digits in arabic and english with english text
       expect(
-        convertArToEn('hello Persian Tools : 123٥٦٧'),
+        convertArToEn('hello Persian Tools : 123٥٦۷'),
         equals('hello Persian Tools : 123567'),
       );
 
       // digits in arabic with english text
       expect(
-        convertArToEn('hey! i have arabic : ٠١٢٣٤٥٦٧٨٩'),
+        convertArToEn('hey! i have arabic : ۰۱۲۳٤٥٦۷۸۹'),
         equals('hey! i have arabic : 0123456789'),
       );
 
       // digits in arabic , english with persian text
       expect(
-        convertArToEn('سلام به دوستای پرشین تولز : ٤٥٦٧123'),
+        convertArToEn('سلام به دوستای پرشین تولز : ٤٥٦۷123'),
         equals('سلام به دوستای پرشین تولز : 4567123'),
       );
     });

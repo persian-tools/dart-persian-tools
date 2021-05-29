@@ -2,4 +2,4 @@
 const faNumber = '۰۱۲۳۴۵۶۷۸۹';
 
 /// Arabic numbers
-const arNumber = '٠١٢٣٤٥٦٧٨٩';
+const arNumber = '۰۱۲۳٤٥٦۷۸۹';
