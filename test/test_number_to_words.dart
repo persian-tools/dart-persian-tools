@@ -18,7 +18,7 @@ void main() {
       expect(numToWord(85), equals('هشتاد و پنج'),);
 
     });
-
+    //----------------------------------------------------------------------------------------
     test('test numberToWordsByString function', () {
       expect(
         numberToWordsByString('56'),
@@ -46,7 +46,7 @@ void main() {
       );
 
       expect(
-        numberToWordsByString('2,465,337,400', ordinal: true),
+        numberToWordsByString('2,465,337,400', true),
         equals('دو میلیارد و چهارصد و شصت و پنج میلیون و سیصد و سی و هفت هزار و چهارصدم'),
       );
 
@@ -86,21 +86,21 @@ void main() {
 
     test('test numberToWordsByString function: return ordinal words', () {
       expect(
-        numberToWordsByString('-700,443,000', ordinal: true),
+        numberToWordsByString('-700,443,000', true),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),
       );
 
       expect(
-        numberToWordsByString('-700443000', ordinal: true),
+        numberToWordsByString('-700443000', true),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),
       );
 
       expect(
-        numberToWordsByString('700443001', ordinal: true),
+        numberToWordsByString('700443001', true),
         equals('هفتصد میلیون و چهارصد و چهل و سه هزار و یکم'),
       );
     });
-
+    //----------------------------------------------------------------------------------------
     test('test numberToWordsByInt function', () {
       expect(
         numberToWordsByInt(0),
@@ -133,7 +133,7 @@ void main() {
       );
 
       expect(
-        numberToWordsByInt(2465337400, ordinal: true),
+        numberToWordsByInt(2465337400, true),
         equals('دو میلیارد و چهارصد و شصت و پنج میلیون و سیصد و سی و هفت هزار و چهارصدم'),
       );
 
@@ -175,24 +175,55 @@ void main() {
     test('test numberToWordsByInt function: return ordinal words', () {
 
       expect(
-        numberToWordsByInt(-30, ordinal: true),
+        numberToWordsByInt(-30, true),
         equals('منفی سی اُم'),
       );
 
       expect(
-        numberToWordsByInt(33, ordinal: true),
+        numberToWordsByInt(33, true),
         equals('سی و سوم'),
       );
 
       expect(
-        numberToWordsByInt(-700443000, ordinal: true),
+        numberToWordsByInt(-700443000, true),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),
       );
 
       expect(
-        numberToWordsByInt(700443001, ordinal: true),
+        numberToWordsByInt(700443001, true),
         equals('هفتصد میلیون و چهارصد و چهل و سه هزار و یکم'),
       );
+    });
+
+    test('test numberToWords extension', () {
+
+      expect('-700443000'.convertNumToWordsByStr(), equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزار'),);
+      expect('-700443000'.convertNumToWordsByStr(true), equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),);
+
+      expect((-700443000).convertNumToWordsByInt(), equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزار'),);
+      expect((-700443000).convertNumToWordsByInt(true), equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),);
+
+      expect(500443.convertNumToWordsByInt(), equals('پانصد هزار و چهارصد و چهل و سه'),);
+      expect(500443.convertNumToWordsByInt(true), equals('پانصد هزار و چهارصد و چهل و سوم'),);
+
+      expect('-700,443,000'.convertNumToWordsByStr(),equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزار'),);
+      expect('-700,443,000'.convertNumToWordsByStr(true),equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),);
+
+      expect('-87'.convertNumToWordsByStr(), equals('منفی هشتاد و هفت'),);
+      expect('-87'.convertNumToWordsByStr(true), equals('منفی هشتاد و هفتم'),);
+
+      expect('87'.convertNumToWordsByStr(), equals('هشتاد و هفت'),);
+      expect('87'.convertNumToWordsByStr(true), equals('هشتاد و هفتم'),);
+
+      expect(87.convertNumToWordsByInt(), equals('هشتاد و هفت'),);
+      expect(87.convertNumToWordsByInt(true), equals('هشتاد و هفتم'),);
+
+      expect(500.convertNumToWordsByInt()?.length, equals(5),);
+      expect('500'.convertNumToWordsByStr()?.length, equals(5),);
+
+      expect(0.convertNumToWordsByInt(), equals('صفر'),);
+      expect('0'.convertNumToWordsByStr(), equals('صفر'),);
+
     });
 
   });
