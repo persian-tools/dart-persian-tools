@@ -18,11 +18,10 @@ void main() {
 
   /// you can use create [Plate] with below String extension method
 
-  var motorPlate =  '12345678'.createVehiclePlate;
+  var motorPlate = '12345678'.createVehiclePlate;
   print(motorPlate.info.type); // Motorcycle
   print(motorPlate.info.template); // 123-45678
   print(motorPlate.info.province); // مرکز تهران
   print(motorPlate.info.category); // null because its type is Motorcycle
   print(motorPlate.isValid); // true
-
 }
