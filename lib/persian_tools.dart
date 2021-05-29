@@ -45,3 +45,6 @@ export 'src/core/vehicle_plate/classes.dart';
 
 // exports [wordsToNumber] method
 export 'src/core/words_to_number/words_to_number.dart';
+
+// exports [numberToWords] method
+export 'src/core/number_to_words/number_to_words.dart';
