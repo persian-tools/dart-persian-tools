@@ -10,17 +10,8 @@ void main() {
       );
     });
 
-    test('test toWord method', () {
-      expect(
-        numToWord(432),
-        equals('چهارصد و سی و دو'),
-      );
-      expect(
-        numToWord(85),
-        equals('هشتاد و پنج'),
-      );
-    });
     //----------------------------------------------------------------------------------------
+
     test('test numberToWordsByString function', () {
       expect(
         numberToWordsString('56'),
@@ -101,183 +92,187 @@ void main() {
         equals('هفتصد میلیون و چهارصد و چهل و سه هزار و یکم'),
       );
     });
+
     //----------------------------------------------------------------------------------------
+
     test('test numberToWordsByInt function', () {
       expect(
-        numberToWordsInt(0),
+        numberToWords(0),
         equals('صفر'),
       );
 
       expect(
-        numberToWordsInt(56),
+        numberToWords(56),
         equals('پنجاه و شش'),
       );
 
       expect(
-        numberToWordsInt(256432),
+        numberToWords(256432),
         equals('دویست و پنجاه و شش هزار و چهارصد و سی و دو'),
       );
 
       expect(
-        numberToWordsInt(2465337400),
+        numberToWords(2465337400),
         equals('دو میلیارد و چهارصد و شصت و پنج میلیون و سیصد و سی و هفت هزار و چهارصد'),
       );
 
       expect(
-        numberToWordsInt(0),
+        numberToWords(0),
         equals('صفر'),
       );
 
       expect(
-        numberToWordsInt(500443),
+        numberToWords(500443),
         equals('پانصد هزار و چهارصد و چهل و سه'),
       );
 
       expect(
-        numberToWordsInt(2465337400, ordinal: true),
+        numberToWords(2465337400, ordinal: true),
         equals('دو میلیارد و چهارصد و شصت و پنج میلیون و سیصد و سی و هفت هزار و چهارصدم'),
       );
 
       expect(
-        numberToWordsInt(500)?.length,
+        numberToWords(500)?.length,
         equals(5),
       );
 
       expect(
-        numberToWordsInt(502375902532527),
+        numberToWords(502375902532527),
         equals(''),
       );
     });
 
     test('test numberToWordsByInt function: with negative values', () {
       expect(
-        numberToWordsInt(-87),
+        numberToWords(-87),
         equals('منفی هشتاد و هفت'),
       );
 
       expect(
-        numberToWordsInt(-256432),
+        numberToWords(-256432),
         equals('منفی دویست و پنجاه و شش هزار و چهارصد و سی و دو'),
       );
 
       expect(
-        numberToWordsInt(-500443),
+        numberToWords(-500443),
         equals('منفی پانصد هزار و چهارصد و چهل و سه'),
       );
 
       expect(
-        numberToWordsInt(-700443000),
+        numberToWords(-700443000),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزار'),
       );
     });
 
     test('test numberToWordsByInt function: return ordinal words', () {
       expect(
-        numberToWordsInt(-30, ordinal: true),
+        numberToWords(-30, ordinal: true),
         equals('منفی سی اُم'),
       );
 
       expect(
-        numberToWordsInt(33, ordinal: true),
+        numberToWords(33, ordinal: true),
         equals('سی و سوم'),
       );
 
       expect(
-        numberToWordsInt(-700443000, ordinal: true),
+        numberToWords(-700443000, ordinal: true),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),
       );
 
       expect(
-        numberToWordsInt(700443001, ordinal: true),
+        numberToWords(700443001, ordinal: true),
         equals('هفتصد میلیون و چهارصد و چهل و سه هزار و یکم'),
       );
     });
+
+    //----------------------------------------------------------------------------------------
 
     test('test numberToWords extension', () {
       var int = -30;
       var str = '555';
 
-      expect(int.convertNumToWordsInt()!, equals('منفی سی'));
-      expect(str.convertNumToWordsString()!, equals('پانصد و پنجاه و پنج'));
+      expect(int.convertNumToWords()!, equals('منفی سی'));
+      expect(str.convertNumToWords()!, equals('پانصد و پنجاه و پنج'));
 
       expect(
-        '-700443000'.convertNumToWordsString(),
+        '-700443000'.convertNumToWords(),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزار'),
       );
       expect(
-        '-700443000'.convertNumToWordsString(ordinal: true),
+        '-700443000'.convertNumToWords(ordinal: true),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),
       );
 
       expect(
-        (-700443000).convertNumToWordsInt(),
+        (-700443000).convertNumToWords(),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزار'),
       );
       expect(
-        (-700443000).convertNumToWordsInt(ordinal: true),
+        (-700443000).convertNumToWords(ordinal: true),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),
       );
 
       expect(
-        500443.convertNumToWordsInt(),
+        500443.convertNumToWords(),
         equals('پانصد هزار و چهارصد و چهل و سه'),
       );
       expect(
-        500443.convertNumToWordsInt(ordinal: true),
+        500443.convertNumToWords(ordinal: true),
         equals('پانصد هزار و چهارصد و چهل و سوم'),
       );
 
       expect(
-        '-700,443,000'.convertNumToWordsString(),
+        '-700,443,000'.convertNumToWords(),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزار'),
       );
       expect(
-        '-700,443,000'.convertNumToWordsString(ordinal: true),
+        '-700,443,000'.convertNumToWords(ordinal: true),
         equals('منفی هفتصد میلیون و چهارصد و چهل و سه هزارم'),
       );
 
       expect(
-        '-87'.convertNumToWordsString(),
+        '-87'.convertNumToWords(),
         equals('منفی هشتاد و هفت'),
       );
       expect(
-        '-87'.convertNumToWordsString(ordinal: true),
+        '-87'.convertNumToWords(ordinal: true),
         equals('منفی هشتاد و هفتم'),
       );
 
       expect(
-        '87'.convertNumToWordsString(),
+        '87'.convertNumToWords(),
         equals('هشتاد و هفت'),
       );
       expect(
-        '87'.convertNumToWordsString(ordinal: true),
+        '87'.convertNumToWords(ordinal: true),
         equals('هشتاد و هفتم'),
       );
 
       expect(
-        87.convertNumToWordsInt(),
+        87.convertNumToWords(),
         equals('هشتاد و هفت'),
       );
       expect(
-        87.convertNumToWordsInt(ordinal: true),
+        87.convertNumToWords(ordinal: true),
         equals('هشتاد و هفتم'),
       );
 
       expect(
-        500.convertNumToWordsInt()?.length,
+        500.convertNumToWords()?.length,
         equals(5),
       );
       expect(
-        '500'.convertNumToWordsString()?.length,
+        '500'.convertNumToWords()?.length,
         equals(5),
       );
 
       expect(
-        0.convertNumToWordsInt(),
+        0.convertNumToWords(),
         equals('صفر'),
       );
       expect(
-        '0'.convertNumToWordsString(),
+        '0'.convertNumToWords(),
         equals('صفر'),
       );
     });
