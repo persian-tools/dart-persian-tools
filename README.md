@@ -18,7 +18,7 @@
 
 - [x] [Removing ordinal suffixes](#removing-ordinal-suffixes---source)
 - [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
-- [x] Converting Persian words to number
+- [x] [Converting Persian words to number](#converting-persian-words-to-number---source)
 - [ ] Converting Persian numbers to word
 - [x] [Adding and removing separator to / from numbers](#adding-and-removing-separator-to--from-numbers---source)
 - [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
