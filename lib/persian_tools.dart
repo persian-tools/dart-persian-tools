@@ -4,6 +4,9 @@ library persian_tools;
 // exports [addOrdinalSuffix] method and [AddOrdinalSuffix] extension
 export 'src/core/add_ordinal_suffix/add_ordinal_suffix.dart';
 
+// exports [removeOrdinalSuffix] method and [RemoveOrdinalSuffix] extension
+export 'src/core/remove_ordinal_suffix/remove_ordinal_suffix.dart';
+
 // exports [Bill] class
 export 'src/core/bill/bill.dart';
 

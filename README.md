@@ -16,6 +16,7 @@
 
 ## Features
 
+- [x] [Removing ordinal suffixes](#removing-ordinal-suffixes---source)
 - [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
 - [ ] Converting Persian words to number
 - [ ] Converting Persian numbers to word
@@ -35,12 +36,24 @@
 
 now let's look at examples and how work with apis in package
 
-- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
+- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/remove_ordinal_suffix/remove_ordinal_suffix.dart)
 
 ```dart
 var number = 'سی سه'; // or سی | شصت | پنجاه دو
 addOrdinalSuffix(number); // سی سوم | سی اُم | شصتم | پنجاه دوم
+
+/// or use it as String extension method
 number.withOrdinalSuffix // ... like so
+```
+
+- #### Removing Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
+
+```dart
+var number = 'چهل و سوم'; // سی سوم | سی اُم | شصتم | پنجاه دوم
+removeOrdinalSuffix(number); // سی | شصت | پنجاه دو
+
+/// or use it as String extension method
+number.withoutOrdinalSuffix; // ... like so
 ```
 
 - #### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)
