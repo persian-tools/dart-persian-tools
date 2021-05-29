@@ -18,7 +18,7 @@
 
 - [x] [Removing ordinal suffixes](#removing-ordinal-suffixes---source)
 - [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
-- [ ] Converting Persian words to number
+- [x] [Converting Persian words to number](#converting-persian-words-to-number---source)
 - [ ] Converting Persian numbers to word
 - [x] [Adding and removing separator to / from numbers](#adding-and-removing-separator-to--from-numbers---source)
 - [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
@@ -36,7 +36,7 @@
 
 now let's look at examples and how work with apis in package
 
-- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/remove_ordinal_suffix/remove_ordinal_suffix.dart)
+- #### Adding Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
 
 ```dart
 var number = 'سی سه'; // or سی | شصت | پنجاه دو
@@ -46,7 +46,7 @@ addOrdinalSuffix(number); // سی سوم | سی اُم | شصتم | پنجاه �
 number.withOrdinalSuffix // ... like so
 ```
 
-- #### Removing Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/add_ordinal_suffix/add_ordinal_suffix.dart)
+- #### Removing Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/remove_ordinal_suffix/remove_ordinal_suffix.dart)
 
 ```dart
 var number = 'چهل و سوم'; // سی سوم | سی اُم | شصتم | پنجاه دوم
@@ -54,6 +54,32 @@ removeOrdinalSuffix(number); // سی | شصت | پنجاه دو
 
 /// or use it as String extension method
 number.withoutOrdinalSuffix; // ... like so
+```
+
+- #### Converting Persian words to number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/words_to_number/words_to_number.dart)
+
+```dart
+final words = 'سه هزار دویست و دوازده';
+
+/// use [wordsToNumber] method to convert [words] to int number
+wordsToNumber(words); // 3212
+
+/// use [wordsToNumberString] method to convert [words] to String
+wordsToNumberString(words); // '3212' as String
+
+/// [wordsToNumberString] also has two optional parameter
+/// use [digit] optional parameter to convert the digits to specific local digits
+/// use [addComma] to add comma between the every 3 digits
+wordsToNumberString(
+words,
+digits: DigitLocale.fa,
+addComma: true,
+); // '۳,۲۱۲' as String
+
+/// or you can easily use extension methods on String object
+words.convertWordsToNumber(); // 3212
+
+words.convertWordsToNumberString(); // '3212' as String
 ```
 
 - #### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)

@@ -42,3 +42,6 @@ export 'src/core/commas/methods.dart';
 
 // exports [Plate] class
 export 'src/core/vehicle_plate/classes.dart';
+
+// exports [wordsToNumber] method
+export 'src/core/words_to_number/words_to_number.dart';
