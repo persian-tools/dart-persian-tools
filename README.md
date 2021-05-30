@@ -19,7 +19,7 @@
 - [x] [Removing ordinal suffixes](#removing-ordinal-suffixes---source)
 - [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
 - [x] [Converting Persian words to number](#converting-persian-words-to-number---source)
-- [ ] Converting Persian numbers to word
+- [x] [Converting Persian numbers to word](#converting-persian-numbers-to-word---source)
 - [x] [Adding and removing separator to / from numbers](#adding-and-removing-separator-to--from-numbers---source)
 - [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
 - [x] [Checking a string has/is Persian](#checking-a-string-hasis-persian---source)
@@ -80,6 +80,34 @@ addComma: true,
 words.convertWordsToNumber(); // 3212
 
 words.convertWordsToNumberString(); // '3212' as String
+```
+
+- #### Converting Persian numbers to word - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/number_to_words/number_to_words.dart)
+
+```dart
+final stringDigit = '257,433';
+final intDigit = -128;
+
+/// use [numberToWordsString] method to convert [stringDigit] to persian
+
+numberToWordsString(stringDigit); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سه'
+
+/// [numberToWordsString] also has an optional parameter
+/// by default [ordinal] is [false], [true] makes the output an ordinal word
+
+numberToWordsString(stringDigit, ordinal: true); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سوم'
+
+/// use [numberToWordsInt] method to convert [intDigit] to persian
+numberToWords(intDigit); // 'منفی صد و بیست و هشت'
+
+/// [numberToWordsInt] also has an optional parameter
+/// by default [ordinal] is [false], [true] makes the output an ordinal word
+numberToWords(intDigit, ordinal: true); // 'منفی صد و بیست و هشتم'
+
+/// you can simply use extension methods on int or String objects
+stringDigit.convertNumToWords(); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سه'
+
+intDigit.convertNumToWords(); // 'منفی صد و بیست و هشت'
 ```
 
 - #### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)

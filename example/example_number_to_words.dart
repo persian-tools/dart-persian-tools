@@ -5,15 +5,12 @@ void main() {
   final intDigit = -128;
 
   /// use [numberToWordsString] method to convert [stringDigit] to persian
-  print(
-    numberToWordsString(stringDigit),
-  ); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سه'
+  print(numberToWordsString(stringDigit)); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سه'
 
   /// [numberToWordsString] also has an optional parameter
   /// by default [ordinal] is [false], [true] makes the output an ordinal word
-  print(
-    numberToWordsString(stringDigit, ordinal: true),
-  ); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سوم'
+  print(numberToWordsString(stringDigit,
+      ordinal: true)); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سوم'
 
   /// use [numberToWordsInt] method to convert [intDigit] to persian
   print(numberToWords(intDigit)); // 'منفی صد و بیست و هشت'
