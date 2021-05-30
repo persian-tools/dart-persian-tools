@@ -16,22 +16,22 @@
 
 ## Features
 
-- [x] [Removing ordinal suffixes](#removing-ordinal-suffixes---source)
-- [x] [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
-- [x] [Converting Persian words to number](#converting-persian-words-to-number---source)
-- [x] [Converting Persian numbers to word](#converting-persian-numbers-to-word---source)
-- [x] [Adding and removing separator to / from numbers](#adding-and-removing-separator-to--from-numbers---source)
-- [x] [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
-- [x] [Checking a string has/is Persian](#checking-a-string-hasis-persian---source)
-- [x] [Validating Iranians national id](#validate-iranian-national-id---source)
-- [x] [Finding city and province names by national id](#find-city-and-province-name-by-national-code---source)
-- [x] [Calculating bills](#calculating-bill---source)
-- [x] [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
-- [x] [Validating ATM card number](#validating-atm-card-number---source)
-- [x] [Validating Iranians phone number](#validating-iranians-phone-number---source)
-- [x] [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
-- [x] [Getting information from vehicle plate](#getting-information-from-vehicle-plate---source)
-- [x] [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
+- [Removing ordinal suffixes](#removing-ordinal-suffixes---source)
+- [Adding ordinal suffixes](#adding-ordinal-suffixes---source)
+- [Converting Persian words to number](#converting-persian-words-to-number---source)
+- [Converting Persian numbers to word](#converting-persian-numbers-to-word---source)
+- [Adding and removing separator to / from numbers](#adding-and-removing-separator-to--from-numbers---source)
+- [Converting Persian numbers to Arabic / English numbers and reverse](#converting-persian-numbers-to-arabic--english-numbers-and-reverse---source)
+- [Checking a string has/is Persian](#checking-a-string-hasis-persian---source)
+- [Validating Iranians national id](#validate-iranian-national-id---source)
+- [Finding city and province names by national id](#find-city-and-province-name-by-national-code---source)
+- [Calculating bills](#calculating-bill---source)
+- [Checking IBAN of the bank account (_SHEBA_)](#checking-iban-of-the-bank-account-sheba---source)
+- [Validating ATM card number](#validating-atm-card-number---source)
+- [Validating Iranians phone number](#validating-iranians-phone-number---source)
+- [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
+- [Getting information from vehicle plate](#getting-information-from-vehicle-plate---source)
+- [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
 ## Usage
 
 now let's look at examples and how work with apis in package
