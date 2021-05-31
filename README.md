@@ -32,6 +32,7 @@
 - [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
 - [Getting information from vehicle plate](#getting-information-from-vehicle-plate---source)
 - [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
+
 ## Usage
 
 now let's look at examples and how work with apis in package
@@ -289,3 +290,6 @@ motorPlate.isValid // true
 var url = 'wss://hostname.domain/?q=i am a wrong query';
 urlFix(url); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
 ```
+
+## Contributing
+Thank you for your interest in contributing! For more detail about contributing, please check out the [CONTRIBUTING.md file](https://github.com/persian-tools/dart-persian-tools/blob/master/CONTRIBUTING.md "CONTRIBUTING.md file").
