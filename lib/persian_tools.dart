@@ -38,7 +38,7 @@ export 'src/core/get_place_by_national_id/get_place_by_national_id.dart';
 export 'src/core/get_bank_name_from_card_number/get_bank_name_from_card_number.dart';
 
 // exports [addCommas] and [removeCommas] methods
-export 'src/core/commas/methods.dart';
+export 'src/core/commas/commas.dart';
 
 // exports [Plate] class
 export 'src/core/vehicle_plate/classes.dart';
