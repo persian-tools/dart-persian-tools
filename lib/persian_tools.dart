@@ -19,10 +19,10 @@ export 'src/core/url_fix/url_fix.dart';
 // exports [validateCardNumber]
 export 'src/core/validate_card_number/validate_card_number.dart';
 
-// exports Digits/methods
+// exports [digits]
 export 'src/core/digits/digits.dart';
 
-// exports Sheba/methods
+// exports [sheba]
 export 'src/core/sheba/sheba.dart';
 
 // exports [NationalId] extension and
@@ -41,7 +41,7 @@ export 'src/core/get_bank_name_from_card_number/get_bank_name_from_card_number.d
 export 'src/core/commas/commas.dart';
 
 // exports [Plate] class
-export 'src/core/vehicle_plate/classes.dart';
+export 'src/core/vehicle_plate/vehicle_plate.dart';
 
 // exports [wordsToNumber] method
 export 'src/core/words_to_number/words_to_number.dart';

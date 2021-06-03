@@ -1,6 +1,5 @@
 import 'package:persian_tools/persian_tools.dart';
-import 'package:persian_tools/src/core/vehicle_plate/helper_classes.dart';
-import 'package:persian_tools/src/core/vehicle_plate/helper_methods.dart';
+import 'package:persian_tools/src/core/vehicle_plate/model.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -12,10 +11,18 @@ void main() {
       plate = Plate(plate: '12ب14547');
       expect(plate.info, isA<PlateInfo>());
       expect(plate.isValid, isA<bool>());
+      expect(plate.info.type, 'Car');
+      expect(plate.info.template, '12ب145ایران47');
+      expect(plate.info.province, 'مرکزی');
+      expect(plate.info.category, 'شخصی');
+      expect(plate.isValid, true);
 
       plate = Plate(plate: '12345678');
       expect(plate.info.type, 'Motorcycle');
       expect(plate.isValid, true);
+      expect(plate.info.template, '123-45678');
+      expect(plate.info.province, 'مرکز تهران');
+      expect(plate.info.category, null);
     });
   });
   group('test vehicle_plate/helper_*', () {
