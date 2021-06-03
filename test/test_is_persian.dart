@@ -2,7 +2,7 @@ import 'package:persian_tools/persian_tools.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('test isPersian/methods.dart', () {
+  group('test is_persian/is_persian.dart', () {
     test('test isPersian method', () {
       expect(isPersian('این یک متن فارسی است؟'), equals(true));
       expect(

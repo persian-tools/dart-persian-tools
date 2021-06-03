@@ -18,3 +18,5 @@ const faText = faAlphabet + faNumber + faShortVowels + faOthers;
 
 /// Letters that is common in Arabic and Farsi
 const faComplexText = faText + faMixedWithArabic;
+
+const trimPatternRegExp = '["' r"'-+()؟\s.]";

@@ -11,7 +11,7 @@ export 'src/core/remove_ordinal_suffix/remove_ordinal_suffix.dart';
 export 'src/core/bill/bill.dart';
 
 // exports isPersian/methods
-export 'src/core/is_persian/methods.dart';
+export 'src/core/is_persian/is_persian.dart';
 
 // exports [urlFix] method
 export 'src/core/url_fix/url_fix.dart';
