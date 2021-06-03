@@ -42,7 +42,9 @@ String _convert(int number, bool ordinal) {
 
   var words = result.join('');
 
-  if (words.endsWith(' و ')) words = words.substring(0, (words.length - 3));
+  if (words.endsWith(endsWithAnd)) {
+    words = words.substring(0, (words.length - 3));
+  }
 
   words = trim(isNegative ? 'منفی $words' : words);
 
@@ -53,22 +55,24 @@ String _convert(int number, bool ordinal) {
 
 String? numberToWordsString(String number, {bool ordinal = false}) {
   if (number.isEmpty) return null;
-  if (number == '0') return 'صفر';
+  if (number == '0') return zeroFa;
 
   return _convert(removeCommas(number).toInt(), ordinal);
 }
 
 String? numberToWords(int number, {bool ordinal = false}) {
-  if (number == 0) return 'صفر';
+  if (number == 0) return zeroFa;
   return _convert(number, ordinal);
 }
 
 extension NumberToPersianWordsString on String {
   /// converts current [String] value to persian words
-  String? convertNumToWords({bool ordinal = false}) => numberToWordsString(this, ordinal: ordinal);
+  String? convertNumToWords({bool ordinal = false}) =>
+      numberToWordsString(this, ordinal: ordinal);
 }
 
 extension NumberToPersianWordsInt on int {
   /// converts current [int] value to persian words
-  String? convertNumToWords({bool ordinal = false}) => numberToWords(this, ordinal: ordinal);
+  String? convertNumToWords({bool ordinal = false}) =>
+      numberToWords(this, ordinal: ordinal);
 }
