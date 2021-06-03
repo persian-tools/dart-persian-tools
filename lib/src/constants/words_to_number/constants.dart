@@ -76,3 +76,5 @@ const tokenType = {
 };
 
 final allWords = [...numberWords, ...joiners, ...prefixes];
+
+const faOrdinalRegExp = 'مین\$';
