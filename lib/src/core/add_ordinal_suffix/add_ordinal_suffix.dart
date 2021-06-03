@@ -1,3 +1,5 @@
+import 'package:persian_tools/src/constants/add_ordinal_suffix/constants.dart';
+
 /// Adds Ordinal Suffixes to numbers
 /// for example :
 /// ```dart
@@ -6,13 +8,13 @@
 /// addOrdinalSuffix('پنج'); // پنجم
 /// ```
 String addOrdinalSuffix(String number) {
-  if (number.endsWith('ی')) {
-    return number + ' اُم';
+  if (number.endsWith(lastFaChar)) {
+    return number + ordinalSuffixSeparate;
   }
-  if (number.endsWith('سه')) {
-    return number.substring(0, number.length - 2) + 'سوم';
+  if (number.endsWith(three)) {
+    return number.substring(0, number.length - 2) + third;
   }
-  return number + 'م';
+  return number + ordinalSuffix;
 }
 
 /// with AddOrdinalSuffix extension method you can use [addOrdinalSuffix] method

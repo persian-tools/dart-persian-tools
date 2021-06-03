@@ -22,14 +22,7 @@ const MCI = {
     operator: Operator.MCI,
   ),
   '912': OperatorDetail(
-    provinces: [
-      'البرز',
-      'زنجان',
-      'سمنان',
-      'قزوین',
-      'قم',
-      'برخی از شهرستان های استان مرکزی'
-    ],
+    provinces: ['البرز', 'زنجان', 'سمنان', 'قزوین', 'قم', 'برخی از شهرستان های استان مرکزی'],
     base: 'تهران',
     type: SimCardType.permanent,
     operator: Operator.MCI,
@@ -191,3 +184,13 @@ final operators = {
   ...shatelMobile,
   ...rightTel,
 };
+
+const shatelName = 'شاتل موبایل';
+
+const MCIName = 'همراه اول';
+
+const irancellName = 'ایرانسل';
+
+const taliaName = 'تالیا';
+
+const rightTelName = 'رایتل';
