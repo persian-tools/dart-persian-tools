@@ -20,7 +20,7 @@ export 'src/core/url_fix/url_fix.dart';
 export 'src/core/validate_card_number/validate_card_number.dart';
 
 // exports Digits/methods
-export 'src/core/digits/methods.dart';
+export 'src/core/digits/digits.dart';
 
 // exports Sheba/methods
 export 'src/core/sheba/methods.dart';
