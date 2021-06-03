@@ -23,7 +23,7 @@ export 'src/core/validate_card_number/validate_card_number.dart';
 export 'src/core/digits/digits.dart';
 
 // exports Sheba/methods
-export 'src/core/sheba/methods.dart';
+export 'src/core/sheba/sheba.dart';
 
 // exports [NationalId] extension and
 export 'src/core/national_id/national_id.dart';

@@ -1,4 +1,8 @@
-import '../../core/sheba/methods.dart';
+import 'package:persian_tools/src/core/sheba/model.dart';
+
+const shebaRegExp = r'IR[0-9]{24}';
+
+const bankCodeRegExp = r'IR[0-9]{2}([0-9]{3})[0-9]{19}';
 
 var _banksInfo = <BankInformation>[
   BankInformation(
@@ -236,12 +240,8 @@ var _banksInfo = <BankInformation>[
 
 AccountNumberModel _parsianBankProc(String string) {
   string = string.substring(14);
-  var formatted = '0' +
-      string.substring(0, 3) +
-      '-0' +
-      string.substring(2, 8) +
-      '-' +
-      string.substring(9, 12);
+  var formatted =
+      '0' + string.substring(0, 3) + '-0' + string.substring(2, 8) + '-' + string.substring(9, 12);
   return AccountNumberModel(
     accountNumber: string,
     formattedAccountNumber: formatted,
