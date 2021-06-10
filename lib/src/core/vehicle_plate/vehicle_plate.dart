@@ -18,7 +18,10 @@ typedef PlateHandler = PlateInfo Function(NormalizedPlate);
 NormalizedPlate normalizePlate(String plate) {
   String numbers;
   String char;
-  char = _nonDigit.allMatches(plate).map<String>((match) => match.group(0)!).join();
+  char = _nonDigit
+      .allMatches(plate)
+      .map<String>((match) => match.group(0)!)
+      .join();
   numbers = plate.replaceAll(_nonDigit, '');
 
   return NormalizedPlate(numbers, char == '' ? null : char);
@@ -27,7 +30,10 @@ NormalizedPlate normalizePlate(String plate) {
 /// Checks plate number validation
 bool isPlateNumberValid(String number) {
   if (_nonDigit.hasMatch(number)) return false;
-  return number.split('').sublist(0, number.length - 1).every((digit) => int.parse(digit) != 0);
+  return number
+      .split('')
+      .sublist(0, number.length - 1)
+      .every((digit) => int.parse(digit) != 0);
 }
 
 bool isPlateValid(PlateInfo plateInfo, NormalizedPlate normalizedPlate) {

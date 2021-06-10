@@ -11,7 +11,8 @@ String addCommas(Object number) {
   final numberStr = number.runtimeType is String
       ? number as String //
       : number.toString();
-  final enNumberStr = isPersian(numberStr) ? convertFaToEn(numberStr) : numberStr;
+  final enNumberStr =
+      isPersian(numberStr) ? convertFaToEn(numberStr) : numberStr;
   final decimalNumber = enNumberStr.split('.');
   final integerPart = decimalNumber[0].replaceAllMapped(
     RegExp(addCommasRegExp),

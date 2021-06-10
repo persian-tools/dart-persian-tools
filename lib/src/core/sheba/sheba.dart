@@ -23,7 +23,8 @@ class Sheba {
       } on RangeError catch (_) {
         block = remainder;
       }
-      remainder = '${int.parse(block) % 97}' + remainder.substring(block.length);
+      remainder =
+          '${int.parse(block) % 97}' + remainder.substring(block.length);
     }
     return int.parse(remainder) % 97;
   }

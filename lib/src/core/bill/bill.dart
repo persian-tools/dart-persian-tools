@@ -6,8 +6,6 @@ final Map<int, String> billTypesMap = Map.fromIterables(
   billTypesList,
 );
 
-
-
 /// The means to gathering information from barcode or id and payment id of a bill
 class Bill {
   /// Barcode of the Bill
@@ -42,7 +40,8 @@ class Bill {
   /// Takes bill type of the Bill form bill ID
   String get billType {
     var billIdStr = '$_billId';
-    var billTypeKey = int.parse(billIdStr.substring(billIdStr.length - 2, billIdStr.length - 1));
+    var billTypeKey = int.parse(
+        billIdStr.substring(billIdStr.length - 2, billIdStr.length - 1));
     return billTypesMap[billTypeKey] ?? unknown;
   }
 
@@ -61,7 +60,8 @@ class Bill {
     final secondControlBit = paymentIdStr[paymentIdStr.length - 1];
     paymentIdStr = paymentIdStr.substring(0, paymentIdStr.length - 2);
     return _calTheBit(paymentIdStr) == int.parse(firstControlBit) &&
-        _calTheBit(billIdSrt + paymentIdStr + firstControlBit) == int.parse(secondControlBit);
+        _calTheBit(billIdSrt + paymentIdStr + firstControlBit) ==
+            int.parse(secondControlBit);
   }
 
   /// Validates bill ID of the Bill
@@ -70,7 +70,8 @@ class Bill {
     if (billIdStr.length < 6) return false;
     final firstControlBit = billIdStr[billIdStr.length - 1];
     billIdStr = billIdStr.substring(0, billIdStr.length - 1);
-    return _calTheBit(billIdStr) == int.parse(firstControlBit) && billType != unknown;
+    return _calTheBit(billIdStr) == int.parse(firstControlBit) &&
+        billType != unknown;
   }
 
   /// Validates the Bill by bill ID and payment ID
