@@ -35,14 +35,14 @@ num removeCommas(String number) {
   return num.parse(number);
 }
 
-/// [String] Extension wrapper for functions
+/// [String] Extension wrapper to removing and adding comma to the String object
 extension CommasString on String {
   String get addComma => addCommas(this);
 
   num get removeComma => removeCommas(this);
 }
 
-/// [num] Extension wrapper for functions
+/// [num] Extension wrapper to adding comma to the String object
 extension CommasNum on num {
   String get addComma => addCommas(this);
 }
