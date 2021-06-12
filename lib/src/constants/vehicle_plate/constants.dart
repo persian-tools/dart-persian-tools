@@ -1,3 +1,5 @@
+const nonDigitRegExp = r'\D';
+
 const plateDataset = [
   {
     10: 'تهران',

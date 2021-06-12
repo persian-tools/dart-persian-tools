@@ -1,11 +1,12 @@
-import '../digits/methods.dart';
-import '../is_persian/methods.dart';
+import 'package:persian_tools/src/constants/commas/constants.dart';
+import 'package:persian_tools/src/core/digits/digits.dart';
+import 'package:persian_tools/src/core/is_persian/is_persian.dart';
 
 /// Takes an integer or string and add commas as separator
 /// NOTE: it converts Fa digits to En digits
 String addCommas(Object number) {
   if (number is! int && number is! String && number is! double) {
-    throw Exception('Type should be String or int');
+    throw Exception(exception);
   }
   final numberStr = number.runtimeType is String
       ? number as String //
@@ -14,7 +15,7 @@ String addCommas(Object number) {
       isPersian(numberStr) ? convertFaToEn(numberStr) : numberStr;
   final decimalNumber = enNumberStr.split('.');
   final integerPart = decimalNumber[0].replaceAllMapped(
-    RegExp(r'(\d)(?=(\d{3})+(?!\d))'),
+    RegExp(addCommasRegExp),
     (matched) => '${matched[1]},',
   );
   String decimalPart;
@@ -29,7 +30,7 @@ String addCommas(Object number) {
 ///Takes a string and it should be includes integer then remove all the commas
 num removeCommas(String number) {
   if (number.contains(',')) {
-    number = number.replaceAll(RegExp(r',\s?'), '');
+    number = number.replaceAll(RegExp(removeCommasRegExp), '');
   }
   return num.parse(number);
 }

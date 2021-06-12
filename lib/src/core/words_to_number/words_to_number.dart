@@ -9,7 +9,7 @@ enum DigitLocale {
   ar,
 }
 
-int compute(List<String> tokens) {
+int _compute(List<String> tokens) {
   var sum = 0;
   var isNegative = false;
 
@@ -31,7 +31,7 @@ int compute(List<String> tokens) {
   return isNegative ? sum * -1 : sum;
 }
 
-List<String> tokenize(String words) {
+List<String> _tokenize(String words) {
   final temp = words.replaceMap(typoList);
   final result = <String>[];
   temp.split(' ').forEach((element) {
@@ -45,12 +45,12 @@ List<String> tokenize(String words) {
 int? wordsToNumber(String words) {
   if (words.isEmpty) return null;
 
-  words = words.replaceAll(RegExp('مین\$', caseSensitive: false), '');
+  words = words.replaceAll(RegExp(faOrdinalRegExp, caseSensitive: false), '');
 
   /// removing the ordinal suffix
   words = words.withoutOrdinalSuffix;
 
-  return compute(tokenize(words));
+  return _compute(_tokenize(words));
 }
 
 String? wordsToNumberString(

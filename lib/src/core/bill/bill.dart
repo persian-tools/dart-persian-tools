@@ -1,23 +1,10 @@
-/// Saves bill types to use it in our codes as ```List<String>```
-final List<String> billTypesList = [
-  'آب',
-  'برق',
-  'گاز',
-  'تلفن ثابت',
-  'تلفن همراه',
-  'عوارض شهرداری',
-  'سازمان مالیات',
-  'جرایم راهنمایی و رانندگی',
-];
+import 'package:persian_tools/src/constants/bill/constants.dart';
 
 /// Saves bill types as a ```Map<int, String>```
 final Map<int, String> billTypesMap = Map.fromIterables(
   List<int>.generate(8, (index) => index + 1),
   billTypesList,
 );
-
-/// Saves Iranian currencies to use it in our codes as ```List<String>```
-final List<String> currencies = ['toman', 'rial'];
 
 /// The means to gathering information from barcode or id and payment id of a bill
 class Bill {
@@ -36,7 +23,7 @@ class Bill {
   /// The only constructor for [Bill]
   Bill({
     String? barcode,
-    String currency = 'toman',
+    String currency = toman,
     int? billId,
     int? paymentId,
   })  : _barcode = barcode,
@@ -46,7 +33,7 @@ class Bill {
 
   /// Takes amount of the Bill from payment ID
   int get amount {
-    final currency = _currency == 'rial' ? 1000 : 100;
+    final currency = _currency == rial ? 1000 : 100;
     return _paymentId! ~/ 100000 * currency;
   }
 
@@ -55,7 +42,7 @@ class Bill {
     var billIdStr = '$_billId';
     var billTypeKey = int.parse(
         billIdStr.substring(billIdStr.length - 2, billIdStr.length - 1));
-    return billTypesMap[billTypeKey] ?? 'unknown';
+    return billTypesMap[billTypeKey] ?? unknown;
   }
 
   /// Creates barcode of the Bill from bill ID and payment ID
@@ -84,7 +71,7 @@ class Bill {
     final firstControlBit = billIdStr[billIdStr.length - 1];
     billIdStr = billIdStr.substring(0, billIdStr.length - 1);
     return _calTheBit(billIdStr) == int.parse(firstControlBit) &&
-        billType != 'unknown';
+        billType != unknown;
   }
 
   /// Validates the Bill by bill ID and payment ID

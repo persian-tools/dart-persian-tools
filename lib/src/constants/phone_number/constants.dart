@@ -191,3 +191,13 @@ final operators = {
   ...shatelMobile,
   ...rightTel,
 };
+
+const shatelName = 'شاتل موبایل';
+
+const MCIName = 'همراه اول';
+
+const irancellName = 'ایرانسل';
+
+const taliaName = 'تالیا';
+
+const rightTelName = 'رایتل';

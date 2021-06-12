@@ -1,6 +1,8 @@
+import 'package:persian_tools/src/constants/national_id/constants.dart';
+
 /// check the [value] is an iranian national ID
 bool verifyIranianNationalId(String value) {
-  if (!RegExp(r'^\d{10}$').hasMatch(value)) return false;
+  if (!RegExp(isNumberRegExp).hasMatch(value)) return false;
 
   final nationalId = '0000$value'.substring(value.length + 4 - 10);
 

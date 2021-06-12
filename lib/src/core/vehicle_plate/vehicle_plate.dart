@@ -1,6 +1,16 @@
-import 'helper_classes.dart';
+import 'package:persian_tools/src/constants/vehicle_plate/constants.dart';
+import 'package:persian_tools/src/core/vehicle_plate/model.dart';
 
-final _nonDigit = RegExp(r'\D');
+/// Returns car province name by the given key which is province code
+String? _getCarProvince(int key) => plateDataset[0][key];
+
+/// Returns motorcycle province name by the given key which is province code
+String? _getMotorcycleProvince(int key) => plateDataset[1][key];
+
+/// Returns category name by the given char
+String? _getCategory(String key) => plateDataset[2][key];
+
+final _nonDigit = RegExp(nonDigitRegExp);
 
 typedef PlateHandler = PlateInfo Function(NormalizedPlate);
 
@@ -53,8 +63,8 @@ PlateInfo carHandler(NormalizedPlate plate) {
   var type = 'Car';
   var template = '${plate.numbers.substring(0, 2)}${plate.char}'
       '${plate.numbers.substring(2, 5)}ایران$provinceCode';
-  var province = PlateDataset.getCarProvince(provinceCode);
-  var category = PlateDataset.getCategory(plate.char ?? '');
+  var province = _getCarProvince(provinceCode);
+  var category = _getCategory(plate.char ?? '');
   return PlateInfo(
     template: template,
     province: province,
@@ -67,10 +77,27 @@ PlateInfo motorcycleHandler(NormalizedPlate plate) {
   var provinceCode = int.parse(plate.numbers.substring(0, 3));
   var type = 'Motorcycle';
   var template = '$provinceCode-${plate.numbers.substring(3)}';
-  var province = PlateDataset.getMotorcycleProvince(provinceCode);
+  var province = _getMotorcycleProvince(provinceCode);
   return PlateInfo(
     template: template,
     province: province,
     type: type,
   );
+}
+
+class Plate {
+  String plate;
+  late NormalizedPlate normalizedPlate;
+
+  Plate({required this.plate}) {
+    normalizedPlate = normalizePlate(plate);
+  }
+
+  PlateInfo get info => getPlateInfo(normalizedPlate);
+
+  bool get isValid => isPlateValid(info, normalizedPlate);
+}
+
+extension VehiclePlate on String {
+  Plate get createVehiclePlate => Plate(plate: this);
 }

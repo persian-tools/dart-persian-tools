@@ -2,7 +2,7 @@ import 'package:persian_tools/persian_tools.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('test commas/methods.dart', () {
+  group('test commas/commas.dart', () {
     test('addCommas method', () {
       // integer numbers in type [int] and [String]
       expect(addCommas(30000000), equals('30,000,000'));

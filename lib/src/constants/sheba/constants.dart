@@ -1,4 +1,8 @@
-import '../../core/sheba/methods.dart';
+import 'package:persian_tools/src/core/sheba/model.dart';
+
+const shebaRegExp = r'IR[0-9]{24}';
+
+const bankCodeRegExp = r'IR[0-9]{2}([0-9]{3})[0-9]{19}';
 
 var _banksInfo = <BankInformation>[
   BankInformation(

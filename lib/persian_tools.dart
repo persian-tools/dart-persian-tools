@@ -11,7 +11,7 @@ export 'src/core/remove_ordinal_suffix/remove_ordinal_suffix.dart';
 export 'src/core/bill/bill.dart';
 
 // exports isPersian/methods
-export 'src/core/is_persian/methods.dart';
+export 'src/core/is_persian/is_persian.dart';
 
 // exports [urlFix] method
 export 'src/core/url_fix/url_fix.dart';
@@ -19,11 +19,11 @@ export 'src/core/url_fix/url_fix.dart';
 // exports [validateCardNumber]
 export 'src/core/validate_card_number/validate_card_number.dart';
 
-// exports Digits/methods
-export 'src/core/digits/methods.dart';
+// exports [digits]
+export 'src/core/digits/digits.dart';
 
-// exports Sheba/methods
-export 'src/core/sheba/methods.dart';
+// exports [sheba]
+export 'src/core/sheba/sheba.dart';
 
 // exports [NationalId] extension and
 export 'src/core/national_id/national_id.dart';
@@ -38,10 +38,10 @@ export 'src/core/get_place_by_national_id/get_place_by_national_id.dart';
 export 'src/core/get_bank_name_from_card_number/get_bank_name_from_card_number.dart';
 
 // exports [addCommas] and [removeCommas] methods
-export 'src/core/commas/methods.dart';
+export 'src/core/commas/commas.dart';
 
 // exports [Plate] class
-export 'src/core/vehicle_plate/classes.dart';
+export 'src/core/vehicle_plate/vehicle_plate.dart';
 
 // exports [wordsToNumber] method
 export 'src/core/words_to_number/words_to_number.dart';

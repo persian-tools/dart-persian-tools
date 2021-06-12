@@ -1,56 +1,15 @@
-import '../../constants/sheba/constants.dart';
-
-/// Stores account number that _*Proc methods returns
-class AccountNumberModel {
-  final String accountNumber, formattedAccountNumber;
-
-  AccountNumberModel({
-    required this.accountNumber,
-    required this.formattedAccountNumber,
-  });
-}
-
-/// Stores Bank information that [banksInfo] uses
-class BankInformation {
-  final String nickname, name, persianName, code;
-  final bool isAccountNumberAvailable;
-  AccountNumberModel Function(String)? process;
-  String? accountNumber, formattedAccountNumber;
-
-  BankInformation({
-    required this.nickname,
-    required this.name,
-    required this.persianName,
-    required this.code,
-    required this.isAccountNumberAvailable,
-    this.process,
-    this.accountNumber,
-    this.formattedAccountNumber,
-  });
-
-  @override
-  bool operator ==(Object other) {
-    other = other as BankInformation;
-    return nickname == other.nickname &&
-        name == other.name &&
-        persianName == other.persianName &&
-        code == other.code &&
-        isAccountNumberAvailable == other.isAccountNumberAvailable &&
-        accountNumber == other.accountNumber &&
-        formattedAccountNumber == other.formattedAccountNumber &&
-        process == other.process;
-  }
-}
+import 'package:persian_tools/src/constants/sheba/constants.dart';
+import 'package:persian_tools/src/core/sheba/model.dart';
 
 /// Takes Sheba code and gives information from it
 class Sheba {
   final String _shebaCode;
 
   /// [RegExp] to checking validation of the sheba
-  final pattern = RegExp(r'IR[0-9]{24}');
+  final pattern = RegExp(shebaRegExp);
 
   /// [RegExp] to finding bank code
-  final patternCode = RegExp(r'IR[0-9]{2}([0-9]{3})[0-9]{19}');
+  final patternCode = RegExp(bankCodeRegExp);
 
   Sheba(this._shebaCode);
 

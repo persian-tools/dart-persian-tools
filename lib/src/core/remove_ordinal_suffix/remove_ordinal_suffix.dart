@@ -1,3 +1,5 @@
+import 'package:persian_tools/src/constants/remove_ordinal_suffix/constants.dart';
+
 /// removes Ordinal Suffixes to numbers
 /// for example :
 /// ```dart
@@ -8,11 +10,11 @@ String removeOrdinalSuffix(String word) {
   if (word.isEmpty) return word;
 
   word = word
-      .replaceAll(RegExp('مین\$', caseSensitive: false), '')
-      .replaceAll(RegExp('(ام| اُم)\$', caseSensitive: false), '');
-  if (word.endsWith('سوم')) {
-    word = word.substring(0, word.length - 3) + 'سه';
-  } else if (word.endsWith('م')) {
+      .replaceAll(RegExp(ordinalSuffix, caseSensitive: false), '')
+      .replaceAll(RegExp(ordinalSuffixSeparate, caseSensitive: false), '');
+  if (word.endsWith(thirdFa)) {
+    word = word.substring(0, word.length - 3) + threeFa;
+  } else if (word.endsWith(ordinalSuffixSingle)) {
     word = word.substring(0, word.length - 1);
   }
 

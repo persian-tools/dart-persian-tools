@@ -1,3 +1,5 @@
+import 'package:persian_tools/src/constants/phone_number/constants.dart';
+
 enum SimCardType {
   credit,
   permanent,
@@ -66,11 +68,11 @@ class Operator {
 
   final String name;
 
-  static const shatelMobile = Operator._('شاتل موبایل');
-  static const MCI = Operator._('همراه اول');
-  static const irancell = Operator._('ایرانسل');
-  static const taliya = Operator._('تالیا');
-  static const rightTel = Operator._('رایتل');
+  static const shatelMobile = Operator._(shatelName);
+  static const MCI = Operator._(MCIName);
+  static const irancell = Operator._(irancellName);
+  static const taliya = Operator._(taliaName);
+  static const rightTel = Operator._(rightTelName);
 
   @override
   bool operator ==(Object other) =>

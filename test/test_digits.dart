@@ -2,7 +2,7 @@ import 'package:persian_tools/persian_tools.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('test Digits/methods.dart', () {
+  group('test digits/digits.dart', () {
     test('test convertEnToFa method', () {
       // just digits
       expect(convertEnToFa('۱۲۳456۷۸۹'), equals('۱۲۳۴۵۶۷۸۹'));
@@ -26,11 +26,11 @@ void main() {
       );
     });
     test('test convertEnToAr method', () {
-      expect(convertEnToAr('123456'), "۱۲۳٤٥٦");
-      expect(convertEnToAr('1234567891'), "۱۲۳٤٥٦۷۸۹۱");
-      expect(convertEnToAr('0'), "۰");
-      expect(convertEnToAr("123٤٥٦"), "۱۲۳٤٥٦");
-      expect(convertEnToAr(""), "");
+      expect(convertEnToAr('123456'), '۱۲۳٤٥٦');
+      expect(convertEnToAr('1234567891'), '۱۲۳٤٥٦۷۸۹۱');
+      expect(convertEnToAr('0'), '۰');
+      expect(convertEnToAr('123٤٥٦'), '۱۲۳٤٥٦');
+      expect(convertEnToAr(''), '');
     });
     test('test convertFaToEn method', () {
       // just digits

@@ -1,6 +1,10 @@
 const base = 1000;
 
-const scale = ["", "هزار", "میلیون", "میلیارد"];
+const zeroFa = 'صفر';
+
+const endsWithAnd = ' و ';
+
+const scale = ['', 'هزار', 'میلیون', 'میلیارد'];
 
 const numberToWord = {
   0: '',
