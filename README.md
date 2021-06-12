@@ -111,7 +111,7 @@ stringDigit.convertNumToWords(); // 'دویست و پنجاه و هفت هزار
 intDigit.convertNumToWords(); // 'منفی صد و بیست و هشت'
 ```
 
-- #### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)
+- #### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/commas.dart)
 
 ```dart
 addCommas('3333'); // 3,333
@@ -124,7 +124,7 @@ removeCommas('3,365.255'); // 3365.255
 '4,544.562'.removeComma // 4544.562
 ```
 
-- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/methods.dart)
+- #### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/digits.dart)
 
 ```dart
 convertArToFa('السلام علیکم 14۱۲۳6٤٥'); // السلام علیکم 14۱۲۳6۴۵
@@ -133,7 +133,7 @@ convertEnToFa('سلام این هارو فارسی کن : 22۲۳۴'); // سلا�
 convertFaToEn('سلام این هارو اینگلیسی کن : 22۲۳۴'); // سلام این هارو اینگلیسی کن : 22234
 ```
 
-- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/is_persian/methods.dart)
+- #### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/is_persian/is_persian.dart)
 
 ```dart
 isPersian('این یک متن فارسی است؟'); // true
@@ -159,7 +159,7 @@ nationalID = '';
 nationalID.isIranianNationalId; // false
 ```
 
-- #### Find city and province name by national code - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core\get_place_by_national_id\get_place_by_national_id.dart)
+- #### Find city and province name by national code - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/get_place_by_national_id/get_place_by_national_id.dart)
 
 ```dart
 final place = getPlaceByIranNationalId('0084575948');
@@ -186,7 +186,7 @@ bill.isBillIdValid // true
 bill();
 ```
 
-- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
+- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/sheba/sheba.dart)
   
 ```dart
 var sheba = Sheba('IR820540102680020817909002');
@@ -257,7 +257,7 @@ bankInfo?.initCode; // 603770
 cardNumber.bankNameFromCard?.name; // بانک کشاورزی
 ```
 
-- ### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/classes.dart)
+- ### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/vehicle_plate.dart)
 
 ```dart
 var motorcyclePlate = Plate(plate: '12345678');
