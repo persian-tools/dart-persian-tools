@@ -12,11 +12,15 @@ String? _getCategory(String key) => plateDataset[2][key];
 
 final _nonDigit = RegExp(nonDigitRegExp);
 
+/// Plate handler functions typedef
 typedef PlateHandler = PlateInfo Function(NormalizedPlate);
 
 /// Normalizes the Plate (or separate char part from number part)
 NormalizedPlate normalizePlate(String plate) {
+  // number part of the plate
   String numbers;
+
+  // char part of the palte
   String char;
   char = _nonDigit
       .allMatches(plate)
@@ -36,6 +40,7 @@ bool isPlateNumberValid(String number) {
       .every((digit) => int.parse(digit) != 0);
 }
 
+/// Checks plate validation
 bool isPlateValid(PlateInfo plateInfo, NormalizedPlate normalizedPlate) {
   if (!isPlateNumberValid(normalizedPlate.numbers)) return false;
   if (plateInfo.type == 'Car' && plateInfo.category == null) return false;
@@ -43,11 +48,13 @@ bool isPlateValid(PlateInfo plateInfo, NormalizedPlate normalizedPlate) {
   return true;
 }
 
+/// Gives plate information from its normalized form in [normalizePlate]
 PlateInfo getPlateInfo(NormalizedPlate plate) {
   var handler = getPlateHandler(plate);
   return handler(plate);
 }
 
+/// Gives plate handler based on normalized form of the plate
 PlateHandler getPlateHandler(NormalizedPlate plate) {
   if (plate.numbers.length == 7) {
     return carHandler;
@@ -58,6 +65,7 @@ PlateHandler getPlateHandler(NormalizedPlate plate) {
   }
 }
 
+/// Gives car's plate information from its normalized form of the plate
 PlateInfo carHandler(NormalizedPlate plate) {
   var provinceCode = int.parse(plate.numbers.substring(5, 7));
   var type = 'Car';
@@ -73,6 +81,7 @@ PlateInfo carHandler(NormalizedPlate plate) {
   );
 }
 
+/// Gives motorcycle's plate information from its normalized form of the plate
 PlateInfo motorcycleHandler(NormalizedPlate plate) {
   var provinceCode = int.parse(plate.numbers.substring(0, 3));
   var type = 'Motorcycle';
@@ -85,19 +94,26 @@ PlateInfo motorcycleHandler(NormalizedPlate plate) {
   );
 }
 
+/// Takes motorcycle or car plate and gives information based on it
 class Plate {
+  /// The plate in [String] form
   String plate;
+
+  /// The plate in normalized form that separates char and number parts
   late NormalizedPlate normalizedPlate;
 
   Plate({required this.plate}) {
     normalizedPlate = normalizePlate(plate);
   }
 
+  /// Gives information based on normalized form of the plate
   PlateInfo get info => getPlateInfo(normalizedPlate);
 
+  /// Checks plate validation based on normalized form of the plate and its information
   bool get isValid => isPlateValid(info, normalizedPlate);
 }
 
+/// [String] Extension wrapper to creating plate based on the String object
 extension VehiclePlate on String {
   Plate get createVehiclePlate => Plate(plate: this);
 }
