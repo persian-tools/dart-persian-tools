@@ -1,11 +1,6 @@
 import 'package:persian_tools/src/constants/remove_ordinal_suffix/constants.dart';
 
-/// removes Ordinal Suffixes to numbers
-/// for example :
-/// ```dart
-/// removeOrdinalSuffix('سه هزارم') // سث هزار
-/// removeOrdinalSuffix('سه هزارمین') // سه هزار
-/// ```
+/// Removes ordinal suffixes to numbers
 String removeOrdinalSuffix(String word) {
   if (word.isEmpty) return word;
 
@@ -21,12 +16,7 @@ String removeOrdinalSuffix(String word) {
   return word;
 }
 
-/// with RemoveOrdinalSuffix extension method you can use [removeOrdinalSuffix] method
-/// as a getter on String object
-/// ```dart
-/// var number = 'سی سه';
-/// number.withoutOrdinalSuffix; // سی سوم
-/// ```
+/// [String] Extension wrapper to remove ordinal suffix on String object
 extension RemoveOrdinalSuffix on String {
   String get withoutOrdinalSuffix => removeOrdinalSuffix(this);
 }
