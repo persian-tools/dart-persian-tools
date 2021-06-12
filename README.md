@@ -186,8 +186,8 @@ bill.isBillIdValid // true
 bill();
 ```
 
-- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/sheba/sheba.dart)
-  
+- #### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/sheba/sheba.dart)
+
 ```dart
 var sheba = Sheba('IR820540102680020817909002');
 var bank = sheba(); // Returns nullable object of BankInformation
@@ -242,7 +242,7 @@ phoneNumber.phoneNumberPrefix; // 902
 phoneNumber.phoneNumberDetail?.name; // ایرانسل
 ```
 
-- #### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
+- #### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/get_bank_name_from_card_number/get_bank_name_from_card_number.dart)
 
 ```dart
 final cardNumber = '6037701689095443';
@@ -253,11 +253,11 @@ bankInfo?.initCode; // 603770
 
 /// you can also use this methods as String extension method
 
-// get bank info from String 
+// get bank info from String
 cardNumber.bankNameFromCard?.name; // بانک کشاورزی
 ```
 
-- ### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/vehicle_plate.dart)
+- #### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/vehicle_plate.dart)
 
 ```dart
 var motorcyclePlate = Plate(plate: '12345678');
