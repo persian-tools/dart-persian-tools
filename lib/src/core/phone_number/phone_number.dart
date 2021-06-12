@@ -2,11 +2,7 @@ import 'package:persian_tools/src/constants/phone_number/constants.dart';
 
 import 'models.dart';
 
-/// returns the phone number prefix
-/// use it like:
-/// ```dart
-///   getPhonePrefix('09022002580'); // 902
-/// ```
+/// Returns the phone number prefix
 String getPhonePrefix(String phoneNumber) {
   final matches = mobileRegex.allMatches(phoneNumber);
 
@@ -17,24 +13,17 @@ String getPhonePrefix(String phoneNumber) {
   return '';
 }
 
-/// find information such as province, type and model of [phoneNumber]
-/// this function used the [getPhonePrefix] to find out the [phoneNumber] prefix number and
-/// used the [phoneNumberValidator] function to validate the [phoneNumber].
-/// support the following phone number formats
+/// Finds information such as province, type and model of phone number.
+///
+/// This function used the [getPhonePrefix] to find out the phone number prefix number and
+/// used the [phoneNumberValidator] function to validate the phone number.
+///
+/// Supports the following phone number formats
 /// 1. 00989123456789
 /// 2. +989123456789
 /// 3. 989123456789
 /// 4. 09123456789
 /// 5. 9123456789
-///
-/// use it like:
-/// ```dart
-/// final operatorDetail = getPhoneNumberDetail(phoneNumber);
-/// print(operatorDetail?.name); // ایرانسل
-/// print(operatorDetail?.provinces); // []
-/// print(operatorDetail?.base); // کشوری
-/// print(operatorDetail?.type); // SimCartType.both
-/// ```
 OperatorDetail? getPhoneNumberDetail(String phoneNumber) {
   if (phoneNumberValidator(phoneNumber)) {
     final prefix = getPhonePrefix(phoneNumber);
@@ -43,13 +32,15 @@ OperatorDetail? getPhoneNumberDetail(String phoneNumber) {
   }
 }
 
-/// validate [phoneNumber] and returns [true] if the [phoneNumber] parameter matched with pattern
+/// validate phone number and returns true if the given String phone number matched with pattern
 /// otherwise returns false.
 bool phoneNumberValidator(String phoneNumber) {
   return mobileRegex.hasMatch(phoneNumber) &&
       prefixes.contains(getPhonePrefix(phoneNumber));
 }
 
+/// [String] Extension wrapper to use [getPhonePrefix], [getPhoneNumberDetail] and
+/// [phoneNumberValidator] on String object
 extension PhoneNumberExtension on String {
   String get phoneNumberPrefix => getPhonePrefix(this);
 
