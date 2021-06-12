@@ -1,4 +1,4 @@
-/// Check validation of the given ATM card number
+/// Checks validation of the given ATM card number
 bool validateCardNumber(String cardNumber) {
   if (cardNumber.length < 16 ||
       int.parse(cardNumber.substring(1, 11)) == 0 ||
