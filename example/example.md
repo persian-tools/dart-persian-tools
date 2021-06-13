@@ -4,8 +4,71 @@ var number = 'سی سه'; // or سی | شصت | پنجاه دو
 addOrdinalSuffix(number); // سی سوم | سی اُم | شصتم | پنجاه دوم
 number.withOrdinalSuffix // ... like so
 ```
+#### Removing Ordinal Suffixes - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/remove_ordinal_suffix/remove_ordinal_suffix.dart)
 
-#### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/methods.dart)
+```dart
+var number = 'چهل و سوم'; // سی سوم | سی اُم | شصتم | پنجاه دوم
+removeOrdinalSuffix(number); // سی | شصت | پنجاه دو
+
+/// or use it as String extension method
+number.withoutOrdinalSuffix; // ... like so
+```
+
+#### Converting Persian words to number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/words_to_number/words_to_number.dart)
+
+```dart
+final words = 'سه هزار دویست و دوازده';
+
+/// use [wordsToNumber] method to convert [words] to int number
+wordsToNumber(words); // 3212
+
+/// use [wordsToNumberString] method to convert [words] to String
+wordsToNumberString(words); // '3212' as String
+
+/// [wordsToNumberString] also has two optional parameter
+/// use [digit] optional parameter to convert the digits to specific local digits
+/// use [addComma] to add comma between the every 3 digits
+wordsToNumberString(
+words,
+digits: DigitLocale.fa,
+addComma: true,
+); // '۳,۲۱۲' as String
+
+/// or you can easily use extension methods on String object
+words.convertWordsToNumber(); // 3212
+
+words.convertWordsToNumberString(); // '3212' as String
+```
+
+#### Converting Persian numbers to word - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/number_to_words/number_to_words.dart)
+
+```dart
+final stringDigit = '257,433';
+final intDigit = -128;
+
+/// use [numberToWordsString] method to convert [stringDigit] to persian
+
+numberToWordsString(stringDigit); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سه'
+
+/// [numberToWordsString] also has an optional parameter
+/// by default [ordinal] is [false], [true] makes the output an ordinal word
+
+numberToWordsString(stringDigit, ordinal: true); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سوم'
+
+/// use [numberToWordsInt] method to convert [intDigit] to persian
+numberToWords(intDigit); // 'منفی صد و بیست و هشت'
+
+/// [numberToWordsInt] also has an optional parameter
+/// by default [ordinal] is [false], [true] makes the output an ordinal word
+numberToWords(intDigit, ordinal: true); // 'منفی صد و بیست و هشتم'
+
+/// you can simply use extension methods on int or String objects
+stringDigit.convertNumToWords(); // 'دویست و پنجاه و هفت هزار و چهارصد و سی و سه'
+
+intDigit.convertNumToWords(); // 'منفی صد و بیست و هشت'
+```
+
+#### Adding and removing separator to / from numbers - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/commas/commas.dart)
 ```dart
 addCommas('3333'); // 3,333
 addCommas('۸۲۳۳۴۵'); // 823,345
@@ -17,7 +80,7 @@ removeCommas('3,365.255'); // 3365.255
 '4,544.562'.removeComma // 4544.562
 ```
 
-#### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/methods.dart)
+#### Converting Persian numbers to Arabic / English numbers and reverse - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/digits/digits.dart)
 ```dart
 convertArToFa('السلام علیکم 14۱۲۳6٤٥'); // السلام علیکم 14۱۲۳6۴۵
 convertArToEn('Persian Tools : 123٥٦٧'); // Persian Tools : 123567
@@ -25,7 +88,7 @@ convertEnToFa('سلام این هارو فارسی کن : 22۲۳۴'); // سلا�
 convertFaToEn('سلام این هارو اینگلیسی کن : 22۲۳۴'); // سلام این هارو اینگلیسی کن : 22234
 ```
 
-#### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/is_persian/methods.dart)
+#### Checking a string has/is Persian - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/is_persian/is_persian.dart)
 
 ```dart
 isPersian('این یک متن فارسی است؟'); // true
@@ -40,7 +103,7 @@ hasPersian('أكد رئيس اللجنة العسكرية الممثلة لحك�
 ```dart
 var nationalID = '0684159414';
 verifyIranianNationalId(nationalID); // true
-  
+
 ///the nationalID should contain 10 digit, so the following verifications
 ///should return false
 nationalID = '00000';
@@ -51,7 +114,7 @@ nationalID = '';
 nationalID.isIranianNationalId; // false
 ```
 
-#### Find city and province name by national code - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core\get_place_by_national_id\get_place_by_national_id.dart)
+#### Find city and province name by national code - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/get_place_by_national_id/get_place_by_national_id.dart)
 
 ```dart
 final place = getPlaceByIranNationalId('0084575948');
@@ -69,7 +132,7 @@ nationalId.getPlaceNationalId?.province.name; // گلستان
 ```dart
 var bill = Bill(billId: 9174639504124, paymentId: 12908197, currency: 'rial');
 bill.barcode // 917463950412400012908197
-bill.billType // برق 
+bill.billType // برق
 bill.amount // 129000
 bill.isBillValid // false
 bill.isPaymentIdValid // false
@@ -78,7 +141,7 @@ bill.isBillIdValid // true
 bill();
 ```
 
-#### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/Sheba/methods.dart)
+#### Checking IBAN of the bank account (_SHEBA_) - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/sheba/sheba.dart)
 
 ```dart
 var sheba = Sheba('IR820540102680020817909002');
@@ -134,7 +197,7 @@ phoneNumber.phoneNumberPrefix; // 902
 phoneNumber.phoneNumberDetail?.name; // ایرانسل
 ```
 
-#### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/url_fix/url_fix.dart)
+#### Finding banks name by card number - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/get_bank_name_from_card_number/get_bank_name_from_card_number.dart)
 
 ```dart
 final cardNumber = '6037701689095443';
@@ -145,11 +208,11 @@ bankInfo?.initCode; // 603770
 
 /// you can also use this methods as String extension method
 
-// get bank info from String 
+// get bank info from String
 cardNumber.bankNameFromCard?.name; // بانک کشاورزی
 ```
 
-#### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/classes.dart)
+#### Getting information from vehicle plate - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/vehicle_plate/vehicle_plate.dart)
 
 ```dart
 var motorcyclePlate = Plate(plate: '12345678');
@@ -182,4 +245,3 @@ motorPlate.isValid // true
 var url = 'wss://hostname.domain/?q=i am a wrong query';
 urlFix(url); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
 ```
-
