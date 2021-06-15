@@ -2,7 +2,7 @@ import 'package:persian_tools/persian_tools.dart';
 import 'package:persian_tools/src/constants/number_to_words/constants.dart';
 import 'package:persian_tools/src/internal_methods.dart';
 
-/// gets an [int] with 3 or less digits as input and converts it to persian
+/// Gets an [int] with 3 or less digits as input and converts it to persian
 String _numToWord(int number) {
   var unit = 100;
   var result = '';
@@ -22,7 +22,7 @@ String _numToWord(int number) {
   return result;
 }
 
-/// checks current [input] for negative [value] and deploying converting process
+/// Checks current [input] for negative [value] and deploying converting process
 String _convert(int number, bool ordinal) {
   var result = <String>[];
 
@@ -53,6 +53,8 @@ String _convert(int number, bool ordinal) {
   return words;
 }
 
+/// Returns Persian word of the given number in String. Number can contain commas.
+/// You can determine returned string has ordinal suffix or not by `ordinal` flag.
 String? numberToWordsString(String number, {bool ordinal = false}) {
   if (number.isEmpty) return null;
   if (number == '0') return zeroFa;
@@ -60,19 +62,21 @@ String? numberToWordsString(String number, {bool ordinal = false}) {
   return _convert(removeCommas(number).toInt(), ordinal);
 }
 
-String? numberToWords(int number, {bool ordinal = false}) {
+/// Returns Persian word of the given number in int You can determine
+/// returned string has ordinal suffix or not by `ordinal` flag.
+String numberToWords(int number, {bool ordinal = false}) {
   if (number == 0) return zeroFa;
   return _convert(number, ordinal);
 }
 
+/// [String] Extension wrapper to convert number to Persian word on String object
 extension NumberToPersianWordsString on String {
-  /// converts current [String] value to persian words
   String? convertNumToWords({bool ordinal = false}) =>
       numberToWordsString(this, ordinal: ordinal);
 }
 
+/// [int] Extension wrapper to convert number to Persian word on int object
 extension NumberToPersianWordsInt on int {
-  /// converts current [int] value to persian words
   String? convertNumToWords({bool ordinal = false}) =>
       numberToWords(this, ordinal: ordinal);
 }
