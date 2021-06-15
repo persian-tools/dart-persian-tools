@@ -136,7 +136,7 @@ void main() {
       );
 
       expect(
-        numberToWords(500)?.length,
+        numberToWords(500).length,
         equals(5),
       );
 
