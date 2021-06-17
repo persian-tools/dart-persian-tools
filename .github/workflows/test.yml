@@ -1,11 +1,15 @@
-# Testing codes on every push/pull_request to master branch
-name: "Test master"
+name: "Test"
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+      - dev
+      
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - dev
 
 jobs:
   test:
