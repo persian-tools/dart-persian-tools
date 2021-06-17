@@ -28,7 +28,8 @@
         "code",
         "doc",
         "example",
-        "test"
+        "test",
+        "review"
       ]
     }
   ],
