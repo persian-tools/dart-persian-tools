@@ -306,7 +306,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/EhsanAramide"><img src="https://avatars.githubusercontent.com/u/72789505?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ehsan Aramide</b></sub></a><br /><a href="https://github.com/persian-tools/dart-persian-tools/commits?author=EhsanAramide" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/EhsanAramide"><img src="https://avatars.githubusercontent.com/u/72789505?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ehsan Aramide</b></sub></a><br /><a href="https://github.com/persian-tools/dart-persian-tools/commits?author=EhsanAramide" title="Code">💻</a> <a href="https://github.com/persian-tools/dart-persian-tools/commits?author=EhsanAramide" title="Documentation">📖</a> <a href="#example-EhsanAramide" title="Examples">💡</a> <a href="#maintenance-EhsanAramide" title="Maintenance">🚧</a> <a href="https://github.com/persian-tools/dart-persian-tools/pulls?q=is%3Apr+reviewed-by%3AEhsanAramide" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/persian-tools/dart-persian-tools/commits?author=EhsanAramide" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
