@@ -1,6 +1,5 @@
 <div align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 	<p align="center">
 		<img src="https://raw.githubusercontent.com/persian-tools/persian-tools/master/images/logo.png" width="200" />
@@ -14,6 +13,7 @@
 [![Dart Version](https://img.shields.io/badge/Dart->=2.12.0%20<3.0.0-lightblue)](https://dart.dev)
 [![pub version](https://img.shields.io/pub/v/persian_tools)](https://pub.dev/packages/persian_tools)
 ![status](https://img.shields.io/badge/under_development-lightblue.svg)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg)](#contributors-)
 </div>
 <hr/>
 
