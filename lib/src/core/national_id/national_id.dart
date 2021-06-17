@@ -1,6 +1,6 @@
 import 'package:persian_tools/src/constants/national_id/constants.dart';
 
-/// check the [value] is an iranian national ID
+/// Checks the given String is an iranian national ID or not
 bool verifyIranianNationalId(String value) {
   if (!RegExp(isNumberRegExp).hasMatch(value)) return false;
 
@@ -20,7 +20,7 @@ bool verifyIranianNationalId(String value) {
   return (sum < 2 && lastNumber == sum) || (sum >= 2 && lastNumber == 11 - sum);
 }
 
+/// [String] Extension wrapper to checking iranian national id verification
 extension NationalId on String {
-  /// Checks the current [String] to verify if it has a national ID.
   bool get isIranianNationalId => verifyIranianNationalId(this);
 }

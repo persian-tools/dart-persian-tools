@@ -3,6 +3,7 @@ import 'package:persian_tools/src/constants/words_to_number/constants.dart';
 import 'package:persian_tools/src/internal_methods.dart';
 
 //ToDo : implementing fuzzy option
+/// Determines language of the digits in [wordsToNumber] and [wordsToNumberString] functions.
 enum DigitLocale {
   en,
   fa,
@@ -42,17 +43,23 @@ List<String> _tokenize(String words) {
   return result;
 }
 
+/// Returns equivalent number in [int] of the given words
 int? wordsToNumber(String words) {
   if (words.isEmpty) return null;
 
   words = words.replaceAll(RegExp(faOrdinalRegExp, caseSensitive: false), '');
 
-  /// removing the ordinal suffix
+  // removing the ordinal suffix
   words = words.withoutOrdinalSuffix;
 
   return _compute(_tokenize(words));
 }
 
+/// Returns equivalent number in [String] of the given words.
+///
+/// With [DigitLocale] enum you can determine language of the digits in returned String.
+///
+/// With `addComma` parameter you can determine the returned String has comma or not.
 String? wordsToNumberString(
   String words, {
   DigitLocale digits = DigitLocale.en,
@@ -74,6 +81,8 @@ String? wordsToNumberString(
   }
 }
 
+/// [String] Extension wrapper to convert String object to its equivalent number
+/// in [int] and [String].
 extension WordsToNumber on String {
   int? convertWordsToNumber() => wordsToNumber(this);
 

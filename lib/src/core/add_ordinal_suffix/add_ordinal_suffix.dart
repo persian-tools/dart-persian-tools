@@ -1,12 +1,6 @@
 import 'package:persian_tools/src/constants/add_ordinal_suffix/constants.dart';
 
-/// Adds Ordinal Suffixes to numbers
-/// for example :
-/// ```dart
-/// addOrdinalSuffix('سی'); // سی اُم
-/// addOrdinalSuffix('سی دو'); // سی دوم
-/// addOrdinalSuffix('پنج'); // پنجم
-/// ```
+/// Adds ordinal suffixes to numbers
 String addOrdinalSuffix(String number) {
   if (number.endsWith(lastFaChar)) {
     return number + ordinalSuffixSeparate;
@@ -17,12 +11,7 @@ String addOrdinalSuffix(String number) {
   return number + ordinalSuffix;
 }
 
-/// with AddOrdinalSuffix extension method you can use [addOrdinalSuffix] method
-/// as a getter on String object
-/// ```dart
-/// var number = 'سی سه';
-/// number.withOrdinalSuffix; // سی سوم
-/// ```
+/// [String] Extension wrapper to adding ordinal suffix to String object
 extension AddOrdinalSuffix on String {
   // TODO: add Persian language checker on this object
   String get withOrdinalSuffix => addOrdinalSuffix(this);
