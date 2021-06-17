@@ -20,6 +20,20 @@
       ]
     },
     {
+      "login": "payam-zahedi",
+      "name": "Payam Zahedi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47558577?v=4",
+      "profile": "https://github.com/payam-zahedi",
+      "contributions": [
+        "code",
+        "doc",
+        "example",
+        "maintenance",
+        "review",
+        "test"
+      ]
+    },
+    {
       "login": "makhosravi",
       "name": "Mohammad Ali Khosravi",
       "avatar_url": "https://avatars.githubusercontent.com/u/25433936?v=4",
