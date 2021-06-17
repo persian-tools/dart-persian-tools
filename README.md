@@ -1,4 +1,7 @@
 <div align="center">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 	<p align="center">
 		<img src="https://raw.githubusercontent.com/persian-tools/persian-tools/master/images/logo.png" width="200" />
 	</p>
@@ -293,3 +296,23 @@ urlFix(url); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
 
 ## Contributing
 Thank you for your interest in contributing! For more detail about contributing, please check out the [CONTRIBUTING.md file](https://github.com/persian-tools/dart-persian-tools/blob/master/CONTRIBUTING.md "CONTRIBUTING.md file").
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/EhsanAramide"><img src="https://avatars.githubusercontent.com/u/72789505?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ehsan Aramide</b></sub></a><br /><a href="https://github.com/persian-tools/dart-persian-tools/commits?author=EhsanAramide" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
