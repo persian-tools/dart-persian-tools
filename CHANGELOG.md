@@ -1,3 +1,6 @@
+## 1.0.1
+- All-Contributors section added to Readme.md
+
 ## 1.0.0
 
 - Stabled features
