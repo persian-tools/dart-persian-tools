@@ -35,6 +35,7 @@
 - [Finding banks name by ATM card number](#finding-banks-name-by-card-number---source)
 - [Getting information from vehicle plate](#getting-information-from-vehicle-plate---source)
 - [Fixing and decoding URLs with whitespace](#fixing-and-decoding-urls---source)
+- [Jalali Convertor](#jalai-convertor---source)
 
 ## Usage
 
@@ -292,6 +293,51 @@ motorPlate.isValid // true
 ```dart
 var url = 'wss://hostname.domain/?q=i am a wrong query';
 urlFix(url); // wss://hostname.domain/?q=i%20am%20a%20wrong%20query
+```
+
+
+
+- #### Jalali Convertor - [source](https://github.com/persian-tools/dart-persian-tools/blob/master/lib/src/core/jalali/jalali.dart)
+
+```dart
+// Get curent time
+Jalali.now() 
+
+// Convert gregorian to jalali
+'1989-08-21 02:00:00'.toJalali()
+
+'1989-08-21 02:00:00'.toJalali(formate: 'yyyy-mm-dd hh:nn:ss SSS') // also, you can pass the custom format
+
+// formats you can use
+// yyyy - yy - mm - m - MM - M - dd - d - w - WW - W - DD - D - hh - h - HH - H - nn - n - ss - s - SSS - S - uuu - u - am - AM -
+
+
+// jalali to gregorian
+Jalali().now().toGregorian()
+
+'1368-05-30 02:00:00'.toGregorian()
+
+// jalali to timeStamp
+'1368-05-30 02:00:00'.jalaliToTimeStamp()
+
+// timestamp to ago
+'619668000'.timeStampToAgo() 
+'619668000000'.timeStampToAgo(inMilliseconds: true) // if the time stamp is in Milliseconds set it to true  
+
+// jalali to ago
+Jalali().now().jalaliToTimeStamp()
+
+// DateTime to ago
+DateTime().now().deteTimeToAgo()
+
+// jalali to ago
+'1368-05-30 02:00:00'.jalaliToAgo()
+
+// timestamp to jalali
+'619668000'.timeStampToJalai()
+'619668000000'.timeStampToJalai(inMilliseconds: true) // if the time stamp is in Milliseconds set it to true  
+
+
 ```
 
 ## Contributing
