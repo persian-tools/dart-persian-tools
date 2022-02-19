@@ -1,13 +1,11 @@
-const base = 1000;
+const errorMessage =
+    'PersianTools: numberToWords - the number must be a safe integer less than 16 digits';
 
 const zeroFa = 'صفر';
 
-const endsWithAnd = ' و ';
-
-const scale = ['', 'هزار', 'میلیون', 'میلیارد'];
+const andFa = ' و ';
 
 const numberToWord = {
-  0: '',
   1: 'یک',
   2: 'دو',
   3: 'سه',
@@ -44,4 +42,9 @@ const numberToWord = {
   700: 'هفتصد',
   800: 'هشتصد',
   900: 'نهصد',
+  1000: 'هزار',
+  1000000: 'میلیون',
+  1000000000: 'میلیارد',
+  1000000000000: 'تریلیون',
+  1000000000000000: 'کوآدریلیون',
 };
