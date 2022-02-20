@@ -1,5 +1,6 @@
 import 'package:persian_tools/persian_tools.dart';
 import 'package:persian_tools/src/constants/number_to_words/constants.dart';
+import 'package:persian_tools/src/internal_methods.dart';
 
 /// Gets an [int] as input and checks if it's a negative number
 bool _isNegative(int number) {
@@ -64,7 +65,7 @@ String _performer(int number) {
   })
       .where((element) => element.length > 1)
       .toList();
-  return numberArr.join(andFa).trim();
+  return trim(numberArr.join(andFa));
 }
 
 /// Returns Persian word of the given number in int You can determine
