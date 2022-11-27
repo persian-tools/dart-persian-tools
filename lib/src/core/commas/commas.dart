@@ -21,7 +21,7 @@ String addCommas(Object number) {
   String decimalPart;
   try {
     decimalPart = '.${decimalNumber[1]}';
-  } on RangeError catch (e) {
+  } on RangeError catch (_) {
     decimalPart = '';
   }
   return integerPart + decimalPart;

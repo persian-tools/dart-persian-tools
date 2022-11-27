@@ -1,3 +1,8 @@
+## 1.0.2
+- Added support for new Irancell and MCI phone numbers
+    - 0900 - Irancell
+    - 0995 - MCI
+    - 0996 - MCI
 ## 1.0.1
 - All-Contributors section added to Readme.md
 

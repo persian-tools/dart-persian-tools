@@ -23,6 +23,18 @@ void main() {
       expect(number3?.operator?.name, 'ایرانسل');
       expect(number3?.type, SimCardType.both);
 
+      final number4 = getPhoneNumberDetail('09960880440');
+
+      expect(number4?.base, 'کشوری');
+      expect(number4?.operator?.name, 'همراه اول');
+      expect(number4?.type, SimCardType.credit);
+
+      final number5 = getPhoneNumberDetail('09000880440');
+
+      expect(number5?.base, 'کشوری');
+      expect(number5?.operator?.name, 'ایرانسل');
+      expect(number5?.type, SimCardType.both);
+
       expect(getPhoneNumberDetail('09022002580')?.provinces?.length ?? 0, 0);
 
       /// Should return null, because it's not an iranian phone number
