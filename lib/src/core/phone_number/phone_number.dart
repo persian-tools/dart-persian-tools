@@ -30,6 +30,8 @@ OperatorDetail? getPhoneNumberDetail(String phoneNumber) {
 
     return operators[prefix];
   }
+
+  return null;
 }
 
 /// validate phone number and returns true if the given String phone number matched with pattern
