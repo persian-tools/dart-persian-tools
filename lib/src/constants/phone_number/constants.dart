@@ -100,6 +100,18 @@ const MCI = {
     type: SimCardType.credit,
     operator: Operator.MCI,
   ),
+  '995': OperatorDetail(
+    provinces: [],
+    base: 'کشوری',
+    type: SimCardType.credit,
+    operator: Operator.MCI,
+  ),
+  '996': OperatorDetail(
+    provinces: [],
+    base: 'کشوری',
+    type: SimCardType.credit,
+    operator: Operator.MCI,
+  ),
 };
 
 const taliya = {
@@ -140,6 +152,7 @@ const defaultIrancellModel = OperatorDetail(
 );
 
 const irancell = {
+  '900': defaultIrancellModel,
   '930': defaultIrancellModel,
   '933': defaultIrancellModel,
   '935': defaultIrancellModel,
