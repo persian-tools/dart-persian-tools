@@ -181,4 +181,12 @@ const bankInformation = <Bank?>[
     name: 'موسسه اعتباری توسعه',
     initCode: '628157',
   ),
+  Bank(
+    name: 'موسسه مالی اعتباری نور',
+    initCode: '507677',
+  ),
+  Bank(
+    name: 'بانک خاورمیانه',
+    initCode: '585947',
+  ),
 ];
