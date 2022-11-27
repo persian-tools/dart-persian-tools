@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Setup Dart SKD , v2.12.0
         uses: dart-lang/setup-dart@v1
