@@ -1,3 +1,8 @@
+## 1.0.3
+- Added support for new Bank names
+    - 0900 - موسسه مالی اعتباری نور
+    - 0995 - بانک خاورمیانه
+
 ## 1.0.2
 - Added support for new Irancell and MCI phone numbers
     - 0900 - Irancell

@@ -2,7 +2,7 @@
 class AccountNumberModel {
   final String accountNumber, formattedAccountNumber;
 
-  AccountNumberModel({
+  const AccountNumberModel({
     required this.accountNumber,
     required this.formattedAccountNumber,
   });
@@ -26,6 +26,18 @@ class BankInformation {
     this.formattedAccountNumber,
   });
 
+  @override
+  int get hashCode => Object.hashAll([
+        nickname,
+        name,
+        persianName,
+        code,
+        isAccountNumberAvailable,
+        accountNumber,
+        formattedAccountNumber,
+        process,
+      ]);
+      
   @override
   bool operator ==(Object other) {
     other = other as BankInformation;
