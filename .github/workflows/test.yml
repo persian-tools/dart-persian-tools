@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: pub get
       
-      - name: Run tests and take coverage
-        run: pub run test --coverage=coverage
+      - name: Run tests
+        run: dart test .
         
       - name: Install coverage
         run: pub global activate coverage
