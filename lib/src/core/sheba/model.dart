@@ -27,17 +27,19 @@ class BankInformation {
   });
 
   @override
-  int get hashCode => Object.hashAll([
+  int get hashCode => Object.hash(
         nickname,
         name,
-        persianName,
-        code,
-        isAccountNumberAvailable,
-        accountNumber,
-        formattedAccountNumber,
-        process,
-      ]);
-      
+        [
+          persianName,
+          code,
+          isAccountNumberAvailable,
+          accountNumber,
+          formattedAccountNumber,
+          process,
+        ],
+      );
+
   @override
   bool operator ==(Object other) {
     other = other as BankInformation;
