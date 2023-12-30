@@ -35,6 +35,12 @@ void main() {
       expect(number5?.operator?.name, 'ایرانسل');
       expect(number5?.type, SimCardType.both);
 
+      final number6 = getPhoneNumberDetail('09990880440');
+
+      expect(number6?.base, 'کشوری');
+      expect(number6?.operator?.name, 'سامانتل');
+      expect(number6?.type, SimCardType.both);
+
       expect(getPhoneNumberDetail('09022002580')?.provinces?.length ?? 0, 0);
 
       /// Should return null, because it's not an iranian phone number
@@ -52,6 +58,10 @@ void main() {
       expect(phoneNumberValidator('00989022002580'), true);
       expect(phoneNumberValidator('9022002580'), true);
 
+      expect(phoneNumberValidator('9992002580'), true);
+      expect(phoneNumberValidator('00989992002580'), true);
+      expect(phoneNumberValidator('+989992002580'), true);
+
       expect(phoneNumberValidator('09802002580'), false);
     });
 
@@ -62,6 +72,8 @@ void main() {
       expect(getPhonePrefix('09981000000'), '998');
       expect(getPhonePrefix('09123200007'), '912');
       expect(getPhonePrefix('09300880440'), '930');
+
+      expect(getPhonePrefix('09990880440'), '999');
 
       /// Should return the prefix with 98 or +98
       expect(getPhonePrefix('+989022002580'), '902');
