@@ -189,12 +189,22 @@ const shatelMobile = {
   ),
 };
 
+const samanTel = {
+  '999': OperatorDetail(
+    provinces: [],
+    base: 'کشوری',
+    type: SimCardType.both,
+    operator: Operator.samanTel,
+  ),
+};
+
 final List<String> prefixes = [
   ...MCI.keys,
   ...taliya.keys,
   ...rightTel.keys,
   ...irancell.keys,
   ...shatelMobile.keys,
+  ...samanTel.keys,
 ];
 
 final operators = {
@@ -203,6 +213,7 @@ final operators = {
   ...irancell,
   ...shatelMobile,
   ...rightTel,
+  ...samanTel,
 };
 
 const shatelName = 'شاتل موبایل';
@@ -214,3 +225,5 @@ const irancellName = 'ایرانسل';
 const taliaName = 'تالیا';
 
 const rightTelName = 'رایتل';
+
+const samanTelName = 'سامانتل';
