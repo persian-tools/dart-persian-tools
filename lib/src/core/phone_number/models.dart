@@ -73,6 +73,7 @@ class Operator {
   static const irancell = Operator._(irancellName);
   static const taliya = Operator._(taliaName);
   static const rightTel = Operator._(rightTelName);
+  static const samanTel = Operator._(samanTelName);
 
   @override
   bool operator ==(Object other) =>
